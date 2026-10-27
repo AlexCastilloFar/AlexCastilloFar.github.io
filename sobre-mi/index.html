@@ -2,29 +2,44 @@
 layout: default
 seccion: sobre-mi
 title: Sobre mí
-description: Alex, estudiante de Ingeniería Industrial en Lima enfocado en análisis de datos y creador de plantillas de Excel.
+description: Alex Castillo, encargado de control de producción y procesos y estudiante de Ingeniería Industrial en Lima, enfocado en optimización de procesos y analítica de datos.
 ---
 <section class="view wrap">
   <div class="me">
     {% include foto.html %}
-    <div class="stack" style="max-width:640px">
+    <div class="stack" style="max-width:660px">
       <span class="eyebrow">Sobre mí</span>
       <h1>Hola, soy Alex</h1>
-      <p class="lead">Estudiante de Ingeniería Industrial en Lima, enfocado en análisis de datos. Creo herramientas en Excel que ahorran horas de trabajo.</p>
-      <div class="chips"><span class="tag">Excel + VBA</span><span class="tag">Power BI</span><span class="tag">Power Query</span><span class="tag">Python</span></div>
+      <p class="lead">Trabajo en una planta de manufactura desde 2017 y hoy me encargo del control de producción y procesos. Estudio los últimos ciclos de Ingeniería Industrial y me enfoco en optimizar procesos con datos.</p>
+      <div class="chips"><span class="tag">Excel + VBA</span><span class="tag">Power BI</span><span class="tag">Power Query</span><span class="tag">Python</span><span class="tag">Bizagi · BPMN</span><span class="tag">AutoCAD</span></div>
       {% if site.linkedin and site.linkedin != "" %}<div class="ctas"><a class="btn btn-ink" href="{{ site.linkedin }}" target="_blank" rel="noopener">Ver mi LinkedIn ↗</a></div>{% endif %}
     </div>
   </div>
+
   <div class="block">
-    <div class="sec-head"><span class="eyebrow">Portafolio</span><h2>Proyectos</h2></div>
+    <div class="sec-head"><span class="eyebrow">Experiencia</span><h2>Más de 8 años en planta</h2><p>Todo lo que explico en este blog lo uso en el día a día.</p></div>
+    <div class="grid2">
+      <div class="card"><span class="tag hot">2022 – actualidad</span><h3>Encargado de Control de Producción y Procesos</h3><p>Monitoreo indicadores de producción, convierto la data de planta en reportes para la jefatura y lidero la estandarización de métodos de trabajo.</p></div>
+      <div class="card"><span class="tag">2017 – 2021</span><h3>Asistente de Optimización y Procesos</h3><p>Trabajo operativo en planta: aprendí el flujo completo del proceso y la gestión de materiales desde adentro.</p></div>
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="sec-head"><span class="eyebrow">Formación</span><h2>Estudios y certificaciones</h2></div>
+    <div class="grid3">
+      <div class="card"><span class="tag">2022 – actualidad</span><h3>Ingeniería Industrial</h3><p>Universidad César Vallejo. Diseño de planos y distribución de planta con AutoCAD y Autodesk Inventor.</p></div>
+      <div class="card"><span class="tag">2026</span><h3>Modelamiento de Procesos con Bizagi</h3><p>Certificación en BPMN 2.0 para estandarizar métodos de trabajo y optimizar procesos.</p></div>
+      <div class="card"><span class="tag">Investigación</span><h3>Gestión energética en una empresa de envasado</h3><p>Investigación cuantitativa en equipo sobre uso de energía renovable en una planta de Chiclayo (2023 – 2024).</p></div>
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="sec-head"><span class="eyebrow">Portafolio</span><h2>Proyectos propios</h2></div>
     <div class="grid2">
       <a class="card card-link" href="{{ '/plantillas/' | relative_url }}"><span class="tag">Excel · VBA</span><h3>Plantillas para ingeniería</h3><p>Ishikawa + Pareto, Gantt con ruta crítica y un cotizador para negocios.</p><span class="meta">Ver plantillas →</span></a>
       <div class="card"><span class="tag">Emprendimiento</span><h3>SorteoYa</h3><p>Negocio de sorteos con control financiero en Excel y web propia.</p></div>
       <div class="card"><span class="tag">Python</span><h3>Automatizaciones</h3><p>Scripts que pasan cientos de PDFs a Excel y bots de Telegram que hacen cálculos por mí.</p></div>
       <div class="card"><span class="tag">Contenido</span><h3>TikTok</h3><p>Tutoriales cortos y plantillas gratis para estudiantes de ingeniería.</p></div>
     </div>
-  </div>
-  <div class="block">
-    <div class="sec-head"><span class="eyebrow">Experiencia</span><h2>Prácticas</h2><p>Supervisión de producción, estandarizando métodos de trabajo en una línea de manufactura.</p></div>
   </div>
 </section>

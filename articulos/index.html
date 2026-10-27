@@ -1,0 +1,12 @@
+---
+layout: default
+seccion: articulos
+title: Artículos de Ingeniería Industrial
+description: Guías prácticas de herramientas de Ingeniería Industrial con ejemplos peruanos y plantillas de Excel.
+---
+<section class="view wrap">
+  <div class="sec-head"><span class="eyebrow">Artículos</span><h1>Guías prácticas</h1><p class="lead">Una herramienta por artículo, explicada con un caso peruano y una plantilla para resolverlo.</p></div>
+  <div class="grid2">
+    {% for post in site.posts %}{% include post-card.html post=post nuevo=forloop.first %}{% endfor %}
+  </div>
+</section>

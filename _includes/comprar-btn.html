@@ -1,0 +1,1 @@
+{% if site.telegram != "" %}<a class="btn btn-ink" href="{{ site.telegram }}" target="_blank" rel="noopener">{{ include.texto | default: "Comprar por Yape o Plin" }} ↗</a>{% else %}<button class="btn btn-ink buy" type="button">{{ include.texto | default: "Comprar por Yape o Plin" }}</button>{% endif %}

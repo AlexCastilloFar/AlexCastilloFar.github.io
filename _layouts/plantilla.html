@@ -1,0 +1,42 @@
+---
+layout: default
+seccion: plantillas
+comprar: true
+---
+{% assign p = site.data.plantillas | where: "id", page.plantilla | first %}
+<section class="view wrap">
+  <div class="crumbs" style="margin-bottom:20px"><a href="{{ '/plantillas/' | relative_url }}">Plantillas</a> / {{ p.nombre }}</div>
+  <div class="detail">
+    <div class="stack" style="gap:28px">
+      <div class="stack" style="gap:14px">
+        <span class="tag">{{ p.tag }}</span>
+        <h1>{{ p.nombre }}</h1>
+        <p class="lead">{{ p.beneficio }}</p>
+      </div>
+      <div class="video">
+        <div class="thumb">{% include {{ p.thumb }} %}</div>
+        <span class="pill-note">Aquí irá el video de la plantilla funcionando</span>
+      </div>
+      <div class="stack" style="gap:12px">
+        <h2 style="font-size:28px">Qué incluye</h2>
+        <ul class="checks">{% for i in p.incluye %}<li>{{ i }}</li>{% endfor %}</ul>
+      </div>
+      <div class="stack" style="gap:8px">
+        <h2 style="font-size:28px">Para quién es</h2>
+        <p class="muted" style="font-size:17px">{{ p.para }}</p>
+      </div>
+      {{ content }}
+    </div>
+    <aside class="buybox">
+      <span class="price" style="font-size:36px">{{ p.precio }}<small>pago único</small></span>
+      {% include comprar-btn.html %}
+      <ol class="checks" style="font-size:15px">
+        <li>Pagas por Yape o Plin</li>
+        <li>Envías la captura al bot de Telegram</li>
+        <li>Confirmo y te llega el archivo</li>
+      </ol>
+      <div class="warn"><strong>Requisito:</strong> Excel para Windows con macros activadas. No funciona completo en Mac ni en el Excel del celular.</div>
+      {% if site.tiktok != "" %}<a class="more" href="{{ site.tiktok }}" target="_blank" rel="noopener">Prueba la versión gratis en TikTok →</a>{% endif %}
+    </aside>
+  </div>
+</section>

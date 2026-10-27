@@ -1,0 +1,8 @@
+{% assign meses = "ene,feb,mar,abr,may,jun,jul,ago,set,oct,nov,dic" | split: "," %}
+{% assign m = include.post.date | date: "%-m" | minus: 1 %}
+<a class="card card-link" href="{{ include.post.url | relative_url }}">
+  <span class="tag{% if include.nuevo %} hot{% endif %}">{{ include.post.categoria | default: "Guía" }}</span>
+  <h3>{{ include.post.title }}</h3>
+  <p>{{ include.post.resumen }}</p>
+  <span class="meta">{{ include.post.date | date: "%-d" }} {{ meses[m] }} {{ include.post.date | date: "%Y" }} · Leer guía →</span>
+</a>

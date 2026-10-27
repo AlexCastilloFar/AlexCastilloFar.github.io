@@ -1,0 +1,22 @@
+---
+layout: default
+seccion: plantillas
+comprar: true
+title: Plantillas de Excel para Ingeniería Industrial
+description: Plantillas de Excel con macros para Ishikawa, Pareto, Gantt y cotizaciones. Pago por Yape o Plin.
+---
+<section class="view wrap">
+  <div class="sec-head"><span class="eyebrow">Tienda</span><h1>Plantillas de Excel</h1><p class="lead">Hechas para quien no sabe Excel: hoja de instrucciones, botones claros y fórmulas protegidas.</p></div>
+  <div class="grid3">{% for p in site.data.plantillas %}{% include prod-card.html p=p %}{% endfor %}</div>
+  <p class="note" style="margin-top:14px">Requisito: Excel para Windows con macros activadas.</p>
+
+  <div class="block">
+    <div class="sec-head"><span class="eyebrow">Dudas</span><h2>Preguntas frecuentes</h2></div>
+    <div class="grid2">
+      <div class="card"><h3>¿Cuánto tarda en llegar?</h3><p>Apenas confirmo tu pago, el bot te envía el archivo. Normalmente en minutos.</p></div>
+      <div class="card"><h3>¿Funciona en Mac o en el celular?</h3><p>No. Las plantillas usan macros, que solo funcionan completas en Excel para Windows.</p></div>
+      <div class="card"><h3>¿Puedo probarla antes?</h3><p>Sí. En mi TikTok hay versiones gratis y recortadas de cada plantilla.</p></div>
+      <div class="card"><h3>¿Y si tengo un problema?</h3><p>Escríbeme por Telegram con una captura y lo vemos juntos.</p></div>
+    </div>
+  </div>
+</section>

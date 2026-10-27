@@ -1,0 +1,57 @@
+---
+layout: default
+seccion: inicio
+banda: true
+title: Ingeniería Industrial explicada fácil
+---
+<section class="view wrap">
+  <div class="hero">
+    <div class="stack">
+      {% assign ultimo = site.posts | first %}
+      {% if ultimo %}<a class="announce" href="{{ ultimo.url | relative_url }}"><span class="tag hot">Nuevo</span> {{ ultimo.titulo_corto | default: ultimo.title }} →</a>{% endif %}
+      <h1>Ingeniería Industrial, explicada <mark>fácil</mark></h1>
+      <p class="lead">Guías con ejemplos reales de bodegas, líneas de producción y trabajos de la U. Y plantillas de Excel que hacen el trabajo con un botón.</p>
+      <div class="ctas">
+        <a class="btn btn-ink" href="{{ '/plantillas/' | relative_url }}">Ver plantillas →</a>
+        <a class="btn btn-ghost" href="{{ '/articulos/' | relative_url }}">▶ Leer artículos</a>
+      </div>
+    </div>
+    {% include hero-shot.html %}
+  </div>
+
+  <div class="block">
+    <div class="sec-head"><span class="eyebrow">Guías gratis</span><h2>Empieza por aquí</h2><p>Herramientas de la carrera explicadas con un caso real.</p></div>
+    <div class="grid3">
+      {% for post in site.posts limit:3 %}{% include post-card.html post=post nuevo=forloop.first %}{% endfor %}
+      {% if site.posts.size < 3 %}
+      <a class="card card-link" href="{{ '/carrera/' | relative_url }}"><span class="tag">La carrera</span><h3>¿Qué es la Ingeniería Industrial?</h3><p>Qué se estudia, dónde se trabaja y las herramientas que vas a usar.</p><span class="meta">Ver la carrera →</span></a>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="sec-head"><span class="eyebrow">Ahorra horas de trabajo</span><h2>Plantillas que hacen el trabajo por ti</h2><p>Escribes tus datos en las celdas amarillas, pulsas un botón y listo.</p></div>
+    <div class="grid3">{% for p in site.data.plantillas %}{% include prod-card.html p=p %}{% endfor %}</div>
+  </div>
+
+  <div class="block">
+    <div class="sec-head"><span class="eyebrow">Así de simple</span><h2>Cómo comprar</h2><p>Sin tarjetas ni registros. Todo por Yape o Plin.</p></div>
+    <div class="steps">
+      <div class="step"><span class="k">1</span><h3>Elige tu plantilla</h3><p>Mira el video y revisa qué incluye antes de comprar.</p></div>
+      <div class="step"><span class="k">2</span><h3>Paga por Yape o Plin</h3><p>Envía la captura del pago al bot de Telegram.</p></div>
+      <div class="step"><span class="k">3</span><h3>Recibe el archivo</h3><p>Confirmo tu pago y el bot te envía la plantilla.</p></div>
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="mini-me">
+      {% include foto.html %}
+      <div class="stack" style="gap:8px">
+        <span class="eyebrow">Quién está detrás</span>
+        <h3 style="font-size:24px;color:var(--navy)">Hola, soy Alex</h3>
+        <p class="muted">Estudiante de Ingeniería Industrial en Lima, enfocado en análisis de datos. Hago estas plantillas para que no pierdas horas en lo que Excel puede hacer solo.</p>
+        <a class="more" href="{{ '/sobre-mi/' | relative_url }}">Conóceme →</a>
+      </div>
+    </div>
+  </div>
+</section>

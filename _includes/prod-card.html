@@ -1,0 +1,7 @@
+<a class="card prod card-link" href="{{ '/plantillas/' | append: include.p.id | append: '/' | relative_url }}">
+  <div class="thumb">{% include {{ include.p.thumb }} %}</div>
+  <span class="tag">{{ include.p.tag }}</span>
+  <h3>{{ include.p.nombre }}</h3>
+  <p>{{ include.p.desc }}</p>
+  <div class="row"><span class="price">{{ include.p.precio }}<small>pago único</small></span><span class="btn btn-ink">Ver detalles</span></div>
+</a>

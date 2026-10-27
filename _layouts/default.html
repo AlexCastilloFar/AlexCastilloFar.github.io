@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="{{ site.lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="color-scheme" content="light">
+  {% seo %}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%2300e05c'/%3E%3Cpath d='M9 16.5l4.5 4.5L23 11.5' stroke='%23162136' stroke-width='3.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+</head>
+<body>
+{% assign seccion = page.seccion | default: "" %}
+<header>
+  <div class="wrap bar">
+    <a class="logo" href="{{ '/' | relative_url }}"><i></i>{{ site.title }}</a>
+    <nav class="nav" aria-label="Secciones">
+      <a href="{{ '/' | relative_url }}" {% if seccion == "inicio" %}aria-current="page"{% endif %}>Inicio</a>
+      <a href="{{ '/carrera/' | relative_url }}" {% if seccion == "carrera" %}aria-current="page"{% endif %}>La carrera</a>
+      <a href="{{ '/articulos/' | relative_url }}" {% if seccion == "articulos" %}aria-current="page"{% endif %}>Artículos</a>
+      <a href="{{ '/plantillas/' | relative_url }}" {% if seccion == "plantillas" %}aria-current="page"{% endif %}>Plantillas</a>
+      <a href="{{ '/sobre-mi/' | relative_url }}" {% if seccion == "sobre-mi" %}aria-current="page"{% endif %}>Sobre mí</a>
+    </nav>
+    <a class="btn btn-ink" href="{{ '/plantillas/' | relative_url }}">Ver plantillas →</a>
+  </div>
+</header>
+
+<main>
+{{ content }}
+</main>
+
+{% if page.banda %}
+<section class="band" aria-label="Llamado final">
+  <span class="shape s1"></span><span class="shape s2"></span><span class="shape s3"></span><span class="shape s4"></span>
+  <div class="wrap">
+    <span class="eyebrow" style="color:#aab4c8">Pago por Yape o Plin</span>
+    <h2>Deja de hacer tus diagramas a mano</h2>
+    <p>Elige tu plantilla, paga desde tu celular y recíbela por Telegram en minutos.</p>
+    <a class="btn" href="{{ '/plantillas/' | relative_url }}">Ver plantillas →</a>
+  </div>
+</section>
+{% endif %}
+
+<footer>
+  <div class="wrap foot">
+    <div class="stack" style="gap:8px">
+      <a class="logo" href="{{ '/' | relative_url }}"><i></i>{{ site.title }}</a>
+      <span>Pagos por Yape y Plin, confirmados a mano.</span>
+      {% if site.correo != "" %}<span>Contacto: {{ site.correo }}</span>{% endif %}
+    </div>
+    <nav aria-label="Pie">
+      <a href="{{ '/carrera/' | relative_url }}">La carrera</a>
+      <a href="{{ '/articulos/' | relative_url }}">Artículos</a>
+      <a href="{{ '/plantillas/' | relative_url }}">Plantillas</a>
+      <a href="{{ '/sobre-mi/' | relative_url }}">Sobre mí</a>
+      {% if site.tiktok != "" %}<a href="{{ site.tiktok }}" target="_blank" rel="noopener">TikTok</a>{% endif %}
+      {% if site.telegram != "" %}<a href="{{ site.telegram }}" target="_blank" rel="noopener">Telegram</a>{% endif %}
+    </nav>
+  </div>
+</footer>
+
+{% if page.comprar %}
+{% if site.telegram != "" %}<a class="float" href="{{ site.telegram }}" target="_blank" rel="noopener">Comprar por Telegram ↗</a>{% else %}<button class="float buy" type="button">Comprar por Telegram</button>{% endif %}
+{% endif %}
+<div class="toast" id="toast" hidden>El bot de Telegram estará disponible muy pronto.</div>
+<script>
+  // Aviso mientras el bot de Telegram no exista (cuando pongas el enlace en _config.yml, los botones lo abren directo)
+  (function(){var t=document.getElementById("toast"),k;document.addEventListener("click",function(e){if(e.target.closest(".buy")){t.hidden=false;clearTimeout(k);k=setTimeout(function(){t.hidden=true},2500)}})})();
+</script>
+</body>
+</html>

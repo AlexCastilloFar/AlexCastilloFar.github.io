@@ -1,0 +1,2 @@
+{% assign foto = site.static_files | where: "path", "/assets/img/alex.jpg" | first %}
+<div class="photo {{ include.clase }}">{% if foto %}<img src="{{ '/assets/img/alex.jpg' | relative_url }}" alt="Foto de Alex">{% else %}Aquí va tu foto{% endif %}</div>

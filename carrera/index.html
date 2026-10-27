@@ -1,0 +1,42 @@
+---
+layout: default
+seccion: carrera
+title: ¿Qué es la Ingeniería Industrial?
+description: Qué es la Ingeniería Industrial, qué se estudia, dónde se trabaja y sus herramientas clave, explicado con ejemplos peruanos.
+---
+<section class="view wrap">
+  <div class="article stack">
+    <span class="tag">La carrera</span>
+    <h1>¿Qué es la Ingeniería Industrial?</h1>
+    <div class="answer"><strong>Respuesta corta:</strong> es la ingeniería que mejora cómo se hacen las cosas. Hace que una bodega no se quede sin stock, que una línea de envasado deje de perder botellas o que un pedido llegue a tiempo, gastando menos.</div>
+  </div>
+
+  <div class="block" style="margin-top:72px">
+    <div class="sec-head"><span class="eyebrow">Qué se estudia</span><h2>Las áreas de la carrera</h2></div>
+    <div class="grid3">
+      <div class="card"><h3>Procesos</h3><p>Cómo se hace un producto o servicio, paso a paso, y cómo hacerlo más rápido.</p></div>
+      <div class="card"><h3>Calidad</h3><p>Medir fallas, encontrar sus causas y evitar que se repitan.</p></div>
+      <div class="card"><h3>Logística</h3><p>Inventarios, almacenes y que lo correcto llegue a tiempo.</p></div>
+      <div class="card"><h3>Costos</h3><p>Cuánto cuesta producir y dónde se puede ahorrar.</p></div>
+      <div class="card"><h3>Seguridad</h3><p>Trabajar sin accidentes y cumplir la normativa.</p></div>
+      <div class="card"><h3>Datos</h3><p>Excel, Power BI y estadística para decidir con números.</p></div>
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="sec-head"><span class="eyebrow">Herramientas clave</span><h2>Lo que vas a usar en la U y en el trabajo</h2></div>
+    <div class="grid3">
+      {% for h in site.data.herramientas %}
+        {% if h.articulo %}
+        <a class="card card-link" href="{{ h.articulo | relative_url }}"><span class="tag hot">{{ h.tag }}</span><h3>{{ h.nombre }}</h3><p>{{ h.desc }}</p><span class="meta">Leer guía →</span></a>
+        {% else %}
+        <div class="card"><span class="tag">{{ h.tag }}</span><h3>{{ h.nombre }}</h3><p>{{ h.desc }}</p></div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="sec-head"><span class="eyebrow">Campo laboral</span><h2>¿Dónde trabaja un ingeniero industrial?</h2><p>Producción, logística, calidad, seguridad, consultoría y, cada vez más, análisis de datos. En fábricas, almacenes, bancos, retail y emprendimientos propios.</p></div>
+  </div>
+</section>

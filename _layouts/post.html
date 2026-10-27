@@ -1,0 +1,30 @@
+---
+layout: default
+seccion: articulos
+---
+{% assign meses = "ene,feb,mar,abr,may,jun,jul,ago,set,oct,nov,dic" | split: "," %}
+{% assign m = page.date | date: "%-m" | minus: 1 %}
+{% assign palabras = content | number_of_words %}
+{% assign minutos = palabras | divided_by: 200 | plus: 1 %}
+<section class="view wrap">
+  <article class="article stack">
+    <div class="crumbs"><a href="{{ '/articulos/' | relative_url }}">Artículos</a> / {{ page.categoria | default: "Guía" }}</div>
+    <h1>{{ page.title }}</h1>
+    <div class="byline"><span class="av">A</span><span>Por {{ site.author }} · {{ page.date | date: "%-d" }} {{ meses[m] }} {{ page.date | date: "%Y" }} · {{ minutos }} min de lectura</span></div>
+    {% if page.respuesta %}<div class="answer"><strong>En pocas palabras:</strong> {{ page.respuesta }}</div>{% endif %}
+    <div class="prose">
+{{ content }}
+    </div>
+    {% if page.plantilla %}
+      {% assign p = site.data.plantillas | where: "id", page.plantilla | first %}
+      {% if p %}
+      <div class="cta-box">
+        <span class="tag hot" style="width:max-content">Plantilla</span>
+        <h3>¿No quieres hacerlo a mano?</h3>
+        <p>La plantilla {{ p.nombre }}: {{ p.desc }}</p>
+        <a class="btn" href="{{ '/plantillas/' | append: p.id | append: '/' | relative_url }}">Ver plantilla →</a>
+      </div>
+      {% endif %}
+    {% endif %}
+  </article>
+</section>

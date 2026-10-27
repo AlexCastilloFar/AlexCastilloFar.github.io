@@ -1,0 +1,44 @@
+# ============================================================
+# TUS PLANTILLAS — para cambiar un precio o un texto, edítalo aquí
+# ============================================================
+- id: ishikawa-pareto
+  nombre: Ishikawa + Pareto
+  tag: Calidad
+  precio: "S/ 19"
+  desc: Dibuja la espina de pescado y el Pareto, y te dice qué causas atacar primero.
+  beneficio: Encuentra la causa raíz y prioriza qué atacar, con un botón.
+  thumb: thumb-pareto.html
+  incluye:
+    - Hoja de instrucciones paso a paso
+    - Diagrama de Ishikawa (6M) que se dibuja solo
+    - Diagrama de Pareto con línea del 80% y conclusión automática
+    - Botón para pasar las causas del Ishikawa al Pareto
+    - Ejemplo resuelto para practicar
+  para: Estudiantes con trabajos de calidad, supervisores y pequeños negocios que quieren reducir fallas.
+- id: gantt
+  nombre: Gantt con ruta crítica
+  tag: Planeamiento
+  precio: "S/ 19"
+  desc: Calendario automático, % de avance, ruta crítica y dashboard del proyecto.
+  beneficio: Tu cronograma con ruta crítica en 1 clic.
+  thumb: thumb-gantt.html
+  incluye:
+    - Calendario con días de la semana que se dibuja solo
+    - Predecesores y fechas calculadas automáticamente
+    - Botón de ruta crítica (ver / ocultar)
+    - Dashboard con avance del proyecto
+    - Hasta 100 tareas
+  para: Estudiantes con proyectos de curso, practicantes y emprendedores que organizan un proyecto.
+- id: cotizador
+  nombre: Cotizador
+  tag: Negocios
+  precio: "S/ 15"
+  desc: Cotizaciones profesionales en PDF con tus productos y clientes guardados.
+  beneficio: Cotiza en segundos y envía un PDF que da confianza.
+  thumb: thumb-coti.html
+  incluye:
+    - Lista de productos y clientes guardados
+    - Cotización con totales calculados
+    - Botón para guardar en PDF e imprimir
+    - Numeración automática
+  para: Bodegas, librerías, ferreterías y cualquier negocio que cotiza a diario.

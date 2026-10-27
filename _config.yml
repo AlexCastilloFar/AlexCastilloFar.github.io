@@ -1,0 +1,30 @@
+# ============================================================
+# CONFIGURACIÓN DE TU WEB (edita solo los valores de la derecha)
+# ============================================================
+title: Alex Industrial
+description: Herramientas de Ingeniería Industrial explicadas fácil y plantillas de Excel listas para usar.
+author: Alex
+lang: es
+url: "https://alexcastillofar.github.io"
+baseurl: ""
+
+# Tus enlaces (déjalos vacíos "" hasta tenerlos)
+telegram: ""        # ej: "https://t.me/TuBot"
+tiktok: ""          # ej: "https://www.tiktok.com/@tuusuario"
+correo: ""          # ej: "tucorreo@gmail.com"
+
+# No tocar lo de abajo
+permalink: /articulos/:title/
+timezone: America/Lima
+markdown: kramdown
+kramdown:
+  input: GFM
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+exclude:
+  - README.md
+  - PLANTILLA_ARTICULO.md
+defaults:
+  - scope: { path: "", type: "posts" }
+    values: { layout: post, comprar: true }

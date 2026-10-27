@@ -12,6 +12,7 @@ baseurl: ""
 telegram: ""        # ej: "https://t.me/TuBot"
 tiktok: ""          # ej: "https://www.tiktok.com/@tuusuario"
 correo: ""          # ej: "tucorreo@gmail.com"
+linkedin: "https://www.linkedin.com/in/alexw-castillo-farfan/"
 
 # No tocar lo de abajo
 permalink: /articulos/:title/

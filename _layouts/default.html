@@ -56,6 +56,7 @@
       <a href="{{ '/articulos/' | relative_url }}">Artículos</a>
       <a href="{{ '/plantillas/' | relative_url }}">Plantillas</a>
       <a href="{{ '/sobre-mi/' | relative_url }}">Sobre mí</a>
+      {% if site.linkedin and site.linkedin != "" %}<a href="{{ site.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>{% endif %}
       {% if site.tiktok != "" %}<a href="{{ site.tiktok }}" target="_blank" rel="noopener">TikTok</a>{% endif %}
       {% if site.telegram != "" %}<a href="{{ site.telegram }}" target="_blank" rel="noopener">Telegram</a>{% endif %}
     </nav>

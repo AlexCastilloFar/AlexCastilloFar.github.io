@@ -1,2 +1,1 @@
-{% assign foto = site.static_files | where: "path", "/assets/img/alex.jpg" | first %}
-<div class="photo {{ include.clase }}">{% if foto %}<img src="{{ '/assets/img/alex.jpg' | relative_url }}" alt="Foto de Alex">{% else %}Aquí va tu foto{% endif %}</div>
+<div class="photo {{ include.clase }}"><img src="{{ '/assets/img/alex.jpg' | relative_url }}" alt="Foto de Alex Castillo" width="300" height="300" onerror="this.replaceWith(document.createTextNode('Aquí va tu foto'))"></div>

@@ -29,6 +29,12 @@ Blog de Ingeniería Industrial + tienda de plantillas de Excel. Web hecha con Je
 - `- algo` crea una lista con viñetas; `1. algo` crea una lista numerada.
 - Para una imagen: súbela a `assets/img/` y escribe `![descripción](/assets/img/nombre.png)`.
 
+## Cómo agregar un curso o una sesión
+- **Nueva sesión:** abre el archivo del curso en `_cursos/`, copia un bloque `- titulo / video` y pega el enlace de YouTube (sirve cualquier formato: watch, live o youtu.be).
+- **Curso nuevo:** en `_cursos/` crea `pit000-nombre-del-curso.md` y pega el contenido de `PLANTILLA_CURSO.md`.
+- **Apuntes en PDF:** sube el PDF a `assets/pdf/` y escribe su ruta en el campo `pdf` del curso.
+- **Cursos en curso:** se editan en `_data/cursos_en_curso.yml`.
+
 ## Otros cambios fáciles
 - **Precios y textos de las plantillas:** `_data/plantillas.yml`
 - **Enlaces de Telegram, TikTok y correo:** `_config.yml`

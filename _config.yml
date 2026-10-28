@@ -16,6 +16,10 @@ linkedin: "https://www.linkedin.com/in/alexw-castillo-farfan/"
 
 # No tocar lo de abajo
 permalink: /articulos/:title/
+collections:
+  cursos:
+    output: true
+    permalink: /cursos/:name/
 timezone: America/Lima
 markdown: kramdown
 kramdown:
@@ -27,6 +31,9 @@ exclude:
   - README.md
   - PLANTILLA_ARTICULO.md
   - CLAUDE.md
+  - PLANTILLA_CURSO.md
 defaults:
   - scope: { path: "", type: "posts" }
     values: { layout: post, comprar: true }
+  - scope: { path: "", type: "cursos" }
+    values: { layout: curso }

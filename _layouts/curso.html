@@ -1,0 +1,63 @@
+---
+layout: default
+seccion: cursos
+---
+<section class="view wrap">
+  <div class="crumbs" style="margin-bottom:20px"><a href="{{ '/cursos/' | relative_url }}">Cursos</a> / {{ page.area }}</div>
+  <div class="article stack" style="max-width:820px">
+    <div class="chips"><span class="tag hot">{{ page.codigo }}</span><span class="tag">{{ page.area }}</span>{% if page.sesiones.size > 0 %}<span class="tag">{{ page.sesiones.size }} {% if page.sesiones.size == 1 %}sesión{% else %}sesiones{% endif %}</span>{% endif %}</div>
+    <h1>{{ page.title }}</h1>
+    <p class="lead">{{ page.resumen }}</p>
+    <div class="warn">Curso gratuito del Programa de Iniciación Tecnológica (PIT) de la UNI. Estos son mis apuntes personales: <strong>no es una página oficial</strong>.</div>
+    {{ content }}
+  </div>
+
+  <div class="block" style="margin-top:56px">
+    <div class="sec-head"><span class="eyebrow">Clases grabadas</span><h2>Sesiones del curso</h2></div>
+    {% if page.sesiones.size > 0 %}
+    <div class="grid2">
+      {% for s in page.sesiones %}
+      {% capture vid %}{% include yt-id.html url=s.video %}{% endcapture %}{% assign vid = vid | strip %}
+      <div class="card ses">
+        <button class="yt" type="button" data-id="{{ vid }}" aria-label="Reproducir {{ s.titulo }}">
+          <img src="https://i.ytimg.com/vi/{{ vid }}/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">
+          <span class="play" aria-hidden="true">▶</span>
+        </button>
+        <div class="row" style="margin-top:4px"><h3 style="font-size:18px">{{ s.titulo }}</h3><a class="more" href="https://www.youtube.com/watch?v={{ vid }}" target="_blank" rel="noopener">Ver en YouTube ↗</a></div>
+      </div>
+      {% endfor %}
+    </div>
+    {% else %}
+    <div class="card"><p>Estoy organizando los enlaces de las clases de este curso. Mientras tanto, puedes llevarlo gratis inscribiéndote en la UNI.</p></div>
+    {% endif %}
+  </div>
+
+  <div class="block">
+    <div class="grid2">
+      {% if page.pdf != "" %}
+      <div class="card"><span class="eyebrow">Mis apuntes</span><h3>Resumen del curso en PDF</h3><p>Lo más importante de todas las sesiones, explicado con mis palabras y con ejemplos.</p><a class="btn btn-ink" style="align-self:flex-start" href="{{ page.pdf | relative_url }}" target="_blank" rel="noopener">Descargar PDF ↓</a></div>
+      {% endif %}
+      <div class="card"><span class="eyebrow">¿Quieres el certificado?</span><h3>Llévalo gratis en la UNI</h3><p>Si tienes correo institucional (universidad, instituto o sector público), inscríbete en la plataforma oficial y obtén el certificado.</p><a class="btn btn-ink" style="align-self:flex-start" href="https://cursosgratuitos.uni.edu.pe" target="_blank" rel="noopener">Ir a la inscripción ↗</a></div>
+      {% if page.certificado != "" %}
+      <div class="card"><span class="eyebrow">Certificado</span><h3>Curso aprobado</h3><p>Mi certificado de este curso.</p><a class="more" href="{{ page.certificado | relative_url }}" target="_blank" rel="noopener">Ver certificado ↗</a></div>
+      {% endif %}
+    </div>
+  </div>
+
+  {% if page.plantilla and page.plantilla != "" %}
+  {% assign p = site.data.plantillas | where: "id", page.plantilla | first %}
+  {% if p %}
+  <div class="block" style="max-width:820px">
+    <div class="cta-box">
+      <span class="tag hot" style="width:max-content">Plantilla</span>
+      <h3>Pon en práctica lo aprendido</h3>
+      <p>La plantilla {{ p.nombre }}: {{ p.desc }}</p>
+      <a class="btn" href="{{ '/plantillas/' | append: p.id | append: '/' | relative_url }}">Ver plantilla →</a>
+    </div>
+  </div>
+  {% endif %}{% endif %}
+</section>
+<script>
+  // Carga el video solo cuando lo pulsas (la página carga más rápido)
+  document.addEventListener("click",function(e){var b=e.target.closest(".yt");if(!b)return;var f=document.createElement("iframe");f.src="https://www.youtube-nocookie.com/embed/"+b.dataset.id+"?autoplay=1&rel=0";f.title="Video de la clase";f.allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";f.allowFullscreen=true;b.replaceWith(f)});
+</script>

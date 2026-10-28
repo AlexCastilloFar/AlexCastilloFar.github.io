@@ -21,6 +21,7 @@
       <a href="{{ '/' | relative_url }}" {% if seccion == "inicio" %}aria-current="page"{% endif %}>Inicio</a>
       <a href="{{ '/carrera/' | relative_url }}" {% if seccion == "carrera" %}aria-current="page"{% endif %}>La carrera</a>
       <a href="{{ '/articulos/' | relative_url }}" {% if seccion == "articulos" %}aria-current="page"{% endif %}>Artículos</a>
+      <a href="{{ '/cursos/' | relative_url }}" {% if seccion == "cursos" %}aria-current="page"{% endif %}>Cursos</a>
       <a href="{{ '/plantillas/' | relative_url }}" {% if seccion == "plantillas" %}aria-current="page"{% endif %}>Plantillas</a>
       <a href="{{ '/sobre-mi/' | relative_url }}" {% if seccion == "sobre-mi" %}aria-current="page"{% endif %}>Sobre mí</a>
     </nav>
@@ -54,6 +55,7 @@
     <nav aria-label="Pie">
       <a href="{{ '/carrera/' | relative_url }}">La carrera</a>
       <a href="{{ '/articulos/' | relative_url }}">Artículos</a>
+      <a href="{{ '/cursos/' | relative_url }}">Cursos</a>
       <a href="{{ '/plantillas/' | relative_url }}">Plantillas</a>
       <a href="{{ '/sobre-mi/' | relative_url }}">Sobre mí</a>
       {% if site.linkedin and site.linkedin != "" %}<a href="{{ site.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>{% endif %}

@@ -11,7 +11,7 @@ description: Cursos gratuitos del PIT de la UNI (Power BI, SQL, Python, Lean, Si
   <div class="grid3">
     {% for c in cursos %}
     <a class="card card-link" href="{{ c.url | relative_url }}">
-      <div class="chips"><span class="tag hot">{{ c.codigo }}</span><span class="tag">{{ c.area }}</span></div>
+      <span class="tag">{{ c.area }}</span>
       <h3>{{ c.title }}</h3>
       <p>{{ c.resumen | truncate: 110 }}</p>
       <span class="meta">{% if c.sesiones.size > 0 %}{{ c.sesiones.size }} {% if c.sesiones.size == 1 %}sesión{% else %}sesiones{% endif %}{% else %}Ver curso{% endif %}{% if c.pdf != "" %} · Con apuntes PDF{% endif %} →</span>

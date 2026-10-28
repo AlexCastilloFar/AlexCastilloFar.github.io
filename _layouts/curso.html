@@ -5,7 +5,7 @@ seccion: cursos
 <section class="view wrap">
   <div class="crumbs" style="margin-bottom:20px"><a href="{{ '/cursos/' | relative_url }}">Cursos</a> / {{ page.area }}</div>
   <div class="article stack" style="max-width:820px">
-    <div class="chips"><span class="tag hot">{{ page.codigo }}</span><span class="tag">{{ page.area }}</span>{% if page.sesiones.size > 0 %}<span class="tag">{{ page.sesiones.size }} {% if page.sesiones.size == 1 %}sesión{% else %}sesiones{% endif %}</span>{% endif %}</div>
+    <div class="chips"><span class="tag">{{ page.area }}</span>{% if page.sesiones.size > 0 %}<span class="tag">{{ page.sesiones.size }} {% if page.sesiones.size == 1 %}sesión{% else %}sesiones{% endif %}</span>{% endif %}</div>
     <h1>{{ page.title }}</h1>
     <p class="lead">{{ page.resumen }}</p>
     <div class="warn">Curso gratuito del Programa de Iniciación Tecnológica (PIT) de la UNI. Estos son mis apuntes personales: <strong>no es una página oficial</strong>.</div>

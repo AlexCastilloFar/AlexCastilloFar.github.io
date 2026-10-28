@@ -31,7 +31,7 @@ Blog de Ingeniería Industrial + tienda de plantillas de Excel. Web hecha con Je
 
 ## Cómo agregar un curso o una sesión
 - **Nueva sesión:** abre el archivo del curso en `_cursos/`, copia un bloque `- titulo / video` y pega el enlace de YouTube (sirve cualquier enlace de YouTube).
-- **Curso nuevo:** en `_cursos/` crea `pit000-nombre-del-curso.md` y pega el contenido de `PLANTILLA_CURSO.md`.
+- **Curso nuevo:** en `_cursos/` crea `nombre-del-curso.md` y pega el contenido de `PLANTILLA_CURSO.md`.
 - **Apuntes en PDF:** sube el PDF a `assets/pdf/` y escribe su ruta en el campo `pdf` del curso.
 - **Cursos en curso:** se editan en `_data/cursos_en_curso.yml`.
 

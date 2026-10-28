@@ -1,5 +1,5 @@
 ---
-codigo: PIT443 · PIT547
+codigo: PIT443
 title: "Business Process Management (BPM) con Bizagi + IA"
 area: Procesos
 orden: 10

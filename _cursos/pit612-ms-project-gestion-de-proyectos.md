@@ -1,5 +1,5 @@
 ---
-codigo: PIT612 · PIT518
+codigo: PIT612
 title: "MS Project aplicado a la Gestión de Proyectos"
 area: Proyectos
 orden: 11

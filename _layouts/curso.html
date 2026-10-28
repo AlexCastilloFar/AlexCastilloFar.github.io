@@ -15,16 +15,10 @@ seccion: cursos
   <div class="block" style="margin-top:56px">
     <div class="sec-head"><span class="eyebrow">Clases grabadas</span><h2>Sesiones del curso</h2></div>
     {% if page.sesiones.size > 0 %}
-    <div class="grid2">
+    <p class="muted" style="margin-bottom:16px">Cada botón abre la clase grabada en YouTube.</p>
+    <div class="sesiones">
       {% for s in page.sesiones %}
-      {% capture vid %}{% include yt-id.html url=s.video %}{% endcapture %}{% assign vid = vid | strip %}
-      <div class="card ses">
-        <button class="yt" type="button" data-id="{{ vid }}" aria-label="Reproducir {{ s.titulo }}">
-          <img src="https://i.ytimg.com/vi/{{ vid }}/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">
-          <span class="play" aria-hidden="true">▶</span>
-        </button>
-        <div class="row" style="margin-top:4px"><h3 style="font-size:18px">{{ s.titulo }}</h3><a class="more" href="https://www.youtube.com/watch?v={{ vid }}" target="_blank" rel="noopener">Ver en YouTube ↗</a></div>
-      </div>
+      <a class="ses-btn" href="{{ s.video | strip }}" target="_blank" rel="noopener"><span class="ses-play" aria-hidden="true">▶</span>{{ s.titulo }}</a>
       {% endfor %}
     </div>
     {% else %}
@@ -57,7 +51,3 @@ seccion: cursos
   </div>
   {% endif %}{% endif %}
 </section>
-<script>
-  // Carga el video solo cuando lo pulsas (la página carga más rápido)
-  document.addEventListener("click",function(e){var b=e.target.closest(".yt");if(!b)return;var f=document.createElement("iframe");f.src="https://www.youtube-nocookie.com/embed/"+b.dataset.id+"?autoplay=1&rel=0";f.title="Video de la clase";f.allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";f.allowFullscreen=true;b.replaceWith(f)});
-</script>

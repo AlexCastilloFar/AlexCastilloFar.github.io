@@ -189,6 +189,11 @@ section.view{padding-block:64px 96px}
 .me .photo{width:160px;height:160px}
 
 /* ---- Cursos ---- */
+.sesiones{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
+.ses-btn{display:flex;align-items:center;gap:10px;background:var(--frost);color:var(--navy);text-decoration:none;font:600 16px/1 var(--f-ui);padding:16px 18px;border-radius:9999px;border:1px solid var(--line);transition:background .15s,border-color .15s}
+.ses-btn:hover{background:var(--paper);border-color:var(--signal)}
+.ses-btn:focus-visible{outline:2px solid var(--link);outline-offset:2px}
+.ses-play{width:28px;height:28px;border-radius:50%;background:var(--signal);color:var(--on-signal);display:grid;place-items:center;font-size:11px;flex:none}
 .ses{padding:16px;gap:10px}
 .yt,.ses iframe{position:relative;display:block;width:100%;aspect-ratio:16/9;max-width:100%;border:0;border-radius:12px;overflow:hidden;background:#162136;cursor:pointer;padding:0}
 .yt img{width:100%;height:100%;object-fit:cover;display:block;opacity:.92}

@@ -19,7 +19,7 @@
     <a class="logo" href="{{ '/' | relative_url }}"><i></i>{{ site.title }}</a>
     <nav class="nav" aria-label="Secciones">
       <a href="{{ '/' | relative_url }}" {% if seccion == "inicio" %}aria-current="page"{% endif %}>Inicio</a>
-      <a href="{{ '/carrera/' | relative_url }}" {% if seccion == "carrera" %}aria-current="page"{% endif %}>La carrera</a>
+      <a href="{{ '/ingenieria-industrial/' | relative_url }}" {% if seccion == "ingenieria" %}aria-current="page"{% endif %}>Ingeniería Industrial</a>
       <a href="{{ '/articulos/' | relative_url }}" {% if seccion == "articulos" %}aria-current="page"{% endif %}>Artículos</a>
       <a href="{{ '/cursos/' | relative_url }}" {% if seccion == "cursos" %}aria-current="page"{% endif %}>Cursos</a>
       <a href="{{ '/plantillas/' | relative_url }}" {% if seccion == "plantillas" %}aria-current="page"{% endif %}>Plantillas</a>
@@ -53,7 +53,7 @@
       {% if site.correo != "" %}<span>Contacto: {{ site.correo }}</span>{% endif %}
     </div>
     <nav aria-label="Pie">
-      <a href="{{ '/carrera/' | relative_url }}">La carrera</a>
+      <a href="{{ '/ingenieria-industrial/' | relative_url }}">Ingeniería Industrial</a>
       <a href="{{ '/articulos/' | relative_url }}">Artículos</a>
       <a href="{{ '/cursos/' | relative_url }}">Cursos</a>
       <a href="{{ '/plantillas/' | relative_url }}">Plantillas</a>

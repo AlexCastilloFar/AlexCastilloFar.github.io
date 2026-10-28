@@ -39,4 +39,4 @@ Blog de Ingeniería Industrial + tienda de plantillas de Excel. Web hecha con Je
 - **Precios y textos de las plantillas:** `_data/plantillas.yml`
 - **Enlaces de Telegram, TikTok y correo:** `_config.yml`
 - **Tu foto:** sube una imagen cuadrada con el nombre `alex.jpg` a `assets/img/`
-- **Herramientas de "La carrera":** `_data/herramientas.yml`
+- **Herramientas de la sección "Ingeniería Industrial":** `_data/herramientas.yml`

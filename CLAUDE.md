@@ -19,10 +19,10 @@ Web personal de **Alex**: estudiante de Ingeniería Industrial (UCV, Lima) con m
 ## Estructura
 - `_config.yml`: título y enlaces (telegram, tiktok, correo, linkedin).
 - `_data/plantillas.yml`: plantillas de la tienda (precios de ejemplo; faltan los finales).
-- `_data/herramientas.yml`: herramientas de "La carrera".
+- `_data/herramientas.yml`: herramientas de "Ingeniería Industrial".
 - `_posts/`: artículos (molde en `PLANTILLA_ARTICULO.md`; el campo `plantilla` enlaza la plantilla del final).
 - `_layouts/` (default, post, plantilla), `_includes/` (tarjetas, miniaturas, foto), `assets/css/style.css`, `assets/img/alex.jpg`.
-- Páginas: `index.html`, `carrera/`, `articulos/`, `plantillas/` (detalle por plantilla), `sobre-mi/`.
+- Páginas: `index.html`, `ingenieria-industrial/`, `articulos/`, `plantillas/` (detalle por plantilla), `sobre-mi/`.
 
 ## Artículos
 Claros, con un ejemplo peruano real (bodega, línea de producción, trabajo de la U), pensados para Google (título que la gente busca, respuesta directa al inicio, subtítulos) y con la plantilla relacionada al final.

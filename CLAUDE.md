@@ -13,7 +13,7 @@ Web personal de **Alex**: estudiante de Ingeniería Industrial (UCV, Lima) con m
 
 ## Decisiones tomadas
 - Todo gratis, sin herramientas de pago. Cobro por Yape o Plin, confirmado a mano. Bot de Telegram (pendiente) en Apps Script con puente en Cloudflare Workers.
-- Estilo inspirado en Wrike, **siempre con fondo blanco** (sin modo oscuro): azul marino `#162136` para los textos, verde `#00e05c` para los botones (con texto azul marino), tarjetas `#f2f5fa` con esquinas de 20px, botones en forma de pastilla, letra DM Sans. La única zona azul marino es la banda final del inicio.
+- Estilo inspirado en Wrike, **siempre con fondo blanco** (sin modo oscuro): azul marino `#162136` para los textos, verde `#00e05c` para los botones (con texto azul marino), tarjetas `#f2f5fa` con esquinas de 20px, botones en forma de pastilla, letra DM Sans. La única zona azul marino es la banda final del inicio. Texto secundario `#4a5a78` y enlaces `#0062b8` (contraste AA). Íconos SVG propios en `_includes/icon.html` (y `icon-area.html` por área), menú desplegable con botón en celular, portada con fondo de cuadrícula tipo Excel y cifras (+8 años, cursos, plantillas). Revisión UX hecha con la skill UI UX Pro Max (sus estilos sugeridos no encajaban; se usaron solo sus reglas de UX).
 - Publicar debe ser fácil desde el celular, sin tocar código: se edita en archivos de texto (`_posts`, `_data`, `_config.yml`).
 
 ## Estructura

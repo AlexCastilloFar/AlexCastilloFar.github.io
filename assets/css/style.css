@@ -300,5 +300,4 @@ footer{padding-block:56px 0}
 .logo,.bar-cta{white-space:nowrap}
 @media (max-width:440px){.bar-cta{display:none}}
 
-.menu-btn{margin-left:auto}
-.bar-cta + .menu-btn{margin-left:0}
+@media (max-width:440px){.menu-btn{margin-left:auto}}

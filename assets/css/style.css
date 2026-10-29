@@ -201,3 +201,94 @@ section.view{padding-block:64px 96px}
 .yt:hover .play{filter:brightness(.95)}
 .yt:focus-visible{outline:2px solid var(--link);outline-offset:2px}
 .chips .tag{align-self:auto}
+
+/* =========================================================
+   MEJORAS DE DISEÑO (revisión UX con UI UX Pro Max)
+   ========================================================= */
+/* Contraste AA: texto secundario y enlaces más oscuros (antes 4.2:1 sobre tarjetas) */
+:root{--steel:#4a5a78;--link:#0062b8}
+
+/* Íconos */
+.ico{width:22px;height:22px;flex:none}
+.ico-sm{width:18px;height:18px}
+.ico-box{width:44px;height:44px;border-radius:14px;background:var(--paper);border:1px solid var(--line);color:var(--navy);display:inline-grid;place-items:center;flex:none}
+.ico-box .ico{width:22px;height:22px}
+.ico-box.ico-lg{width:52px;height:52px;border-radius:16px;background:var(--signal);border:0;color:var(--on-signal)}
+.ico-box.ico-lg .ico{width:26px;height:26px}
+.card-top{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.card-top .tag{align-self:center}
+
+/* Tarjetas: respuesta clara al pasar el mouse o al tocar */
+.card-link{cursor:pointer;border:1px solid transparent;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.card-link:hover{transform:translateY(-3px);box-shadow:0 18px 36px -24px rgba(22,33,54,.45);border-color:var(--line)}
+.card-link:active{transform:translateY(-1px)}
+.card-link .meta{font-weight:600}
+.pilar h3{font-size:22px;color:var(--navy)}
+
+/* Hero con fondo de cuadrícula tipo hoja de Excel */
+.hero-band{position:relative;overflow:hidden;background:linear-gradient(180deg,#f7f9fc 0%,var(--paper) 100%);border-bottom:1px solid var(--line)}
+.hero-band::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:linear-gradient(to right,rgba(22,33,54,.06) 1px,transparent 1px),linear-gradient(to bottom,rgba(22,33,54,.06) 1px,transparent 1px);
+  background-size:88px 30px;
+  -webkit-mask-image:radial-gradient(ellipse 80% 75% at 70% 40%,#000 30%,transparent 80%);mask-image:radial-gradient(ellipse 80% 75% at 70% 40%,#000 30%,transparent 80%)}
+.hero-band .hero{position:relative;padding-block:64px 72px}
+.hero .shot{transform:rotate(-1deg);transition:transform .3s ease}
+.hero .shot:hover{transform:rotate(0)}
+@media (prefers-reduced-motion:reduce){.hero .shot{transform:none}}
+
+/* Aviso "Nuevo" compacto: no se parte en dos líneas */
+.announce{display:inline-flex;flex-wrap:nowrap;align-items:center;gap:10px;max-width:100%;background:var(--paper);border:1px solid var(--line);box-shadow:0 6px 16px -12px rgba(22,33,54,.4)}
+.announce-txt{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.announce .tag{flex:none}
+
+/* Cifras de confianza */
+.stats{list-style:none;margin:8px 0 0;padding:20px 0 0;border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.stats li{display:grid;gap:2px;min-width:0}
+.stats strong{font:700 22px/1.1 var(--f-ui);color:var(--navy)}
+.stats span{font-size:13px;line-height:1.35;color:var(--steel)}
+@media (max-width:420px){.stats strong{font-size:18px}.stats span{font-size:12px}}
+
+/* Botón de texto con flecha */
+.btn .ico-sm{transition:transform .2s ease}
+.btn:hover .ico-sm{transform:translateX(3px)}
+.btn-ghost{color:var(--navy);font-weight:600;border:1px solid var(--mist)}
+.btn-ghost:hover{background:var(--frost)}
+
+/* Navegación: indicador verde en la sección actual */
+.nav a{position:relative;transition:background .15s ease}
+.nav a:hover{background:var(--frost)}
+.nav a[aria-current="page"]{background:transparent;font-weight:600}
+.nav a[aria-current="page"]::after{content:"";position:absolute;left:12px;right:12px;bottom:2px;height:3px;border-radius:3px;background:var(--signal)}
+
+/* Menú móvil con botón (antes el menú se cortaba y ocultaba secciones) */
+.menu-btn{display:none;width:44px;height:44px;border-radius:12px;border:1px solid var(--line);background:var(--paper);color:var(--navy);place-items:center;cursor:pointer;padding:0}
+.menu-btn .i-cerrar{display:none}
+.menu-btn span{display:grid;place-items:center}
+@media (max-width:860px){
+  .bar{flex-wrap:nowrap;min-height:64px;gap:10px}
+  .menu-btn{display:grid}
+  .bar-cta{margin-left:auto;padding:10px 16px;font-size:14px}
+  .nav{display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;gap:2px;background:var(--paper);padding:8px max(16px,env(safe-area-inset-right,0px)) 16px max(16px,env(safe-area-inset-left,0px));border-top:1px solid var(--line);box-shadow:0 24px 40px -24px rgba(22,33,54,.45);margin:0;order:0;flex-basis:auto}
+  header.abierto .nav{display:flex}
+  header.abierto .i-abrir{display:none}
+  header.abierto .i-cerrar{display:grid}
+  .nav a{font-size:17px;padding:14px 12px;border-radius:12px}
+  .nav a[aria-current="page"]{background:var(--frost)}
+  .nav a[aria-current="page"]::after{left:0;right:auto;top:12px;bottom:12px;width:4px;height:auto}
+}
+@media (max-width:380px){.bar-cta{display:none}}
+
+/* Pie de página en columnas */
+footer{padding-block:56px 0}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:32px;padding-bottom:40px}
+@media (max-width:720px){.foot-grid{grid-template-columns:1fr 1fr}.foot-grid>.stack{grid-column:1/-1}}
+.foot-grid p{color:var(--steel)}
+.foot-col{display:grid;gap:10px;align-content:start}
+.foot-col a{color:var(--navy);text-decoration:none}
+.foot-col a:hover{color:var(--link);text-decoration:underline}
+.foot-note{font-size:14px;color:var(--steel)}
+.foot-bottom{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid var(--line);padding-block:20px 96px;font-size:14px;color:var(--steel)}
+
+/* Pasos de compra con más presencia */
+.step{border:1px solid var(--line);background:var(--paper)}
+.step .k{width:40px;height:40px}

@@ -11,7 +11,7 @@ description: Cursos gratuitos de la UNI (Power BI, SQL, Python, Lean, Six Sigma,
   <div class="grid3">
     {% for c in cursos %}
     <a class="card card-link" href="{{ c.url | relative_url }}">
-      <span class="tag">{{ c.area }}</span>
+      <div class="card-top">{% include icon-area.html a=c.area %}<span class="tag">{{ c.area }}</span></div>
       <h3>{{ c.title }}</h3>
       <p>{{ c.resumen | truncate: 110 }}</p>
       <span class="meta">{% if c.sesiones.size > 0 %}{{ c.sesiones.size }} {% if c.sesiones.size == 1 %}sesión{% else %}sesiones{% endif %}{% else %}Ver curso{% endif %}{% if c.pdf != "" %} · Con apuntes PDF{% endif %} →</span>

@@ -28,9 +28,9 @@ description: Qué es la Ingeniería Industrial, qué se estudia, dónde se traba
     <div class="grid3">
       {% for h in site.data.herramientas %}
         {% if h.articulo %}
-        <a class="card card-link" href="{{ h.articulo | relative_url }}"><span class="tag hot">{{ h.tag }}</span><h3>{{ h.nombre }}</h3><p>{{ h.desc }}</p><span class="meta">Leer guía →</span></a>
+        <a class="card card-link" href="{{ h.articulo | relative_url }}"><div class="card-top">{% include icon-area.html a=h.tag %}<span class="tag hot">{{ h.tag }}</span></div><h3>{{ h.nombre }}</h3><p>{{ h.desc }}</p><span class="meta">Leer guía →</span></a>
         {% else %}
-        <div class="card"><span class="tag">{{ h.tag }}</span><h3>{{ h.nombre }}</h3><p>{{ h.desc }}</p></div>
+        <div class="card"><div class="card-top">{% include icon-area.html a=h.tag %}<span class="tag">{{ h.tag }}</span></div><h3>{{ h.nombre }}</h3><p>{{ h.desc }}</p></div>
         {% endif %}
       {% endfor %}
     </div>

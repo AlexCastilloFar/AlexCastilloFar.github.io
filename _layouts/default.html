@@ -17,7 +17,7 @@
 <header>
   <div class="wrap bar">
     <a class="logo" href="{{ '/' | relative_url }}"><i></i>{{ site.title }}</a>
-    <nav class="nav" aria-label="Secciones">
+    <nav class="nav" id="menu" aria-label="Secciones">
       <a href="{{ '/' | relative_url }}" {% if seccion == "inicio" %}aria-current="page"{% endif %}>Inicio</a>
       <a href="{{ '/ingenieria-industrial/' | relative_url }}" {% if seccion == "ingenieria" %}aria-current="page"{% endif %}>Ingeniería Industrial</a>
       <a href="{{ '/articulos/' | relative_url }}" {% if seccion == "articulos" %}aria-current="page"{% endif %}>Artículos</a>
@@ -25,7 +25,8 @@
       <a href="{{ '/plantillas/' | relative_url }}" {% if seccion == "plantillas" %}aria-current="page"{% endif %}>Plantillas</a>
       <a href="{{ '/sobre-mi/' | relative_url }}" {% if seccion == "sobre-mi" %}aria-current="page"{% endif %}>Sobre mí</a>
     </nav>
-    <a class="btn btn-ink" href="{{ '/plantillas/' | relative_url }}">Ver plantillas →</a>
+    <a class="btn btn-ink bar-cta" href="{{ '/plantillas/' | relative_url }}">Ver plantillas</a>
+    <button class="menu-btn" type="button" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú"><span class="i-abrir">{% include icon.html n="menu" %}</span><span class="i-cerrar">{% include icon.html n="cerrar" %}</span></button>
   </div>
 </header>
 
@@ -46,23 +47,29 @@
 {% endif %}
 
 <footer>
-  <div class="wrap foot">
-    <div class="stack" style="gap:8px">
+  <div class="wrap foot-grid">
+    <div class="stack" style="gap:12px;max-width:340px">
       <a class="logo" href="{{ '/' | relative_url }}"><i></i>{{ site.title }}</a>
-      <span>Pagos por Yape y Plin, confirmados a mano.</span>
-      {% if site.correo != "" %}<span>Contacto: {{ site.correo }}</span>{% endif %}
+      <p>Herramientas de Ingeniería Industrial explicadas con casos reales y plantillas de Excel listas para usar.</p>
+      <span class="foot-note">Pagos por Yape y Plin, confirmados a mano.</span>
     </div>
-    <nav aria-label="Pie">
+    <nav class="foot-col" aria-label="Secciones">
+      <span class="eyebrow">Secciones</span>
       <a href="{{ '/ingenieria-industrial/' | relative_url }}">Ingeniería Industrial</a>
       <a href="{{ '/articulos/' | relative_url }}">Artículos</a>
       <a href="{{ '/cursos/' | relative_url }}">Cursos</a>
       <a href="{{ '/plantillas/' | relative_url }}">Plantillas</a>
       <a href="{{ '/sobre-mi/' | relative_url }}">Sobre mí</a>
-      {% if site.linkedin and site.linkedin != "" %}<a href="{{ site.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>{% endif %}
-      {% if site.tiktok != "" %}<a href="{{ site.tiktok }}" target="_blank" rel="noopener">TikTok</a>{% endif %}
-      {% if site.telegram != "" %}<a href="{{ site.telegram }}" target="_blank" rel="noopener">Telegram</a>{% endif %}
     </nav>
+    <div class="foot-col">
+      <span class="eyebrow">Contacto</span>
+      {% if site.linkedin and site.linkedin != "" %}<a href="{{ site.linkedin }}" target="_blank" rel="noopener">LinkedIn ↗</a>{% endif %}
+      {% if site.tiktok != "" %}<a href="{{ site.tiktok }}" target="_blank" rel="noopener">TikTok ↗</a>{% endif %}
+      {% if site.telegram != "" %}<a href="{{ site.telegram }}" target="_blank" rel="noopener">Telegram ↗</a>{% endif %}
+      {% if site.correo != "" %}<span>{{ site.correo }}</span>{% endif %}
+    </div>
   </div>
+  <div class="wrap foot-bottom"><span>© {{ site.time | date: "%Y" }} {{ site.title }}</span><span>Hecho en Lima, Perú</span></div>
 </footer>
 
 {% if page.comprar %}
@@ -71,6 +78,7 @@
 <div class="toast" id="toast" hidden>El bot de Telegram estará disponible muy pronto.</div>
 <script>
   // Aviso mientras el bot de Telegram no exista (cuando pongas el enlace en _config.yml, los botones lo abren directo)
+  (function(){var b=document.querySelector(".menu-btn"),h=document.querySelector("header");if(b){b.addEventListener("click",function(){var o=h.classList.toggle("abierto");b.setAttribute("aria-expanded",o);b.setAttribute("aria-label",o?"Cerrar menú":"Abrir menú")});document.addEventListener("keydown",function(e){if(e.key==="Escape"&&h.classList.contains("abierto")){h.classList.remove("abierto");b.setAttribute("aria-expanded","false");b.focus()}})}})();
   (function(){var t=document.getElementById("toast"),k;document.addEventListener("click",function(e){if(e.target.closest(".buy")){t.hidden=false;clearTimeout(k);k=setTimeout(function(){t.hidden=true},2500)}})})();
 </script>
 </body>

@@ -4,19 +4,48 @@ seccion: inicio
 banda: true
 title: Ingeniería Industrial explicada fácil
 ---
-<section class="view wrap">
-  <div class="hero">
+<section class="hero-band">
+  <div class="wrap hero">
     <div class="stack">
       {% assign ultimo = site.posts | first %}
-      {% if ultimo %}<a class="announce" href="{{ ultimo.url | relative_url }}"><span class="tag hot">Nuevo</span> {{ ultimo.titulo_corto | default: ultimo.title }} →</a>{% endif %}
+      {% if ultimo %}<a class="announce" href="{{ ultimo.url | relative_url }}"><span class="tag hot">Nuevo</span><span class="announce-txt">{{ ultimo.titulo_corto | default: ultimo.title }}</span><span aria-hidden="true">→</span></a>{% endif %}
       <h1>Ingeniería Industrial, explicada <mark>fácil</mark></h1>
       <p class="lead">Guías con ejemplos reales de bodegas, líneas de producción y trabajos de la U. Y plantillas de Excel que hacen el trabajo con un botón.</p>
       <div class="ctas">
-        <a class="btn btn-ink" href="{{ '/plantillas/' | relative_url }}">Ver plantillas →</a>
-        <a class="btn btn-ghost" href="{{ '/articulos/' | relative_url }}">▶ Leer artículos</a>
+        <a class="btn btn-ink" href="{{ '/plantillas/' | relative_url }}">Ver plantillas {% include icon.html n="flecha" c="ico-sm" %}</a>
+        <a class="btn btn-ghost" href="{{ '/articulos/' | relative_url }}">Leer artículos</a>
       </div>
+      <ul class="stats" aria-label="En números">
+        <li><strong>+8 años</strong><span>en una planta de manufactura</span></li>
+        <li><strong>{{ site.cursos.size }} cursos</strong><span>con sus clases grabadas</span></li>
+        <li><strong>{{ site.data.plantillas.size }} plantillas</strong><span>listas para usar</span></li>
+      </ul>
     </div>
     {% include hero-shot.html %}
+  </div>
+</section>
+
+<section class="view wrap" style="padding-top:72px">
+  <div class="sec-head"><span class="eyebrow">Todo en un solo lugar</span><h2>Aprende, practica y ahorra tiempo</h2></div>
+  <div class="grid3 pilares">
+    <a class="card card-link pilar" href="{{ '/articulos/' | relative_url }}">
+      <span class="ico-box ico-lg">{% include icon.html n="libro" %}</span>
+      <h3>Artículos</h3>
+      <p>Cada herramienta de la carrera explicada paso a paso con un caso peruano real.</p>
+      <span class="meta">{{ site.posts.size }} {% if site.posts.size == 1 %}guía{% else %}guías{% endif %} · Leer →</span>
+    </a>
+    <a class="card card-link pilar" href="{{ '/cursos/' | relative_url }}">
+      <span class="ico-box ico-lg">{% include icon.html n="play" %}</span>
+      <h3>Cursos gratuitos</h3>
+      <p>Power BI, SQL, Python, Lean, Six Sigma y más, con todas sus clases ordenadas.</p>
+      <span class="meta">{{ site.cursos.size }} cursos · Ver cursos →</span>
+    </a>
+    <a class="card card-link pilar" href="{{ '/plantillas/' | relative_url }}">
+      <span class="ico-box ico-lg">{% include icon.html n="tabla" %}</span>
+      <h3>Plantillas de Excel</h3>
+      <p>Escribes tus datos en las celdas amarillas, pulsas un botón y la plantilla hace el resto.</p>
+      <span class="meta">{{ site.data.plantillas.size }} plantillas · Ver tienda →</span>
+    </a>
   </div>
 
   <div class="block">
@@ -24,7 +53,7 @@ title: Ingeniería Industrial explicada fácil
     <div class="grid3">
       {% for post in site.posts limit:3 %}{% include post-card.html post=post nuevo=forloop.first %}{% endfor %}
       {% if site.posts.size < 3 %}
-      <a class="card card-link" href="{{ '/ingenieria-industrial/' | relative_url }}"><span class="tag">Ingeniería Industrial</span><h3>¿Qué es la Ingeniería Industrial?</h3><p>Qué se estudia, dónde se trabaja y las herramientas que vas a usar.</p><span class="meta">Conoce la carrera →</span></a>
+      <a class="card card-link" href="{{ '/ingenieria-industrial/' | relative_url }}"><div class="card-top">{% include icon-area.html a="procesos" %}<span class="tag">Ingeniería Industrial</span></div><h3>¿Qué es la Ingeniería Industrial?</h3><p>Qué se estudia, dónde se trabaja y las herramientas que vas a usar.</p><span class="meta">Conoce la carrera →</span></a>
       {% endif %}
     </div>
   </div>

@@ -311,3 +311,6 @@ footer{border-top:1px solid var(--cloud);background:#fff;padding-top:56px}
 /* ---------- Movimiento ---------- */
 @media (prefers-reduced-motion:no-preference){main{animation:aparece .35s ease both}@keyframes aparece{from{opacity:.6;transform:translateY(6px)}to{opacity:1;transform:none}}}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important}}
+
+/* Ajustes celular: títulos menos apretados y aviso en una línea */
+@media (max-width:600px){h1{letter-spacing:-.03em}h2{letter-spacing:-.025em}.badge span{display:none}.badge{padding:8px 14px}}

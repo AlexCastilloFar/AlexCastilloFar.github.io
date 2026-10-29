@@ -1,6 +1,6 @@
 # Contexto del proyecto (para Claude)
 
-Web personal de **Alex**: estudiante de Ingeniería Industrial (UCV, Lima) con más de 8 años en planta y enfoque en análisis de datos. Blog de Ingeniería Industrial + tienda de plantillas de Excel.
+Web personal de **Alex Castillo** (marca personal): estudiante de Ingeniería Industrial (UCV, Lima) con más de 8 años en planta y enfoque en análisis de datos. Blog de Ingeniería Industrial + tienda de plantillas de Excel.
 - Web: https://alexcastillofar.github.io (Jekyll en GitHub Pages, rama `main`).
 - Público: estudiantes de Ingeniería Industrial y pequeños negocios en Perú.
 
@@ -13,7 +13,7 @@ Web personal de **Alex**: estudiante de Ingeniería Industrial (UCV, Lima) con m
 
 ## Decisiones tomadas
 - Todo gratis, sin herramientas de pago. Cobro por Yape o Plin, confirmado a mano. Bot de Telegram (pendiente) en Apps Script con puente en Cloudflare Workers.
-- Estilo inspirado en Wrike, **siempre con fondo blanco** (sin modo oscuro): azul marino `#162136` para los textos, verde `#00e05c` para los botones (con texto azul marino), tarjetas `#f2f5fa` con esquinas de 20px, botones en forma de pastilla, letra DM Sans. La única zona azul marino es la banda final del inicio. Texto secundario `#4a5a78` y enlaces `#0062b8` (contraste AA). Íconos SVG propios en `_includes/icon.html` (y `icon-area.html` por área), menú desplegable con botón en celular, portada con fondo de cuadrícula tipo Excel y cifras (+8 años, cursos, plantillas). Revisión UX hecha con la skill UI UX Pro Max (sus estilos sugeridos no encajaban; se usaron solo sus reglas de UX).
+- **Diseño: seguir siempre `DESIGN.md`** (estilo Synthesia: blanco + índigo `#3e57da`, DM Sans, tarjetas con borde fino y sombra suave, paneles oscuros como "pantallas"; sello propio: cuadrícula de plano y etiquetas en IBM Plex Mono). Marca personal **Alex Castillo · Ingeniero Industrial**; cursos y plantillas van dentro de "Recursos". **Aplicar siempre reglas de UX** (contraste AA, objetivos táctiles ≥ 44px, foco visible, celular primero, movimiento reducido). Ya no se usa el verde tipo Excel.
 - Publicar debe ser fácil desde el celular, sin tocar código: se edita en archivos de texto (`_posts`, `_data`, `_config.yml`).
 
 ## Estructura
@@ -22,7 +22,7 @@ Web personal de **Alex**: estudiante de Ingeniería Industrial (UCV, Lima) con m
 - `_data/herramientas.yml`: herramientas de "Ingeniería Industrial".
 - `_posts/`: artículos (molde en `PLANTILLA_ARTICULO.md`; el campo `plantilla` enlaza la plantilla del final).
 - `_layouts/` (default, post, plantilla), `_includes/` (tarjetas, miniaturas, foto), `assets/css/style.css`, `assets/img/alex.jpg`.
-- Páginas: `index.html`, `ingenieria-industrial/`, `articulos/`, `plantillas/` (detalle por plantilla), `sobre-mi/`.
+- Páginas: `index.html`, `ingenieria-industrial/`, `articulos/` (con filtros por área), `recursos/` (entrada a `cursos/` y `plantillas/`), `sobre-mi/` (con bloque de contacto `#contacto`). Menú: Inicio · Ingeniería Industrial · Artículos · Recursos · Sobre mí.
 
 ## Artículos
 Claros, con un ejemplo peruano real (bodega, línea de producción, trabajo de la U), pensados para Google (título que la gente busca, respuesta directa al inicio, subtítulos) y con la plantilla relacionada al final.

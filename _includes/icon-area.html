@@ -1,9 +1,12 @@
 {%- assign a = include.a | downcase -%}{%- assign nombre = "diana" -%}
-{%- if a contains "dato" or a contains "calidad" -%}{%- assign nombre = "chart" -%}
+{%- if a contains "dato" -%}{%- assign nombre = "chart" -%}
+{%- elsif a contains "calidad" or a contains "mejora" -%}{%- assign nombre = "diana" -%}
+{%- elsif a contains "producci" -%}{%- assign nombre = "engranaje" -%}
 {%- elsif a contains "program" -%}{%- assign nombre = "codigo" -%}
 {%- elsif a contains "proceso" -%}{%- assign nombre = "flujo" -%}
 {%- elsif a contains "proyecto" or a contains "planea" -%}{%- assign nombre = "calendario" -%}
 {%- elsif a contains "negocio" -%}{%- assign nombre = "maletin" -%}
 {%- elsif a contains "seguridad" -%}{%- assign nombre = "escudo" -%}
 {%- elsif a contains "log" -%}{%- assign nombre = "base" -%}
+{%- elsif a contains "gesti" -%}{%- assign nombre = "diana" -%}
 {%- endif -%}<span class="ico-box">{% include icon.html n=nombre %}</span>

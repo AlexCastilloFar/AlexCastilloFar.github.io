@@ -1,86 +1,87 @@
 ---
 layout: default
 seccion: inicio
-banda: true
 title: Ingeniería Industrial explicada fácil
 ---
-<section class="hero-band">
+<section class="plano">
   <div class="wrap hero">
     <div class="stack">
-      {% assign ultimo = site.posts | first %}
-      {% if ultimo %}<a class="announce" href="{{ ultimo.url | relative_url }}"><span class="tag hot">Nuevo</span><span class="announce-txt">{{ ultimo.titulo_corto | default: ultimo.title }}</span><span aria-hidden="true">→</span></a>{% endif %}
-      <h1>Ingeniería Industrial, explicada <mark>fácil</mark></h1>
-      <p class="lead">Guías con ejemplos reales de bodegas, líneas de producción y trabajos de la U. Y plantillas de Excel que hacen el trabajo con un botón.</p>
+      <span class="badge"><span>Lima, Perú</span>Ingeniero industrial · +8 años en planta</span>
+      <h1>Ingeniería Industrial, explicada <span class="kw">fácil</span></h1>
+      <p class="lead">Qué es, para qué sirve y cómo se aplica de verdad: procesos, calidad, productividad y datos, contados por alguien que lo vive todos los días en planta.</p>
       <div class="ctas">
-        <a class="btn btn-ink" href="{{ '/plantillas/' | relative_url }}">Ver plantillas {% include icon.html n="flecha" c="ico-sm" %}</a>
-        <a class="btn btn-ghost" href="{{ '/articulos/' | relative_url }}">Leer artículos</a>
+        <a class="btn btn-ink" href="{{ '/ingenieria-industrial/' | relative_url }}">Conoce la carrera {% include icon.html n="flecha" %}</a>
+        <a class="btn btn-ghost" href="{{ '/sobre-mi/' | relative_url }}">Sobre mí</a>
       </div>
-      <ul class="stats" aria-label="En números">
-        <li><strong>+8 años</strong><span>en una planta de manufactura</span></li>
-        <li><strong>{{ site.cursos.size }} cursos</strong><span>con sus clases grabadas</span></li>
-        <li><strong>{{ site.data.plantillas.size }} plantillas</strong><span>listas para usar</span></li>
-      </ul>
+      <ul class="tech" aria-label="Herramientas que uso"><li>LEAN</li><li>SIX SIGMA</li><li>BPMN</li><li>POWER BI</li><li>SQL</li></ul>
     </div>
-    {% include hero-shot.html %}
+    <div class="ph-wrap">
+      <div class="ph"><img src="{{ '/assets/img/alex.jpg' | relative_url }}" alt="Alex Castillo, ingeniero industrial" width="600" height="600"></div>
+      <div class="chip k1" aria-hidden="true"><span class="ico-box">{% include icon.html n="engranaje" %}</span><span><b>Control de producción</b><small>Indicadores y reportes</small></span></div>
+      <div class="chip k2" aria-hidden="true"><span class="ico-box">{% include icon.html n="flujo" %}</span><span><b>Mejora de procesos</b><small>Lean · BPMN</small></span></div>
+      <div class="chip k3" aria-hidden="true"><span class="ico-box">{% include icon.html n="chart" %}</span><span><b>Análisis de datos</b><small>Excel · Power BI · SQL</small></span></div>
+    </div>
   </div>
 </section>
 
-<section class="view wrap" style="padding-top:72px">
-  <div class="sec-head"><span class="eyebrow">Todo en un solo lugar</span><h2>Aprende, practica y ahorra tiempo</h2></div>
-  <div class="grid3 pilares">
-    <a class="card card-link pilar" href="{{ '/articulos/' | relative_url }}">
-      <span class="ico-box ico-lg">{% include icon.html n="libro" %}</span>
-      <h3>Artículos</h3>
-      <p>Cada herramienta de la carrera explicada paso a paso con un caso peruano real.</p>
-      <span class="meta">{{ site.posts.size }} {% if site.posts.size == 1 %}guía{% else %}guías{% endif %} · Leer →</span>
-    </a>
-    <a class="card card-link pilar" href="{{ '/cursos/' | relative_url }}">
-      <span class="ico-box ico-lg">{% include icon.html n="play" %}</span>
-      <h3>Cursos gratuitos</h3>
-      <p>Power BI, SQL, Python, Lean, Six Sigma y más, con todas sus clases ordenadas.</p>
-      <span class="meta">{{ site.cursos.size }} cursos · Ver cursos →</span>
-    </a>
-    <a class="card card-link pilar" href="{{ '/plantillas/' | relative_url }}">
-      <span class="ico-box ico-lg">{% include icon.html n="tabla" %}</span>
-      <h3>Plantillas de Excel</h3>
-      <p>Escribes tus datos en las celdas amarillas, pulsas un botón y la plantilla hace el resto.</p>
-      <span class="meta">{{ site.data.plantillas.size }} plantillas · Ver tienda →</span>
-    </a>
-  </div>
-
-  <div class="block">
-    <div class="sec-head"><span class="eyebrow">Guías gratis</span><h2>Empieza por aquí</h2><p>Herramientas de la carrera explicadas con un caso real.</p></div>
-    <div class="grid3">
-      {% for post in site.posts limit:3 %}{% include post-card.html post=post nuevo=forloop.first %}{% endfor %}
-      {% if site.posts.size < 3 %}
-      <a class="card card-link" href="{{ '/ingenieria-industrial/' | relative_url }}"><div class="card-top">{% include icon-area.html a="procesos" %}<span class="tag">Ingeniería Industrial</span></div><h3>¿Qué es la Ingeniería Industrial?</h3><p>Qué se estudia, dónde se trabaja y las herramientas que vas a usar.</p><span class="meta">Conoce la carrera →</span></a>
-      {% endif %}
-    </div>
-  </div>
-
-  <div class="block">
-    <div class="sec-head"><span class="eyebrow">Ahorra horas de trabajo</span><h2>Plantillas que hacen el trabajo por ti</h2><p>Escribes tus datos en las celdas amarillas, pulsas un botón y listo.</p></div>
-    <div class="grid3">{% for p in site.data.plantillas %}{% include prod-card.html p=p %}{% endfor %}</div>
-  </div>
-
-  <div class="block">
-    <div class="sec-head"><span class="eyebrow">Así de simple</span><h2>Cómo comprar</h2><p>Sin tarjetas ni registros. Todo por Yape o Plin.</p></div>
-    <div class="steps">
-      <div class="step"><span class="k">1</span><h3>Elige tu plantilla</h3><p>Mira el video y revisa qué incluye antes de comprar.</p></div>
-      <div class="step"><span class="k">2</span><h3>Paga por Yape o Plin</h3><p>Envía la captura del pago al bot de Telegram.</p></div>
-      <div class="step"><span class="k">3</span><h3>Recibe el archivo</h3><p>Confirmo tu pago y el bot te envía la plantilla.</p></div>
-    </div>
-  </div>
-
-  <div class="block">
-    <div class="mini-me">
-      {% include foto.html %}
-      <div class="stack" style="gap:8px">
-        <span class="eyebrow">Quién está detrás</span>
-        <h3 style="font-size:24px;color:var(--navy)">Hola, soy Alex</h3>
-        <p class="muted">Llevo más de 8 años en una planta de manufactura, hoy a cargo del control de producción y procesos, y estudio Ingeniería Industrial. Estas plantillas nacen de problemas reales que resuelvo en el trabajo.</p>
-        <a class="more" href="{{ '/sobre-mi/' | relative_url }}">Conóceme →</a>
-      </div>
-    </div>
+<section class="band-wash stats-band" aria-label="En números">
+  <div class="wrap">
+    <div class="st"><b>+8 años</b><span>en una planta de manufactura</span></div>
+    <div class="st"><b>2017</b><span>empecé en operaciones de planta</span></div>
+    <div class="st"><b>{{ site.cursos.size }} cursos</b><span>en datos, procesos y calidad</span></div>
+    <div class="st"><b>BPMN 2.0</b><span>certificado en Bizagi</span></div>
   </div>
 </section>
+
+<section class="s"><div class="wrap">
+  <div class="head"><span class="eyebrow">Lo que hago</span><h2>De la planta a los datos</h2><p>Las cuatro áreas de la Ingeniería Industrial con las que trabajo cada día, y sobre las que escribo aquí.</p></div>
+  <div class="feat">
+    <div class="f"><span class="ico-box">{% include icon.html n="engranaje" %}</span><h3>Control de producción</h3><p>Seguir lo que se produce, cuánto se pierde y por qué, con indicadores claros.</p><span class="mono">OEE · KPI · reportes</span></div>
+    <div class="f"><span class="ico-box">{% include icon.html n="flujo" %}</span><h3>Mejora de procesos</h3><p>Ordenar el trabajo, eliminar desperdicios y estandarizar métodos.</p><span class="mono">Lean · 5S · BPMN</span></div>
+    <div class="f"><span class="ico-box">{% include icon.html n="diana" %}</span><h3>Calidad</h3><p>Encontrar la causa raíz de los problemas y evitar que se repitan.</p><span class="mono">Ishikawa · Pareto · DMAIC</span></div>
+    <div class="f"><span class="ico-box">{% include icon.html n="chart" %}</span><h3>Análisis de datos</h3><p>Convertir la data de planta en decisiones y reportes claros.</p><span class="mono">Excel · Power BI · SQL</span></div>
+  </div>
+</div></section>
+
+<section style="padding-bottom:clamp(64px,8vw,96px)"><div class="wrap"><div class="dark">
+  <div class="stack" style="gap:16px">
+    <span class="eyebrow">Mi trabajo, en datos</span>
+    <h2>Así se ve la Ingeniería Industrial cuando se mide</h2>
+    <p>Un ejemplo del tipo de tablero que armo para seguir una línea de producción: eficiencia, rechazos y sus causas principales.</p>
+    <div><a class="btn" href="{{ '/articulos/' | relative_url }}">Leer artículos</a></div>
+  </div>
+  <figure class="screen" style="margin:0" aria-label="Tablero de ejemplo de una línea de envasado">
+    <div class="sc-top"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span>LÍNEA DE ENVASADO · EJEMPLO</span></div>
+    <div class="kpis"><div class="kpi"><small>OEE</small><b>82%</b><em>▲ 4 pts</em></div><div class="kpi"><small>RECHAZO</small><b>1.8%</b><em>▼ 0.6 pts</em></div><div class="kpi"><small>PRODUCCIÓN</small><b>7 640</b><em>unidades</em></div></div>
+    <div class="chart"><svg viewBox="0 0 320 120" style="width:100%;display:block" role="img" aria-label="Pareto de causas de rechazo">
+      <g fill="#8098f9"><rect x="14" y="14" width="30" height="86" rx="3"/><rect x="54" y="38" width="30" height="62" rx="3"/><rect x="94" y="61" width="30" height="39" rx="3"/><rect x="134" y="79" width="30" height="21" rx="3"/></g>
+      <g fill="rgba(255,255,255,.22)"><rect x="174" y="86" width="30" height="14" rx="3"/><rect x="214" y="89" width="30" height="11" rx="3"/><rect x="254" y="93" width="30" height="7" rx="3"/></g>
+      <line x1="8" y1="30" x2="312" y2="30" stroke="#c6d7fe" stroke-dasharray="4 4" stroke-width="1"/>
+      <polyline fill="none" stroke="#fff" stroke-width="2" points="29,70 69,48 109,35 149,27 189,22 229,18 269,15"/>
+      <text x="312" y="24" fill="#c6d7fe" font-size="9" text-anchor="end" font-family="monospace">80%</text>
+    </svg></div>
+    <figcaption class="sc-note">Datos de ejemplo con fines educativos.</figcaption>
+  </figure>
+</div></div></section>
+
+<section class="s band-wash"><div class="wrap">
+  <div class="head"><span class="eyebrow">Artículos</span><h2>La carrera, explicada fácil</h2><p>Cada herramienta de la Ingeniería Industrial con un caso real y sin tecnicismos.</p></div>
+  <div class="grid3">
+    {% for post in site.posts limit:3 %}{% include post-card.html post=post nuevo=forloop.first %}{% endfor %}
+    {% if site.posts.size < 3 %}
+    <a class="card card-link" href="{{ '/ingenieria-industrial/' | relative_url }}"><div class="card-top">{% include icon-area.html a="procesos" %}<span class="tag">La carrera</span></div><h3>¿Qué es la Ingeniería Industrial?</h3><p>Qué se estudia, dónde se trabaja y las herramientas que vas a usar.</p><span class="meta">Conoce la carrera →</span></a>
+    {% endif %}
+    {% if site.posts.size < 2 %}
+    <a class="card card-link" href="{{ '/sobre-mi/' | relative_url }}"><div class="card-top">{% include icon-area.html a="producción" %}<span class="tag">Experiencia</span></div><h3>Así se vive la carrera en planta</h3><p>Mi recorrido de más de 8 años: de operaciones a control de producción y procesos.</p><span class="meta">Conóceme →</span></a>
+    {% endif %}
+  </div>
+  <div style="margin-top:32px"><a class="more" href="{{ '/articulos/' | relative_url }}">Ver todos los artículos →</a></div>
+</div></section>
+
+<section class="s"><div class="wrap">
+  <div class="head"><span class="eyebrow">Recursos</span><h2>Aprende y practica</h2><p>Cursos gratuitos con sus clases ordenadas y las plantillas que uso en el trabajo.</p></div>
+  <div class="grid2">
+    <a class="card card-link big" href="{{ '/cursos/' | relative_url }}"><span class="ico-box ico-lg">{% include icon.html n="play" %}</span><h3>Cursos gratuitos</h3><p>{{ site.cursos.size }} cursos de la UNI: Power BI, SQL, Python, Lean, Six Sigma y más, con todas sus sesiones.</p><span class="meta">Ver cursos →</span></a>
+    <a class="card card-link big" href="{{ '/plantillas/' | relative_url }}"><span class="ico-box ico-lg">{% include icon.html n="tabla" %}</span><h3>Plantillas de Excel</h3><p>Las plantillas que uso para Ishikawa, Pareto, Gantt y cotizaciones, listas para usar.</p><span class="meta">Ver plantillas →</span></a>
+  </div>
+</div></section>

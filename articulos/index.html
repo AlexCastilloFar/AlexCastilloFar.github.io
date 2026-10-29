@@ -2,11 +2,22 @@
 layout: default
 seccion: articulos
 title: Artículos de Ingeniería Industrial
-description: Guías prácticas de herramientas de Ingeniería Industrial con ejemplos peruanos y plantillas de Excel.
+description: Guías de Ingeniería Industrial explicadas fácil, con casos reales: procesos, calidad, producción y datos.
 ---
 <section class="view wrap">
-  <div class="sec-head"><span class="eyebrow">Artículos</span><h1>Guías prácticas</h1><p class="lead">Una herramienta por artículo, explicada con un caso peruano y una plantilla para resolverlo.</p></div>
-  <div class="grid2">
-    {% for post in site.posts %}{% include post-card.html post=post nuevo=forloop.first %}{% endfor %}
+  <div class="sec-head"><span class="eyebrow">Artículos</span><h1>La carrera, explicada fácil</h1><p class="lead">Una herramienta por artículo, explicada con un caso real y sin tecnicismos.</p></div>
+  {% assign cats = site.posts | map: "categoria" | uniq %}
+  {% if cats.size > 1 %}
+  <div class="filtros" role="group" aria-label="Filtrar por área">
+    <button class="filtro" type="button" data-f="todas" aria-pressed="true">Todas</button>
+    {% for c in cats %}<button class="filtro" type="button" data-f="{{ c | slugify }}" aria-pressed="false">{{ c }}</button>{% endfor %}
   </div>
+  {% endif %}
+  <div class="grid2" id="lista">
+    {% for post in site.posts %}<div data-cat="{{ post.categoria | slugify }}" style="display:grid">{% include post-card.html post=post nuevo=forloop.first %}</div>{% endfor %}
+  </div>
+  <p class="note" id="vacio" hidden>No hay artículos en esta área todavía.</p>
 </section>
+<script>
+(function(){var bs=document.querySelectorAll(".filtro"),it=document.querySelectorAll("#lista>[data-cat]"),v=document.getElementById("vacio");bs.forEach(function(b){b.addEventListener("click",function(){var f=b.dataset.f,n=0;bs.forEach(function(x){x.setAttribute("aria-pressed",x===b)});it.forEach(function(i){var ok=f==="todas"||i.dataset.cat===f;i.hidden=!ok;if(ok)n++});v.hidden=n>0})})})();
+</script>

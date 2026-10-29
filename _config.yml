@@ -1,9 +1,10 @@
 # ============================================================
 # CONFIGURACIÓN DE TU WEB (edita solo los valores de la derecha)
 # ============================================================
-title: Alex Industrial
-description: Herramientas de Ingeniería Industrial explicadas fácil y plantillas de Excel listas para usar.
-author: Alex
+title: Alex Castillo
+subtitulo: Ingeniero Industrial
+description: La Ingeniería Industrial explicada fácil por Alex Castillo, ingeniero industrial con más de 8 años en planta. Procesos, calidad, productividad y datos.
+author: Alex Castillo
 lang: es
 url: "https://alexcastillofar.github.io"
 baseurl: ""

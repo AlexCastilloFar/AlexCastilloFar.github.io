@@ -1,42 +1,60 @@
 ---
 layout: default
 seccion: ingenieria
-title: ¿Qué es la Ingeniería Industrial?
-description: Qué es la Ingeniería Industrial, qué se estudia, dónde se trabaja y sus herramientas clave, explicado con ejemplos peruanos.
+title: ¿Qué es la Ingeniería Industrial? Explicado fácil
+description: Qué es la Ingeniería Industrial, qué se estudia, sus herramientas clave y dónde trabaja un ingeniero industrial, explicado con ejemplos cotidianos.
 ---
-<section class="view wrap">
-  <div class="article stack">
-    <span class="tag">Ingeniería Industrial</span>
-    <h1>¿Qué es la Ingeniería Industrial?</h1>
-    <div class="answer"><strong>Respuesta corta:</strong> es la ingeniería que mejora cómo se hacen las cosas. Hace que una bodega no se quede sin stock, que una línea de envasado deje de perder botellas o que un pedido llegue a tiempo, gastando menos.</div>
-  </div>
-
-  <div class="block" style="margin-top:72px">
-    <div class="sec-head"><span class="eyebrow">Qué se estudia</span><h2>Las áreas de la carrera</h2></div>
-    <div class="grid3">
-      <div class="card"><h3>Procesos</h3><p>Cómo se hace un producto o servicio, paso a paso, y cómo hacerlo más rápido.</p></div>
-      <div class="card"><h3>Calidad</h3><p>Medir fallas, encontrar sus causas y evitar que se repitan.</p></div>
-      <div class="card"><h3>Logística</h3><p>Inventarios, almacenes y que lo correcto llegue a tiempo.</p></div>
-      <div class="card"><h3>Costos</h3><p>Cuánto cuesta producir y dónde se puede ahorrar.</p></div>
-      <div class="card"><h3>Seguridad</h3><p>Trabajar sin accidentes y cumplir la normativa.</p></div>
-      <div class="card"><h3>Datos</h3><p>Excel, Power BI y estadística para decidir con números.</p></div>
+<section class="plano">
+  <div class="wrap" style="padding-block:64px 72px">
+    <div class="article stack">
+      <span class="eyebrow">La carrera</span>
+      <h1>¿Qué es la Ingeniería Industrial?</h1>
+      <div class="answer"><strong>En pocas palabras:</strong> es la ingeniería que mejora cómo se hacen las cosas. Busca que un proceso, en una fábrica, un almacén, un banco o una bodega, produzca más y mejor, con menos tiempo, menos costo y menos errores.</div>
+      <p class="lead">Un ejemplo cotidiano: si en una panadería siempre se forma cola a las 7 a. m., un ingeniero industrial mide cuánto tarda cada paso, encuentra el cuello de botella y reorganiza el trabajo para atender más rápido sin contratar más gente.</p>
     </div>
-  </div>
-
-  <div class="block">
-    <div class="sec-head"><span class="eyebrow">Herramientas clave</span><h2>Lo que vas a usar en la U y en el trabajo</h2></div>
-    <div class="grid3">
-      {% for h in site.data.herramientas %}
-        {% if h.articulo %}
-        <a class="card card-link" href="{{ h.articulo | relative_url }}"><div class="card-top">{% include icon-area.html a=h.tag %}<span class="tag hot">{{ h.tag }}</span></div><h3>{{ h.nombre }}</h3><p>{{ h.desc }}</p><span class="meta">Leer guía →</span></a>
-        {% else %}
-        <div class="card"><div class="card-top">{% include icon-area.html a=h.tag %}<span class="tag">{{ h.tag }}</span></div><h3>{{ h.nombre }}</h3><p>{{ h.desc }}</p></div>
-        {% endif %}
-      {% endfor %}
-    </div>
-  </div>
-
-  <div class="block">
-    <div class="sec-head"><span class="eyebrow">Campo laboral</span><h2>¿Dónde trabaja un ingeniero industrial?</h2><p>Producción, logística, calidad, seguridad, consultoría y, cada vez más, análisis de datos. En fábricas, almacenes, bancos, retail y emprendimientos propios.</p></div>
   </div>
 </section>
+
+<section class="s band-wash"><div class="wrap">
+  <div class="head"><span class="eyebrow">Qué se estudia</span><h2>Las áreas de la carrera</h2></div>
+  <div class="feat">
+    <div class="f"><span class="ico-box">{% include icon.html n="flujo" %}</span><h3>Procesos</h3><p>Cómo se hace un producto o servicio, paso a paso, y cómo hacerlo mejor.</p><span class="mono">DOP · DAP · estudio de tiempos</span></div>
+    <div class="f"><span class="ico-box">{% include icon.html n="diana" %}</span><h3>Calidad</h3><p>Medir las fallas, encontrar sus causas y evitar que se repitan.</p><span class="mono">Ishikawa · Pareto · Six Sigma</span></div>
+    <div class="f"><span class="ico-box">{% include icon.html n="engranaje" %}</span><h3>Producción y logística</h3><p>Planificar qué producir, cuándo y con qué recursos; manejar inventarios y almacenes.</p><span class="mono">MRP · Gantt · Lean</span></div>
+    <div class="f"><span class="ico-box">{% include icon.html n="chart" %}</span><h3>Costos y datos</h3><p>Cuánto cuesta producir, dónde se puede ahorrar y cómo decidir con números.</p><span class="mono">Excel · Power BI · estadística</span></div>
+    <div class="f"><span class="ico-box">{% include icon.html n="escudo" %}</span><h3>Seguridad</h3><p>Trabajar sin accidentes y cumplir las normas de seguridad y salud.</p><span class="mono">SSOMA · IPERC</span></div>
+    <div class="f"><span class="ico-box">{% include icon.html n="calendario" %}</span><h3>Proyectos</h3><p>Planificar, ejecutar y controlar proyectos para que terminen a tiempo.</p><span class="mono">Gantt · ruta crítica · Scrum</span></div>
+  </div>
+</div></section>
+
+<section class="s"><div class="wrap">
+  <div class="head"><span class="eyebrow">Herramientas clave</span><h2>Lo que vas a usar en la U y en el trabajo</h2><p>Cada una tiene, o tendrá, su guía explicada con un caso real.</p></div>
+  <div class="grid3">
+    {% for h in site.data.herramientas %}
+      {% if h.articulo %}
+      <a class="card card-link" href="{{ h.articulo | relative_url }}"><div class="card-top">{% include icon-area.html a=h.tag %}<span class="tag">{{ h.tag }}</span></div><h3>{{ h.nombre }}</h3><p>{{ h.desc }}</p><span class="meta">Leer la guía →</span></a>
+      {% else %}
+      <div class="card"><div class="card-top">{% include icon-area.html a=h.tag %}<span class="tag">{{ h.tag }}</span></div><h3>{{ h.nombre }}</h3><p>{{ h.desc }}</p></div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div></section>
+
+<section class="s band-wash"><div class="wrap">
+  <div class="grid2" style="align-items:center;gap:48px">
+    <div class="stack">
+      <span class="eyebrow">Campo laboral</span>
+      <h2>¿Dónde trabaja un ingeniero industrial?</h2>
+      <p class="lead">En casi cualquier lugar donde haya un proceso que mejorar: fábricas, almacenes y centros de distribución, bancos, retail, minería, salud, consultoría o en su propio emprendimiento.</p>
+      <ul class="tech"><li>PRODUCCIÓN</li><li>LOGÍSTICA</li><li>CALIDAD</li><li>SEGURIDAD</li><li>DATOS</li></ul>
+    </div>
+    <div class="mini-me">
+      {% include foto.html %}
+      <div class="stack" style="gap:8px">
+        <span class="eyebrow">Así lo vivo yo</span>
+        <p style="color:var(--text)">Llevo más de 8 años en una planta de manufactura. Empecé en operaciones y hoy me encargo del control de producción y procesos: indicadores, reportes y estandarización del trabajo.</p>
+        <a class="more" href="{{ '/sobre-mi/' | relative_url }}">Conoce mi experiencia →</a>
+      </div>
+    </div>
+  </div>
+</div></section>

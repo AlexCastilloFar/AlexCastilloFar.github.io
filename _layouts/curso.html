@@ -3,7 +3,7 @@ layout: default
 seccion: cursos
 ---
 <section class="view wrap">
-  <div class="crumbs" style="margin-bottom:20px"><a href="{{ '/cursos/' | relative_url }}">Cursos</a> / {{ page.area }}</div>
+  <div class="crumbs" style="margin-bottom:20px"><a href="{{ '/recursos/' | relative_url }}">Recursos</a> / <a href="{{ '/cursos/' | relative_url }}">Cursos</a> / {{ page.area }}</div>
   <div class="article stack" style="max-width:820px">
     <div class="chips"><span class="tag">{{ page.area }}</span>{% if page.sesiones.size > 0 %}<span class="tag">{{ page.sesiones.size }} {% if page.sesiones.size == 1 %}sesión{% else %}sesiones{% endif %}</span>{% endif %}</div>
     <h1>{{ page.title }}</h1>
@@ -43,7 +43,7 @@ seccion: cursos
   {% if p %}
   <div class="block" style="max-width:820px">
     <div class="cta-box">
-      <span class="tag hot" style="width:max-content">Plantilla</span>
+      <span class="eyebrow">Recurso relacionado</span>
       <h3>Pon en práctica lo aprendido</h3>
       <p>La plantilla {{ p.nombre }}: {{ p.desc }}</p>
       <a class="btn" href="{{ '/plantillas/' | append: p.id | append: '/' | relative_url }}">Ver plantilla →</a>

@@ -9,10 +9,10 @@ description: Alex Castillo, encargado de control de producción y procesos y est
     {% include foto.html %}
     <div class="stack" style="max-width:660px">
       <span class="eyebrow">Sobre mí</span>
-      <h1>Hola, soy Alex</h1>
+      <h1>Hola, soy Alex Castillo</h1>
       <p class="lead">Trabajo en una planta de manufactura desde 2017 y hoy me encargo del control de producción y procesos. Estudio los últimos ciclos de Ingeniería Industrial y me enfoco en optimizar procesos con datos.</p>
       <div class="chips"><span class="tag">Excel + VBA</span><span class="tag">Power BI</span><span class="tag">Power Query</span><span class="tag">Python</span><span class="tag">Bizagi · BPMN</span><span class="tag">AutoCAD</span></div>
-      {% if site.linkedin and site.linkedin != "" %}<div class="ctas"><a class="btn btn-ink" href="{{ site.linkedin }}" target="_blank" rel="noopener">Ver mi LinkedIn ↗</a></div>{% endif %}
+      <div class="ctas"><a class="btn btn-ink" href="#contacto">Contáctame</a>{% if site.linkedin and site.linkedin != "" %}<a class="btn btn-ghost" href="{{ site.linkedin }}" target="_blank" rel="noopener">Ver mi LinkedIn ↗</a>{% endif %}</div>
     </div>
   </div>
 
@@ -34,12 +34,25 @@ description: Alex Castillo, encargado de control de producción y procesos y est
   </div>
 
   <div class="block">
-    <div class="sec-head"><span class="eyebrow">Portafolio</span><h2>Proyectos propios</h2></div>
+    <div class="sec-head"><span class="eyebrow">Portafolio</span><h2>Proyectos propios</h2><p>Lo que construyo fuera del trabajo para aprender y ayudar a otros.</p></div>
     <div class="grid2">
       <a class="card card-link" href="{{ '/plantillas/' | relative_url }}"><span class="tag">Excel · VBA</span><h3>Plantillas para ingeniería</h3><p>Ishikawa + Pareto, Gantt con ruta crítica y un cotizador para negocios.</p><span class="meta">Ver plantillas →</span></a>
       <div class="card"><span class="tag">Emprendimiento</span><h3>SorteoYa</h3><p>Negocio de sorteos con control financiero en Excel y web propia.</p></div>
       <div class="card"><span class="tag">Python</span><h3>Automatizaciones</h3><p>Scripts que pasan cientos de PDFs a Excel y bots de Telegram que hacen cálculos por mí.</p></div>
       <div class="card"><span class="tag">Contenido</span><h3>TikTok</h3><p>Tutoriales cortos y plantillas gratis para estudiantes de ingeniería.</p></div>
+    </div>
+  </div>
+  <div class="block" id="contacto">
+    <div class="contacto">
+      <div class="stack" style="gap:12px">
+        <span class="eyebrow">Contacto</span>
+        <h2>Hablemos</h2>
+        <p>¿Tienes una consulta sobre la carrera, un proyecto de mejora o una propuesta de trabajo? Escríbeme por LinkedIn.</p>
+      </div>
+      <div class="ctas">
+        {% if site.linkedin and site.linkedin != "" %}<a class="btn" href="{{ site.linkedin }}" target="_blank" rel="noopener">Escribirme por LinkedIn ↗</a>{% endif %}
+        {% if site.correo != "" %}<span class="btn btn-s">{{ site.correo }}</span>{% endif %}
+      </div>
     </div>
   </div>
 </section>

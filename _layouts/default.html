@@ -8,56 +8,43 @@
   {% seo %}
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=IBM+Plex+Mono:wght@500&display=swap">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}?v={{ site.time | date: '%s' }}">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%2300e05c'/%3E%3Cpath d='M9 16.5l4.5 4.5L23 11.5' stroke='%23162136' stroke-width='3.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%233e57da'/%3E%3Ctext x='16' y='21' font-family='Arial' font-weight='700' font-size='13' fill='white' text-anchor='middle'%3EAC%3C/text%3E%3C/svg%3E">
 </head>
 <body>
 {% assign seccion = page.seccion | default: "" %}
+<a class="btn btn-ink" href="#contenido" style="position:absolute;left:-9999px;top:8px;z-index:50" onfocus="this.style.left='16px'" onblur="this.style.left='-9999px'">Saltar al contenido</a>
 <header>
   <div class="wrap bar">
-    <a class="logo" href="{{ '/' | relative_url }}"><i></i>{{ site.title }}</a>
+    <a class="logo" href="{{ '/' | relative_url }}" aria-label="{{ site.title }}, inicio"><i aria-hidden="true"></i><span><b>{{ site.title }}</b><small>{{ site.subtitulo }}</small></span></a>
     <nav class="nav" id="menu" aria-label="Secciones">
       <a href="{{ '/' | relative_url }}" {% if seccion == "inicio" %}aria-current="page"{% endif %}>Inicio</a>
       <a href="{{ '/ingenieria-industrial/' | relative_url }}" {% if seccion == "ingenieria" %}aria-current="page"{% endif %}>Ingeniería Industrial</a>
       <a href="{{ '/articulos/' | relative_url }}" {% if seccion == "articulos" %}aria-current="page"{% endif %}>Artículos</a>
-      <a href="{{ '/cursos/' | relative_url }}" {% if seccion == "cursos" %}aria-current="page"{% endif %}>Cursos</a>
-      <a href="{{ '/plantillas/' | relative_url }}" {% if seccion == "plantillas" %}aria-current="page"{% endif %}>Plantillas</a>
+      <a href="{{ '/recursos/' | relative_url }}" {% if seccion == "recursos" or seccion == "cursos" or seccion == "plantillas" %}aria-current="page"{% endif %}>Recursos</a>
       <a href="{{ '/sobre-mi/' | relative_url }}" {% if seccion == "sobre-mi" %}aria-current="page"{% endif %}>Sobre mí</a>
     </nav>
-    <a class="btn btn-ink bar-cta" href="{{ '/plantillas/' | relative_url }}">Ver plantillas</a>
+    <a class="btn btn-ink bar-cta" href="{{ '/sobre-mi/' | relative_url }}#contacto">Contáctame</a>
     <button class="menu-btn" type="button" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú"><span class="i-abrir">{% include icon.html n="menu" %}</span><span class="i-cerrar">{% include icon.html n="cerrar" %}</span></button>
   </div>
 </header>
 
-<main>
+<main id="contenido">
 {{ content }}
 </main>
 
-{% if page.banda %}
-<section class="band" aria-label="Llamado final">
-  <span class="shape s1"></span><span class="shape s2"></span><span class="shape s3"></span><span class="shape s4"></span>
-  <div class="wrap">
-    <span class="eyebrow" style="color:#aab4c8">Pago por Yape o Plin</span>
-    <h2>Deja de hacer tus diagramas a mano</h2>
-    <p>Elige tu plantilla, paga desde tu celular y recíbela por Telegram en minutos.</p>
-    <a class="btn" href="{{ '/plantillas/' | relative_url }}">Ver plantillas →</a>
-  </div>
-</section>
-{% endif %}
-
 <footer>
   <div class="wrap foot-grid">
-    <div class="stack" style="gap:12px;max-width:340px">
-      <a class="logo" href="{{ '/' | relative_url }}"><i></i>{{ site.title }}</a>
-      <p>Herramientas de Ingeniería Industrial explicadas con casos reales y plantillas de Excel listas para usar.</p>
-      <span class="foot-note">Pagos por Yape y Plin, confirmados a mano.</span>
+    <div class="stack" style="gap:12px;max-width:360px">
+      <a class="logo" href="{{ '/' | relative_url }}"><i aria-hidden="true"></i><span><b>{{ site.title }}</b><small>{{ site.subtitulo }}</small></span></a>
+      <p>La Ingeniería Industrial explicada fácil, desde la experiencia de planta: procesos, calidad, productividad y datos.</p>
     </div>
-    <nav class="foot-col" aria-label="Secciones">
+    <nav class="foot-col" aria-label="Secciones del sitio">
       <span class="eyebrow">Secciones</span>
       <a href="{{ '/ingenieria-industrial/' | relative_url }}">Ingeniería Industrial</a>
       <a href="{{ '/articulos/' | relative_url }}">Artículos</a>
-      <a href="{{ '/cursos/' | relative_url }}">Cursos</a>
+      <a href="{{ '/cursos/' | relative_url }}">Cursos gratuitos</a>
       <a href="{{ '/plantillas/' | relative_url }}">Plantillas</a>
       <a href="{{ '/sobre-mi/' | relative_url }}">Sobre mí</a>
     </nav>
@@ -69,16 +56,17 @@
       {% if site.correo != "" %}<span>{{ site.correo }}</span>{% endif %}
     </div>
   </div>
-  <div class="wrap foot-bottom"><span>© {{ site.time | date: "%Y" }} {{ site.title }}</span><span>Hecho en Lima, Perú</span></div>
+  <div class="wrap foot-bottom"><span>© {{ site.time | date: "%Y" }} {{ site.title }} · {{ site.subtitulo }}</span><span>Hecho en Lima, Perú</span></div>
 </footer>
 
 {% if page.comprar %}
 {% if site.telegram != "" %}<a class="float" href="{{ site.telegram }}" target="_blank" rel="noopener">Comprar por Telegram ↗</a>{% else %}<button class="float buy" type="button">Comprar por Telegram</button>{% endif %}
 {% endif %}
-<div class="toast" id="toast" hidden>El bot de Telegram estará disponible muy pronto.</div>
+<div class="toast" id="toast" role="status" hidden>El bot de Telegram estará disponible muy pronto.</div>
 <script>
+  // Menú del celular
+  (function(){var b=document.querySelector(".menu-btn"),h=document.querySelector("header");if(!b)return;function cerrar(){h.classList.remove("abierto");b.setAttribute("aria-expanded","false");b.setAttribute("aria-label","Abrir menú")}b.addEventListener("click",function(){var o=h.classList.toggle("abierto");b.setAttribute("aria-expanded",o);b.setAttribute("aria-label",o?"Cerrar menú":"Abrir menú")});document.addEventListener("keydown",function(e){if(e.key==="Escape"&&h.classList.contains("abierto")){cerrar();b.focus()}});document.addEventListener("click",function(e){if(h.classList.contains("abierto")&&!h.contains(e.target))cerrar()})})();
   // Aviso mientras el bot de Telegram no exista (cuando pongas el enlace en _config.yml, los botones lo abren directo)
-  (function(){var b=document.querySelector(".menu-btn"),h=document.querySelector("header");if(b){b.addEventListener("click",function(){var o=h.classList.toggle("abierto");b.setAttribute("aria-expanded",o);b.setAttribute("aria-label",o?"Cerrar menú":"Abrir menú")});document.addEventListener("keydown",function(e){if(e.key==="Escape"&&h.classList.contains("abierto")){h.classList.remove("abierto");b.setAttribute("aria-expanded","false");b.focus()}})}})();
   (function(){var t=document.getElementById("toast"),k;document.addEventListener("click",function(e){if(e.target.closest(".buy")){t.hidden=false;clearTimeout(k);k=setTimeout(function(){t.hidden=true},2500)}})})();
 </script>
 </body>

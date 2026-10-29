@@ -5,7 +5,7 @@ comprar: true
 ---
 {% assign p = site.data.plantillas | where: "id", page.plantilla | first %}
 <section class="view wrap">
-  <div class="crumbs" style="margin-bottom:20px"><a href="{{ '/plantillas/' | relative_url }}">Plantillas</a> / {{ p.nombre }}</div>
+  <div class="crumbs" style="margin-bottom:20px"><a href="{{ '/recursos/' | relative_url }}">Recursos</a> / <a href="{{ '/plantillas/' | relative_url }}">Plantillas</a> / {{ p.nombre }}</div>
   <div class="detail">
     <div class="stack" style="gap:28px">
       <div class="stack" style="gap:14px">

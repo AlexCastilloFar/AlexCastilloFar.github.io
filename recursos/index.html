@@ -1,0 +1,25 @@
+---
+layout: default
+seccion: recursos
+title: Recursos de Ingeniería Industrial
+description: Cursos gratuitos con sus clases ordenadas y plantillas de Excel para Ingeniería Industrial.
+---
+<section class="view wrap">
+  <div class="sec-head"><span class="eyebrow">Recursos</span><h1>Aprende y practica</h1><p class="lead">Lo que he ido reuniendo en mi camino: cursos gratuitos con todas sus clases y las plantillas que uso en el trabajo.</p></div>
+  <div class="grid2">
+    <a class="card card-link big" href="{{ '/cursos/' | relative_url }}">
+      <span class="ico-box ico-lg">{% include icon.html n="play" %}</span>
+      <h3>Cursos gratuitos</h3>
+      <p>{{ site.cursos.size }} cursos de la UNI que llevé, con sus sesiones grabadas en orden: Power BI, SQL, Python, Lean, Six Sigma, MS Project y más.</p>
+      <ul class="tech"><li>DATOS</li><li>PROCESOS</li><li>CALIDAD</li><li>PROYECTOS</li></ul>
+      <span class="meta">Ver los {{ site.cursos.size }} cursos →</span>
+    </a>
+    <a class="card card-link big" href="{{ '/plantillas/' | relative_url }}">
+      <span class="ico-box ico-lg">{% include icon.html n="tabla" %}</span>
+      <h3>Plantillas de Excel</h3>
+      <p>Herramientas que nacieron de problemas reales en planta: Ishikawa + Pareto, Gantt con ruta crítica y un cotizador.</p>
+      <ul class="tech"><li>ISHIKAWA</li><li>PARETO</li><li>GANTT</li></ul>
+      <span class="meta">Ver las {{ site.data.plantillas.size }} plantillas →</span>
+    </a>
+  </div>
+</section>

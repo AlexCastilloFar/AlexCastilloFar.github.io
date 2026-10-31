@@ -42,7 +42,7 @@ Sin entrar en detalles del proceso, los cambios fueron de tres tipos:
 
 ## Resultados: antes vs. después
 
-| Métrica | Método actual | Método propuesto | Mejora |
+| Métrica | Antes | Después | Mejora |
 |---|--:|--:|--:|
 | **Tiempo por lote** | 179 min | 106 min | **−40.8%** |
 | Total de actividades | 41 | 28 | −31.7% |

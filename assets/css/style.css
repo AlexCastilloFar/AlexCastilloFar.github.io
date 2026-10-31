@@ -405,3 +405,10 @@ footer .logo small,footer .eyebrow{color:var(--glow)}
 .foot-col a:hover{color:#fff;text-decoration:underline}
 .foot-bottom{border-top:1px solid rgba(255,255,255,.12);color:#a9b3e8}
 footer a:focus-visible{outline-color:var(--glow)}
+.badge{min-height:44px}
+.hero>.stack{min-width:0}
+.badge{max-width:100%;min-width:0;overflow:hidden}
+/* Citas dentro de artículos (avisos de confidencialidad, ejemplos) */
+.prose blockquote{margin:0;background:var(--wash);border-left:3px solid var(--accent);border-radius:0 12px 12px 0;padding:16px 20px;font-size:16px;color:var(--text)}
+.prose blockquote p{margin:0}
+.prose blockquote p+p{margin-top:8px}

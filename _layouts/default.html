@@ -59,9 +59,9 @@
   <div class="wrap foot-bottom"><span>© {{ site.time | date: "%Y" }} {{ site.title }} · {{ site.subtitulo }}</span><span>Hecho en Lima, Perú</span></div>
 </footer>
 
-{% if page.comprar %}
+{% if page.comprar %}{% if page.layout != "post" or page.plantilla %}
 {% if site.telegram != "" %}<a class="float" href="{{ site.telegram }}" target="_blank" rel="noopener">Comprar por Telegram ↗</a>{% else %}<button class="float buy" type="button">Comprar por Telegram</button>{% endif %}
-{% endif %}
+{% endif %}{% endif %}
 <div class="toast" id="toast" role="status" hidden>El bot de Telegram estará disponible muy pronto.</div>
 <script>
   // Menú del celular

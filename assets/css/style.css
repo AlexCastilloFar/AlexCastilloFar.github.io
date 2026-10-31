@@ -507,7 +507,7 @@ header .bar-cta{min-height:48px}
 .side-k{font:500 11px/1 var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
 .toc-lista{list-style:none;margin:0;padding:0;display:grid;gap:2px;counter-reset:toc}
 .toc-lista li{counter-increment:toc}
-.toc-lista a{display:flex;gap:10px;align-items:baseline;min-height:40px;padding:9px 10px;border-radius:10px;font-size:14px;line-height:1.35;color:var(--text);text-decoration:none}
+.toc-lista a{display:flex;gap:10px;align-items:baseline;min-height:44px;padding:9px 10px;border-radius:10px;font-size:14px;line-height:1.35;color:var(--text);text-decoration:none}
 .toc-lista a::before{content:counter(toc,decimal-leading-zero);font:500 11px/1 var(--f-mono);color:var(--muted)}
 .toc-lista a:hover{background:var(--wash);color:var(--ink)}
 .toc-lista a.on{background:var(--wash);color:var(--accent);font-weight:500}
@@ -553,3 +553,9 @@ header .bar-cta{min-height:48px}
 /* Tarjetas: borde fino en vez de sombra (Graphy) */
 .card,.f,.step{box-shadow:0 0 0 1px var(--line)}
 .card-link:hover{box-shadow:0 0 0 1px rgba(62,87,218,.35),0 14px 30px -18px rgba(13,15,44,.28)}
+/* Páginas internas (cursos, plantillas, recursos, sobre mí…): lienzo niebla con cielo arriba y tarjetas blancas (Graphy) */
+body:not(.s-inicio):not(.l-post) main{background:linear-gradient(180deg,#e6ecff 0,var(--mist) 460px) var(--mist);margin-top:-88px;padding-top:88px}
+@media (max-width:900px){body:not(.s-inicio):not(.l-post) main{margin-top:-78px;padding-top:78px}}
+body:not(.s-inicio):not(.l-post) .band-wash{background:#fff}
+.ses-btn,.buybox{box-shadow:0 0 0 1px var(--line)}
+.warn{background:#fff;box-shadow:inset 3px 0 0 var(--accent),0 0 0 1px var(--line)}

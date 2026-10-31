@@ -1,6 +1,6 @@
 ---
 title: "Caso real: reduje 41% el tiempo por lote estandarizando el método de trabajo"
-titulo_corto: "Caso real: −41% de tiempo por lote con un DAP"
+titulo_corto: "Caso real: −41% de tiempo por lote"
 description: "Cómo usé el DAP y la estandarización de métodos de trabajo para reducir 41% el tiempo por lote y 50% la distancia recorrida en una línea de producción."
 categoria: Casos reales
 resumen: "De 179 a 106 minutos por lote en una línea de producción, usando DAP y estandarización."

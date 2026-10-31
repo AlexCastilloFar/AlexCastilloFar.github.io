@@ -454,3 +454,102 @@ header .bar-cta{min-height:48px}
 
 /* 6. Panel del caso destacado más redondeado (Relate) */
 .dark{border-radius:32px}
+.hero .badge{max-width:min(100%,calc(100vw - 32px));width:fit-content}
+.badge .badge-txt{flex:0 1 auto;min-width:0}.badge .badge-new{flex:none}
+
+/* Cifras en versión clara (elegida por Alex) */
+.stats-band{background:var(--wash);border-block:1px solid var(--cloud)}
+.stats-band::before{background-image:linear-gradient(to right,rgba(62,87,218,.06) 1px,transparent 1px),linear-gradient(to bottom,rgba(62,87,218,.06) 1px,transparent 1px)}
+.stats-band .st{border-left-color:var(--hair)}
+.stats-band .st b{color:var(--ink)}
+.stats-band .st span{color:var(--muted)}
+.stats-band .st .st-n{color:var(--accent)}
+
+/* =========================================================
+   v5 · paleta solo índigo + artículos estilo Graphy
+   (lienzo gris niebla + hoja blanca, bordes finos, sin sombras fuertes)
+   ========================================================= */
+:root{--mist:#f2f4f8;--line:rgba(13,15,44,.08)}
+
+/* Quitar verde y naranja: todo en la familia del índigo */
+.hero-sky{background:linear-gradient(180deg,#dde6ff 0%,#eaf0ff 50%,var(--mist) 100%)}
+.feat .f:nth-child(n){background:#fff;box-shadow:0 0 0 1px var(--line)}
+.feat{--feat-bg:var(--mist)}
+.feat .f .ico-box{background:var(--wash)}
+.feat .f::after{display:block}
+.delta,.kpi em{color:var(--glow)}
+.case .res span::before{background:var(--accent)}
+.stats-band{background:var(--mist)}
+
+/* Barra de lectura */
+.leer-barra{position:fixed;left:0;right:0;top:0;height:3px;z-index:30;pointer-events:none}
+.leer-barra span{display:block;height:100%;background:var(--accent);transform-origin:0 50%;transform:scaleX(0)}
+
+/* Cabecera del artículo */
+.art-head{background:linear-gradient(180deg,#e6ecff 0%,var(--mist) 100%);margin-top:-88px;padding-top:88px}
+@media (max-width:900px){.art-head{margin-top:-78px;padding-top:78px}}
+.art-head-in{display:grid;gap:16px;max-width:820px;padding-block:clamp(32px,5vw,56px) clamp(28px,4vw,44px)}
+.art-head h1{font-size:clamp(32px,4.6vw,52px);letter-spacing:-.035em;line-height:1.06}
+.art-head .lead{max-width:640px}
+.art-head .crumbs span{color:var(--hair);margin-inline:4px}
+.pill-cat{justify-self:start;display:inline-flex;align-items:center;gap:8px;background:#fff;border-radius:999px;padding:7px 14px;font:500 13px/1 var(--f-ui);color:var(--ink);box-shadow:0 0 0 1px var(--line)}
+.pill-cat i{width:7px;height:7px;border-radius:50%;background:var(--accent)}
+.art-head .byline{gap:12px;font-size:14px;line-height:1.45}
+.art-head .byline b{color:var(--ink);font-weight:600}
+
+/* Cuerpo: hoja blanca sobre lienzo niebla + índice lateral */
+.art-body{background:var(--mist);padding-bottom:clamp(48px,7vw,88px)}
+.art-grid{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:32px;align-items:start}
+@media (max-width:1000px){.art-grid{grid-template-columns:minmax(0,1fr)}.art-side{display:none}}
+.art-card{background:#fff;border-radius:20px;box-shadow:0 0 0 1px var(--line);padding:clamp(22px,5vw,56px);display:grid;gap:28px;min-width:0}
+.art-side{position:sticky;top:96px;display:grid;gap:16px}
+.side-box{background:#fff;border-radius:16px;box-shadow:0 0 0 1px var(--line);padding:20px;display:grid;gap:12px}
+.side-k{font:500 11px/1 var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.toc-lista{list-style:none;margin:0;padding:0;display:grid;gap:2px;counter-reset:toc}
+.toc-lista li{counter-increment:toc}
+.toc-lista a{display:flex;gap:10px;align-items:baseline;min-height:40px;padding:9px 10px;border-radius:10px;font-size:14px;line-height:1.35;color:var(--text);text-decoration:none}
+.toc-lista a::before{content:counter(toc,decimal-leading-zero);font:500 11px/1 var(--f-mono);color:var(--muted)}
+.toc-lista a:hover{background:var(--wash);color:var(--ink)}
+.toc-lista a.on{background:var(--wash);color:var(--accent);font-weight:500}
+.toc-lista a.on::before{color:var(--accent)}
+.side-autor{grid-template-columns:auto 1fr;align-items:start}
+.side-autor p{font-size:14px;color:var(--muted);line-height:1.5}
+.side-autor p b{color:var(--ink)}
+.side-autor .more{grid-column:1/-1;font-size:14px;min-height:44px}
+.toc-movil{display:none;border-radius:14px;box-shadow:0 0 0 1px var(--line);background:var(--mist)}
+@media (max-width:1000px){.toc-movil{display:block}}
+.toc-movil summary{cursor:pointer;min-height:48px;display:flex;align-items:center;padding:0 16px;font:500 15px/1 var(--f-ui);color:var(--ink);list-style:none}
+.toc-movil summary::-webkit-details-marker{display:none}
+.toc-movil summary::after{content:"+";margin-left:auto;font-size:20px;color:var(--accent)}
+.toc-movil[open] summary::after{content:"–"}
+.toc-movil .toc-lista{padding:0 8px 10px}
+
+/* Respuesta directa */
+.answer{background:var(--wash);box-shadow:none;border-radius:14px;padding:20px 22px;display:grid;gap:6px}
+.answer-k{font:500 11px/1 var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
+.answer p{font-size:17px;line-height:1.65;color:var(--ink)}
+
+/* Texto del artículo */
+.prose{font-size:17.5px;line-height:1.8;gap:20px}
+.prose h2{font-size:clamp(24px,3vw,30px);letter-spacing:-.03em;line-height:1.15;margin-top:24px;padding-top:24px;border-top:1px solid var(--line);scroll-margin-top:96px}
+.prose h2:first-child{margin-top:0;padding-top:0;border-top:0}
+.prose h3{font-size:20px;letter-spacing:-.02em;margin-top:8px;scroll-margin-top:96px}
+.prose ol{list-style:none;padding:0;counter-reset:paso;gap:12px}
+.prose ol>li{counter-increment:paso;position:relative;padding-left:44px}
+.prose ol>li::before{content:counter(paso);position:absolute;left:0;top:2px;width:28px;height:28px;border-radius:8px;background:var(--wash);color:var(--accent);font:500 13px/28px var(--f-mono);text-align:center}
+.prose ul{gap:8px}
+.prose table{box-shadow:0 0 0 1px var(--line);border-radius:12px}
+.prose th{background:var(--mist);color:var(--ink)}
+.prose td{border-top-color:var(--line)}
+.prose code{font:500 .86em/1.4 var(--f-mono);background:var(--mist);border-radius:6px;padding:2px 6px;color:var(--ink)}
+.prose pre{background:var(--ink);color:#e3e7f5;border-radius:12px;padding:16px 18px;overflow-x:auto;margin:0}
+.prose pre code{background:none;color:inherit;padding:0;font-size:14px}
+.prose blockquote{background:var(--mist);border-left:0;border-radius:12px;box-shadow:inset 3px 0 0 var(--accent)}
+.prose a{text-underline-offset:3px}
+
+/* Cierre del artículo */
+.cta-box{border-radius:20px;margin-top:4px}
+.art-mas{background:#fff}
+/* Tarjetas: borde fino en vez de sombra (Graphy) */
+.card,.f,.step{box-shadow:0 0 0 1px var(--line)}
+.card-link:hover{box-shadow:0 0 0 1px rgba(62,87,218,.35),0 14px 30px -18px rgba(13,15,44,.28)}

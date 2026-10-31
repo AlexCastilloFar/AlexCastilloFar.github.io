@@ -6,25 +6,80 @@ seccion: articulos
 {% assign m = page.date | date: "%-m" | minus: 1 %}
 {% assign palabras = content | number_of_words %}
 {% assign minutos = palabras | divided_by: 200 | plus: 1 %}
-<section class="view wrap">
-  <article class="article stack">
-    <div class="crumbs"><a href="{{ '/articulos/' | relative_url }}">Artículos</a> / {{ page.categoria | default: "Guía" }}</div>
-    <h1>{{ page.title }}</h1>
-    <div class="byline"><span class="av"><img src="{{ '/assets/img/alex.jpg' | relative_url }}" alt="" width="40" height="40"></span><span>Por {{ site.author }} · {{ page.date | date: "%-d" }} {{ meses[m] }} {{ page.date | date: "%Y" }} · {{ minutos }} min de lectura</span></div>
-    {% if page.respuesta %}<div class="answer"><strong>En pocas palabras:</strong> {{ page.respuesta }}</div>{% endif %}
-    <div class="prose">
-{{ content }}
+<div class="leer-barra" aria-hidden="true"><span id="leer-progreso"></span></div>
+
+<section class="art-head plano plano-full">
+  <div class="wrap">
+    <div class="art-head-in">
+      <nav class="crumbs" aria-label="Ruta"><a href="{{ '/articulos/' | relative_url }}">Artículos</a> <span aria-hidden="true">/</span> {{ page.categoria | default: "Guía" }}</nav>
+      <span class="pill-cat"><i aria-hidden="true"></i>{{ page.categoria | default: "Guía" }} · {{ minutos }} min de lectura</span>
+      <h1>{{ page.title }}</h1>
+      {% if page.resumen %}<p class="lead">{{ page.resumen }}</p>{% endif %}
+      <div class="byline"><span class="av"><img src="{{ '/assets/img/alex.jpg' | relative_url }}" alt="" width="40" height="40"></span><span><b>{{ site.author }}</b> · Ingeniero industrial<br>{{ page.date | date: "%-d" }} {{ meses[m] }} {{ page.date | date: "%Y" }}</span></div>
     </div>
-    {% if page.plantilla %}
-      {% assign p = site.data.plantillas | where: "id", page.plantilla | first %}
-      {% if p %}
-      <div class="cta-box">
-        <span class="eyebrow">Recurso relacionado</span>
-        <h3>Practica con una plantilla</h3>
-        <p>La plantilla {{ p.nombre }}: {{ p.desc }}</p>
-        <a class="btn" href="{{ '/plantillas/' | append: p.id | append: '/' | relative_url }}">Ver la plantilla →</a>
-      </div>
-      {% endif %}
-    {% endif %}
-  </article>
+  </div>
 </section>
+
+<section class="art-body">
+  <div class="wrap art-grid">
+    <article class="art-card">
+      {% if page.respuesta %}<div class="answer"><span class="answer-k">En pocas palabras</span><p>{{ page.respuesta | slice: 0 | upcase }}{{ page.respuesta | slice: 1, 2000 }}</p></div>{% endif %}
+      <details class="toc-movil" id="toc-movil"><summary>En este artículo</summary><ol class="toc-lista"></ol></details>
+      <div class="prose" id="prose">
+{{ content }}
+      </div>
+      {% if page.plantilla %}
+        {% assign p = site.data.plantillas | where: "id", page.plantilla | first %}
+        {% if p %}
+        <div class="cta-box">
+          <span class="eyebrow">Recurso relacionado</span>
+          <h3>Practica con la plantilla {{ p.nombre }}</h3>
+          <p>{{ p.desc }}</p>
+          <a class="btn" href="{{ '/plantillas/' | append: p.id | append: '/' | relative_url }}">Ver la plantilla →</a>
+        </div>
+        {% endif %}
+      {% endif %}
+    </article>
+
+    <aside class="art-side" aria-label="Índice del artículo">
+      <div class="side-box">
+        <span class="side-k">En este artículo</span>
+        <ol class="toc-lista" id="toc"></ol>
+      </div>
+      <div class="side-box side-autor">
+        <span class="av"><img src="{{ '/assets/img/alex.jpg' | relative_url }}" alt="" width="40" height="40"></span>
+        <p><b>Alex Castillo</b><br>Más de 8 años en una planta de manufactura. Explico la carrera con casos reales.</p>
+        <a class="more" href="{{ '/sobre-mi/' | relative_url }}">Conóceme →</a>
+      </div>
+    </aside>
+  </div>
+</section>
+
+{% assign otros = site.posts | where_exp: "x", "x.url != page.url" %}
+{% assign misma = otros | where: "categoria", page.categoria %}
+{% assign resto = otros | where_exp: "x", "x.categoria != page.categoria" %}
+<section class="s art-mas"><div class="wrap">
+  <div class="head"><span class="eyebrow">Sigue leyendo</span><h2>Más guías y casos reales</h2></div>
+  <div class="grid3">
+    {% assign n = 0 %}
+    {% for post in misma %}{% if n < 3 %}{% include post-card.html post=post %}{% assign n = n | plus: 1 %}{% endif %}{% endfor %}
+    {% for post in resto %}{% if n < 3 %}{% include post-card.html post=post %}{% assign n = n | plus: 1 %}{% endif %}{% endfor %}
+  </div>
+</div></section>
+
+<script>
+(function(){
+  // Índice automático con los subtítulos (##) del artículo
+  var hs=document.querySelectorAll("#prose h2"),listas=document.querySelectorAll(".toc-lista");
+  if(hs.length<2){document.querySelectorAll(".art-side .side-box:first-child,#toc-movil").forEach(function(e){e.hidden=true})}
+  hs.forEach(function(h,i){if(!h.id)h.id="s"+(i+1);listas.forEach(function(l){var li=document.createElement("li"),a=document.createElement("a");a.href="#"+h.id;a.textContent=h.textContent;li.appendChild(a);l.appendChild(li)})});
+  document.querySelectorAll("#toc-movil a").forEach(function(a){a.addEventListener("click",function(){document.getElementById("toc-movil").open=false})});
+  // Sección actual resaltada en el índice
+  var links=document.querySelectorAll("#toc a");
+  if("IntersectionObserver" in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.classList.toggle("on",a.getAttribute("href")==="#"+e.target.id)})}})},{rootMargin:"-20% 0px -70% 0px"});hs.forEach(function(h){io.observe(h)})}
+  // Barra de lectura
+  var b=document.getElementById("leer-progreso"),art=document.querySelector(".art-card");
+  function act(){var r=art.getBoundingClientRect(),t=r.height-innerHeight;var p=t>0?Math.min(1,Math.max(0,-r.top/t)):1;b.style.transform="scaleX("+p+")"}
+  addEventListener("scroll",act,{passive:true});act();
+})();
+</script>

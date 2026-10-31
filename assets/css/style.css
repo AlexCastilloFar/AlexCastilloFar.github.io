@@ -456,3 +456,11 @@ header .bar-cta{min-height:48px}
 .dark{border-radius:32px}
 .hero .badge{max-width:min(100%,calc(100vw - 32px));width:fit-content}
 .badge .badge-txt{flex:0 1 auto;min-width:0}.badge .badge-new{flex:none}
+
+/* Cifras en versión clara (elegida por Alex) */
+.stats-band{background:var(--wash);border-block:1px solid var(--cloud)}
+.stats-band::before{background-image:linear-gradient(to right,rgba(62,87,218,.06) 1px,transparent 1px),linear-gradient(to bottom,rgba(62,87,218,.06) 1px,transparent 1px)}
+.stats-band .st{border-left-color:var(--hair)}
+.stats-band .st b{color:var(--ink)}
+.stats-band .st span{color:var(--muted)}
+.stats-band .st .st-n{color:var(--accent)}

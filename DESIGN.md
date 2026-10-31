@@ -64,7 +64,7 @@ Inicio · Ingeniería Industrial · Artículos · Recursos (Cursos, Plantillas) 
 ## 7. Ritmo de la portada (v4)
 Cada sección se distingue de la anterior, sin agregar colores de marca nuevos:
 1. **Portada** `.hero-sky`: degradado "cielo" (celeste → crema) con cuadrícula de plano y esquinas inferiores redondeadas (40px). Idea de Bevel y Relate.
-2. **Cifras** `.stats-band`: franja oscura `--ink` con cuadrícula y números 01–04.
+2. **Cifras** `.stats-band`: franja clara `--wash` con cuadrícula de plano, números 01–04 en índigo y líneas divisorias (se probó oscura y Alex eligió la clara).
 3. **Lo que hago** `.feat`: 4 tarjetas sin borde con fondos suaves distintos (lavanda `#eef1ff`, menta `#e7f4ed`, durazno `#fff0e8`, celeste `#e8f1fd`). Idea de Resume.io. Solo fondos: el índigo sigue siendo el único color de acción.
 4. **Proyectos de mejora**: fondo `--wash` con plano, panel oscuro (radio 32px) y tarjetas problema → solución → resultado, con punto verde de estado en el resultado.
 5. **Artículos**: blanco.

@@ -616,3 +616,17 @@ body:not(.s-inicio):not(.l-post) .band-wash{background:#fff}
 .gal-cols ul{list-style:none;margin:10px 0 0;padding:0;display:grid}
 .gal-cols a{display:inline-flex;align-items:center;min-height:44px;font-size:15px;color:var(--text);text-decoration:none}
 .gal-cols a:hover{color:var(--accent);text-decoration:underline}
+/* Filtro de la galería: botones de área */
+.gal-btn{display:flex;justify-content:space-between;align-items:center;gap:10px;width:100%;min-height:44px;padding:0 12px;border:0;border-radius:10px;background:transparent;font:400 15px/1 var(--f-ui);color:var(--text);cursor:pointer;text-align:left;transition:background .15s ease,color .15s ease}
+.gal-btn small{font:500 11px/1 var(--f-mono);color:var(--muted);background:var(--mist);border-radius:999px;padding:4px 7px}
+.gal-btn:hover{background:#fff;color:var(--ink)}
+.gal-btn[aria-pressed="true"]{background:var(--accent);color:#fff;font-weight:500}
+.gal-btn[aria-pressed="true"] small{background:rgba(255,255,255,.2);color:#fff}
+.gal-titulo{font-size:22px;letter-spacing:-.02em;padding-bottom:12px;border-bottom:1px solid var(--line);margin-bottom:20px}
+.gal-item{display:grid}
+.gal-item[hidden]{display:none}
+.gal-mas{display:flex;justify-content:center;margin-top:28px}
+@media (max-width:900px){
+  .gal-btn{width:auto;flex:none;background:#fff;box-shadow:0 0 0 1px var(--line);border-radius:999px;padding:0 14px}
+  .gal-btn[aria-pressed="true"]{background:var(--accent);box-shadow:none}
+}

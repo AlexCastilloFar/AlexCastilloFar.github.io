@@ -14,23 +14,20 @@ description: "Guías de Ingeniería Industrial explicadas fácil, con casos real
   </div>
 
   <div class="gal">
-    <nav class="gal-nav" aria-label="Áreas">
+    <div class="gal-nav" role="group" aria-label="Filtrar artículos por área">
       <span class="side-k">Áreas</span>
+      <button class="gal-btn" type="button" data-f="todos" aria-pressed="true"><span>Todos</span><small>{{ site.posts.size }}</small></button>
       {% for c in cats %}{% assign n = site.posts | where: "categoria", c | size %}
-      <a href="#{{ c | slugify }}"><span>{{ c }}</span><small>{{ n }}</small></a>
+      <button class="gal-btn" type="button" data-f="{{ c | slugify }}" aria-pressed="false"><span>{{ c }}</span><small>{{ n }}</small></button>
       {% endfor %}
-    </nav>
+    </div>
 
     <div class="gal-main">
-      {% for c in cats %}
-      {% assign lista = site.posts | where: "categoria", c %}
-      <section class="gal-sec" id="{{ c | slugify }}" aria-labelledby="t-{{ c | slugify }}">
-        <h2 id="t-{{ c | slugify }}">{{ c }}</h2>
-        <div class="gal-grid">
-          {% for post in lista %}{% include post-card.html post=post nuevo=false %}{% endfor %}
-        </div>
-      </section>
-      {% endfor %}
+      <h2 class="gal-titulo" id="gal-titulo" aria-live="polite">Todos los artículos</h2>
+      <div class="gal-grid" id="gal-grid">
+        {% for post in site.posts %}<div class="gal-item" data-cat="{{ post.categoria | slugify }}" data-nombre="{{ post.categoria }}">{% include post-card.html post=post nuevo=forloop.first %}</div>{% endfor %}
+      </div>
+      <div class="gal-mas"><button class="btn btn-ghost" type="button" id="gal-mas" hidden>Ver más artículos</button></div>
     </div>
   </div>
 
@@ -40,7 +37,7 @@ description: "Guías de Ingeniería Industrial explicadas fácil, con casos real
     <div class="gal-cols">
       {% for c in cats %}
       <div><span class="side-k">{{ c }}</span>
-        <ul>{% assign lista = site.posts | where: "categoria", c %}{% for post in lista %}<li><a href="{{ post.url | relative_url }}">{{ post.title | split: ":" | first }}</a></li>{% endfor %}</ul>
+        <ul>{% assign lista = site.posts | where: "categoria", c %}{% for post in lista %}{% assign t = post.title | split: ": " %}<li><a href="{{ post.url | relative_url }}">{% if t[0] == "Caso real" %}{{ t[1] | slice: 0 | upcase }}{{ t[1] | slice: 1, 200 }}{% else %}{{ t[0] }}{% endif %}</a></li>{% endfor %}</ul>
       </div>
       {% endfor %}
     </div>
@@ -48,9 +45,25 @@ description: "Guías de Ingeniería Industrial explicadas fácil, con casos real
 </section>
 <script>
 (function(){
-  // Resalta en el menú lateral el área que estás viendo
-  var ls=document.querySelectorAll(".gal-nav a");if(!("IntersectionObserver" in window))return;
-  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){ls.forEach(function(a){a.classList.toggle("on",a.getAttribute("href")==="#"+e.target.id)})}})},{rootMargin:"-30% 0px -60% 0px"});
-  document.querySelectorAll(".gal-sec").forEach(function(s){io.observe(s)});
+  // Filtro por área + "Ver más" (6 tarjetas por vez). Funciona también con enlaces tipo /articulos/#casos-reales
+  var POR_PAGINA=6,bs=document.querySelectorAll(".gal-btn"),its=[].slice.call(document.querySelectorAll(".gal-item")),
+      mas=document.getElementById("gal-mas"),tit=document.getElementById("gal-titulo"),filtro="todos",visibles=POR_PAGINA;
+  function pintar(){
+    var lista=its.filter(function(i){return filtro==="todos"||i.dataset.cat===filtro});
+    its.forEach(function(i){i.hidden=true});
+    lista.forEach(function(i,k){i.hidden=k>=visibles});
+    mas.hidden=lista.length<=visibles;
+    var b=document.querySelector('.gal-btn[data-f="'+filtro+'"]');
+    tit.textContent=filtro==="todos"?"Todos los artículos":b.querySelector("span").textContent;
+    bs.forEach(function(x){x.setAttribute("aria-pressed",x===b)});
+  }
+  function elegir(f,mover){
+    if(!document.querySelector('.gal-btn[data-f="'+f+'"]'))f="todos";
+    filtro=f;visibles=POR_PAGINA;pintar();
+    if(mover){var top=document.querySelector(".gal").getBoundingClientRect().top+scrollY-90;if(scrollY>top)scrollTo({top:top})}
+  }
+  bs.forEach(function(b){b.addEventListener("click",function(){var f=b.dataset.f;history.replaceState(null,"",f==="todos"?location.pathname:"#"+f);elegir(f,true)})});
+  mas.addEventListener("click",function(){var antes=visibles;visibles+=POR_PAGINA;pintar();var sig=its.filter(function(i){return !i.hidden})[antes];if(sig){var l=sig.querySelector("a");if(l)l.focus({preventScroll:true})}});
+  elegir(location.hash.slice(1)||"todos",false);
 })();
 </script>

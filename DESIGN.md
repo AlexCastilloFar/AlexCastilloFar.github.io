@@ -34,7 +34,7 @@ Reglas:
 - En celular el interletrado de los títulos es más suave (−0.03em) para que se lea bien.
 
 ## 4. Componentes
-- **Botón principal** `.btn.btn-ink`: índigo, texto blanco, radio 12px, alto mínimo 48px.
+- **Botón principal** `.btn.btn-ink`: índigo, texto blanco, forma de píldora (radio 999px), alto mínimo 48px.
 - **Botón secundario** `.btn.btn-ghost`: blanco con borde `--hair`.
 - **Tarjeta** `.card`: blanca, radio 16px, borde `--cloud` + sombra suave. Clicable: `.card-link` (se eleva al pasar el mouse).
 - **Íconos**: SVG de trazo en `_includes/icon.html`, dentro de un círculo `.ico-box` (fondo `--wash`, color índigo). Nunca emojis como íconos.
@@ -47,7 +47,7 @@ Reglas:
 ```
 Inicio · Ingeniería Industrial · Artículos · Recursos (Cursos, Plantillas) · Sobre mí
 ```
-- Encabezado: **sin logo**, solo el nombre "Alex Castillo" (DM Sans 600) y debajo "INGENIERO INDUSTRIAL" en IBM Plex Mono con espaciado amplio; botón "Contáctame". En celular, menú con botón ☰.
+- Encabezado: **menú flotante tipo cápsula** (blanco translúcido con desenfoque, radio 999px; 20px en celular), **sin logo**, solo el nombre "Alex Castillo" (DM Sans 600) y debajo "INGENIERO INDUSTRIAL" en IBM Plex Mono con espaciado amplio; botón "Contáctame". En celular, menú con botón ☰.
 - Pie: descripción, secciones y contacto.
 
 ## 6. Reglas de UX (siempre)
@@ -60,3 +60,14 @@ Inicio · Ingeniería Industrial · Artículos · Recursos (Cursos, Plantillas) 
 7. **Imágenes optimizadas:** fotos de 600px máximo y con texto alternativo.
 8. **Textos claros:** frases cortas, verbos de acción en los botones ("Conoce la carrera", "Ver cursos").
 9. **Revisión con UI UX Pro Max** antes de grandes cambios (solo sus reglas de UX, no sus estilos).
+
+## 7. Ritmo de la portada (v4)
+Cada sección se distingue de la anterior, sin agregar colores de marca nuevos:
+1. **Portada** `.hero-sky`: degradado "cielo" (celeste → crema) con cuadrícula de plano y esquinas inferiores redondeadas (40px). Idea de Bevel y Relate.
+2. **Cifras** `.stats-band`: franja oscura `--ink` con cuadrícula y números 01–04.
+3. **Lo que hago** `.feat`: 4 tarjetas sin borde con fondos suaves distintos (lavanda `#eef1ff`, menta `#e7f4ed`, durazno `#fff0e8`, celeste `#e8f1fd`). Idea de Resume.io. Solo fondos: el índigo sigue siendo el único color de acción.
+4. **Proyectos de mejora**: fondo `--wash` con plano, panel oscuro (radio 32px) y tarjetas problema → solución → resultado, con punto verde de estado en el resultado.
+5. **Artículos**: blanco.
+6. **Recursos** `.show`: tarjetas grandes de color (índigo y azul oscuro) con ícono grande de fondo.
+7. **Cierre** `.cta-final`: `--wash` con plano y botón de contacto.
+8. **Pie**: oscuro `--ink`.

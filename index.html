@@ -4,7 +4,7 @@ seccion: inicio
 title: Ingeniería Industrial explicada fácil
 ---
 {% assign ultimo = site.posts.first %}
-<section class="plano">
+<section class="plano hero-sky">
   <div class="wrap hero">
     <div class="stack">
       {% if ultimo %}<a class="badge" href="{{ ultimo.url | relative_url }}"><span class="badge-new">Nuevo</span><span class="badge-txt">{{ ultimo.titulo_corto | default: ultimo.title }}</span><span class="badge-arrow" aria-hidden="true">→</span></a>{% endif %}

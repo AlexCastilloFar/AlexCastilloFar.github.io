@@ -17,7 +17,7 @@
 <a class="btn btn-ink" href="#contenido" style="position:absolute;left:-9999px;top:8px;z-index:50" onfocus="this.style.left='16px'" onblur="this.style.left='-9999px'">Saltar al contenido</a>
 <header>
   <div class="wrap bar">
-    <a class="logo" href="{{ '/' | relative_url }}" aria-label="{{ site.title }}, inicio"><i aria-hidden="true"></i><span><b>{{ site.title }}</b><small>{{ site.subtitulo }}</small></span></a>
+    <a class="logo" href="{{ '/' | relative_url }}" aria-label="{{ site.title }}, inicio"><span><b>{{ site.title }}</b><small>{{ site.subtitulo }}</small></span></a>
     <nav class="nav" id="menu" aria-label="Secciones">
       <a href="{{ '/' | relative_url }}" {% if seccion == "inicio" %}aria-current="page"{% endif %}>Inicio</a>
       <a href="{{ '/ingenieria-industrial/' | relative_url }}" {% if seccion == "ingenieria" %}aria-current="page"{% endif %}>Ingeniería Industrial</a>
@@ -37,7 +37,7 @@
 <footer>
   <div class="wrap foot-grid">
     <div class="stack" style="gap:12px;max-width:360px">
-      <a class="logo" href="{{ '/' | relative_url }}"><i aria-hidden="true"></i><span><b>{{ site.title }}</b><small>{{ site.subtitulo }}</small></span></a>
+      <a class="logo" href="{{ '/' | relative_url }}"><span><b>{{ site.title }}</b><small>{{ site.subtitulo }}</small></span></a>
       <p>La Ingeniería Industrial explicada fácil, desde la experiencia de planta: procesos, calidad, productividad y datos.</p>
     </div>
     <nav class="foot-col" aria-label="Secciones del sitio">

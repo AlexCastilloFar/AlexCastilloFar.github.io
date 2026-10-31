@@ -47,7 +47,7 @@ Reglas:
 ```
 Inicio · Ingeniería Industrial · Artículos · Recursos (Cursos, Plantillas) · Sobre mí
 ```
-- Encabezado: logo "AC" + "Alex Castillo / Ingeniero Industrial" y botón "Contáctame". En celular, menú con botón ☰.
+- Encabezado: **sin logo**, solo el nombre "Alex Castillo" (DM Sans 600) y debajo "INGENIERO INDUSTRIAL" en IBM Plex Mono con espaciado amplio; botón "Contáctame". En celular, menú con botón ☰.
 - Pie: descripción, secciones y contacto.
 
 ## 6. Reglas de UX (siempre)

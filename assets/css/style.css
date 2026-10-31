@@ -314,3 +314,8 @@ footer{border-top:1px solid var(--cloud);background:#fff;padding-top:56px}
 
 /* Ajustes celular: títulos menos apretados y aviso en una línea */
 @media (max-width:600px){h1{letter-spacing:-.03em}h2{letter-spacing:-.025em}.badge span{display:none}.badge{padding:8px 14px}}
+
+/* Marca sin logo (opción A): solo el nombre + especialidad en letra técnica */
+.logo i{display:none}
+.logo b{font:600 19px/1.1 var(--f-ui);letter-spacing:-.02em;color:var(--ink)}
+.logo small{font:500 11px/1.4 var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:3px}

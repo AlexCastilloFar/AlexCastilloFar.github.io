@@ -6,6 +6,8 @@ categoria: Casos reales
 resumen: "Del cuaderno a un reporte automático en minutos, sin errores de digitación."
 respuesta: "separé los datos en una tabla limpia (base de datos), hice que el reporte general se llene solo con SUMAR.SI.CONJUNTO y, en vez de digitar el cuaderno, le tomo una foto y una IA me devuelve la tabla lista para pegar. Pasé de horas a un par de minutos."
 date: 2026-10-31 06:00:00 -0500
+grafico: registro
+historia: "De horas digitando un cuaderno a un par de minutos con una foto"
 ---
 
 > Caso de una planta de manufactura donde trabajo. Por confidencialidad no muestro los formatos ni los datos reales: los ejemplos de abajo son ilustrativos.

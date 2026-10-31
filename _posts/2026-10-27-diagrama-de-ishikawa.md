@@ -6,6 +6,8 @@ categoria: Calidad
 resumen: "Con el caso de una panadería de barrio donde el pan sale quemado."
 respuesta: "el diagrama de Ishikawa (o espina de pescado) ordena todas las causas posibles de un problema en 6 grupos, las 6M, para que encuentres la causa raíz en vez de quedarte con la primera idea."
 plantilla: ishikawa-pareto
+grafico: ishikawa
+historia: "El panadero nuevo era solo una espina: el problema estaba en el método"
 ---
 
 ## ¿Para qué sirve?

@@ -4,5 +4,5 @@
   <div class="card-top">{% include icon-area.html a=include.post.categoria %}<span class="tag{% if include.nuevo %} hot{% endif %}">{{ include.post.categoria | default: "Guía" }}</span></div>
   <h3>{{ include.post.title }}</h3>
   <p>{{ include.post.resumen }}</p>
-  <span class="meta">{{ include.post.date | date: "%-d" }} {{ meses[m] }} {{ include.post.date | date: "%Y" }} · Leer guía →</span>
+  <span class="meta">{{ include.post.date | date: "%-d" }} {{ meses[m] }} {{ include.post.date | date: "%Y" }} · {% if include.post.categoria == "Casos reales" %}Leer caso{% else %}Leer guía{% endif %} →</span>
 </a>

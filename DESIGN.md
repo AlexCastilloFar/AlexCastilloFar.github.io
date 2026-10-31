@@ -71,3 +71,9 @@ Cada sección se distingue de la anterior, sin agregar colores de marca nuevos:
 6. **Recursos** `.show`: tarjetas grandes de color (índigo y azul oscuro) con ícono grande de fondo.
 7. **Cierre** `.cta-final`: `--wash` con plano y botón de contacto.
 8. **Pie**: oscuro `--ink`.
+
+## 8. v5 · Paleta solo índigo y artículos estilo Graphy (31 oct 2026)
+- **Fuera el verde y el naranja.** Todo vive en la familia del índigo: `--accent`, `--glow`, `--wash`, `--mist` (#f2f4f8) y blanco. Nada de fondos menta o durazno ni puntos verdes.
+- **Dos niveles de superficie (Graphy):** lienzo gris niebla `--mist` + tarjetas blancas con **borde fino** `--line` (rgba(13,15,44,.08)) en vez de sombra. La sombra solo aparece al pasar el mouse.
+- **Páginas internas** (cursos, plantillas, recursos, sobre mí, ingeniería): fondo niebla con un "cielo" índigo suave arriba.
+- **Artículos:** cabecera con cielo y cuadrícula, píldora de categoría con punto índigo + minutos de lectura, autor con foto; cuerpo en **hoja blanca** sobre niebla; **índice lateral fijo** "En este artículo" (en celular, desplegable) que resalta la sección actual; barra de lectura arriba; pasos numerados en cuadritos índigo; al final "Sigue leyendo" con 3 artículos.

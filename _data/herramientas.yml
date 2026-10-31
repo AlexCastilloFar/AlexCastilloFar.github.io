@@ -6,15 +6,19 @@
 - nombre: Diagrama de Ishikawa
   tag: Calidad
   desc: Encuentra la causa raíz de un problema con las 6M.
+  articulo: /articulos/diagrama-de-ishikawa/
 - nombre: Diagrama de Gantt
   tag: Planeamiento
   desc: Cronograma de tareas, avance y ruta crítica.
+  articulo: /articulos/diagrama-de-gantt/
 - nombre: DOP y DAP
   tag: Procesos
   desc: Representa un proceso con la simbología ASME.
+  articulo: /articulos/dop-y-dap/
 - nombre: Estudio de tiempos
   tag: Procesos
   desc: Calcula el tiempo estándar de una operación.
 - nombre: Metodología 5S
   tag: Gestión
   desc: Orden y limpieza que se notan en la productividad.
+  articulo: /articulos/metodologia-5s/

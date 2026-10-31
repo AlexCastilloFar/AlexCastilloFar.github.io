@@ -1,0 +1,22 @@
+name: vista-previa
+on:
+  push:
+    branches: [vista-previa]
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
+      - run: |
+          cd _site
+          sudo chown -R $(id -u) .
+          git init -q -b vista-previa-site
+          git config user.name bot && git config user.email bot@example.com
+          git add -A && git commit -qm build
+          git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" vista-previa-site

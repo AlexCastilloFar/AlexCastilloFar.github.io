@@ -1,5 +1,6 @@
 {%- assign a = include.a | downcase -%}{%- assign nombre = "diana" -%}
-{%- if a contains "dato" -%}{%- assign nombre = "chart" -%}
+{%- if a contains "caso" -%}{%- assign nombre = "medalla" -%}
+{%- elsif a contains "dato" -%}{%- assign nombre = "chart" -%}
 {%- elsif a contains "calidad" or a contains "mejora" -%}{%- assign nombre = "diana" -%}
 {%- elsif a contains "producci" -%}{%- assign nombre = "engranaje" -%}
 {%- elsif a contains "program" -%}{%- assign nombre = "codigo" -%}

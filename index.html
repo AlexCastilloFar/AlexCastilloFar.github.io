@@ -3,12 +3,13 @@ layout: default
 seccion: inicio
 title: Ingeniería Industrial explicada fácil
 ---
+{% assign ultimo = site.posts.first %}
 <section class="plano">
   <div class="wrap hero">
     <div class="stack">
-      <span class="badge"><span>Lima, Perú</span>Ingeniero industrial · +8 años en planta</span>
+      {% if ultimo %}<a class="badge" href="{{ ultimo.url | relative_url }}"><span class="badge-new">Nuevo</span><span class="badge-txt">{{ ultimo.titulo_corto | default: ultimo.title }}</span><span class="badge-arrow" aria-hidden="true">→</span></a>{% endif %}
       <h1>Ingeniería Industrial, explicada <span class="kw">fácil</span></h1>
-      <p class="lead">Qué es, para qué sirve y cómo se aplica de verdad: procesos, calidad, productividad y datos, contados por alguien que lo vive todos los días en planta.</p>
+      <p class="lead">Procesos, calidad, productividad y datos, explicados por alguien que lo vive todos los días en planta.</p>
       <div class="ctas">
         <a class="btn btn-ink" href="{{ '/ingenieria-industrial/' | relative_url }}">Conoce la carrera {% include icon.html n="flecha" %}</a>
         <a class="btn btn-ghost" href="{{ '/sobre-mi/' | relative_url }}">Sobre mí</a>
@@ -24,64 +25,78 @@ title: Ingeniería Industrial explicada fácil
   </div>
 </section>
 
-<section class="band-wash stats-band" aria-label="En números">
+<section class="stats-band" aria-label="En números">
   <div class="wrap">
-    <div class="st"><b>+8 años</b><span>en una planta de manufactura</span></div>
-    <div class="st"><b>2017</b><span>empecé en operaciones de planta</span></div>
-    <div class="st"><b>{{ site.cursos.size }} cursos</b><span>en datos, procesos y calidad</span></div>
-    <div class="st"><b>BPMN 2.0</b><span>certificado en Bizagi</span></div>
+    <div class="st"><span class="st-n">01</span><b>+8 años</b><span>en una planta de manufactura</span></div>
+    <div class="st"><span class="st-n">02</span><b>−41%</b><span>tiempo por lote al estandarizar un método</span></div>
+    <div class="st"><span class="st-n">03</span><b>Horas → min</b><span>registro diario de producción con Excel + IA</span></div>
+    <div class="st"><span class="st-n">04</span><b>{{ site.cursos.size }} cursos</b><span>en datos, procesos y calidad</span></div>
   </div>
 </section>
 
 <section class="s"><div class="wrap">
   <div class="head"><span class="eyebrow">Lo que hago</span><h2>De la planta a los datos</h2><p>Las cuatro áreas de la Ingeniería Industrial con las que trabajo cada día, y sobre las que escribo aquí.</p></div>
   <div class="feat">
-    <div class="f"><span class="ico-box">{% include icon.html n="engranaje" %}</span><h3>Control de producción</h3><p>Seguir lo que se produce, cuánto se pierde y por qué, con indicadores claros.</p><span class="mono">OEE · KPI · reportes</span></div>
-    <div class="f"><span class="ico-box">{% include icon.html n="flujo" %}</span><h3>Mejora de procesos</h3><p>Ordenar el trabajo, eliminar desperdicios y estandarizar métodos.</p><span class="mono">Lean · 5S · BPMN</span></div>
-    <div class="f"><span class="ico-box">{% include icon.html n="diana" %}</span><h3>Calidad</h3><p>Encontrar la causa raíz de los problemas y evitar que se repitan.</p><span class="mono">Ishikawa · Pareto · DMAIC</span></div>
-    <div class="f"><span class="ico-box">{% include icon.html n="chart" %}</span><h3>Análisis de datos</h3><p>Convertir la data de planta en decisiones y reportes claros.</p><span class="mono">Excel · Power BI · SQL</span></div>
+    <div class="f"><div class="f-top"><span class="ico-box">{% include icon.html n="engranaje" %}</span><span class="f-n">01</span></div><h3>Control de producción</h3><p>Seguir lo que se produce, cuánto se pierde y por qué, con indicadores claros.</p><span class="mono">OEE · KPI · reportes</span></div>
+    <div class="f"><div class="f-top"><span class="ico-box">{% include icon.html n="flujo" %}</span><span class="f-n">02</span></div><h3>Mejora de procesos</h3><p>Ordenar el trabajo, eliminar desperdicios y estandarizar métodos.</p><span class="mono">Lean · 5S · BPMN</span></div>
+    <div class="f"><div class="f-top"><span class="ico-box">{% include icon.html n="diana" %}</span><span class="f-n">03</span></div><h3>Calidad</h3><p>Encontrar la causa raíz de los problemas y evitar que se repitan.</p><span class="mono">Ishikawa · Pareto · DMAIC</span></div>
+    <div class="f"><div class="f-top"><span class="ico-box">{% include icon.html n="chart" %}</span><span class="f-n">04</span></div><h3>Análisis de datos</h3><p>Convertir la data de planta en decisiones y reportes claros.</p><span class="mono">Excel · Power BI · SQL</span></div>
   </div>
 </div></section>
 
-<section style="padding-bottom:clamp(64px,8vw,96px)"><div class="wrap"><div class="dark">
-  <div class="stack" style="gap:16px">
-    <span class="eyebrow">Mi trabajo, en datos</span>
-    <h2>Así se ve la Ingeniería Industrial cuando se mide</h2>
-    <p>Un ejemplo del tipo de tablero que armo para seguir una línea de producción: eficiencia, rechazos y sus causas principales.</p>
-    <div><a class="btn" href="{{ '/articulos/' | relative_url }}">Leer artículos</a></div>
+<section class="s band-wash plano plano-full"><div class="wrap">
+  <div class="head"><span class="eyebrow">Proyectos de mejora</span><h2>Casos reales, con resultados medibles</h2><p>Mejoras que hice en una planta de manufactura. Sin datos internos: solo el problema, la solución y el resultado.</p></div>
+  <div class="dark">
+    <div class="stack" style="gap:16px">
+      <span class="eyebrow">Caso destacado · Lean</span>
+      <h2>Estandaricé un método de trabajo y el lote se hizo en 41% menos tiempo</h2>
+      <p>Con un diagrama de análisis de procesos (DAP) encontré pasos que no agregaban valor: inspecciones repetidas, traslados largos y actividades duplicadas.</p>
+      <div><a class="btn" href="{{ '/articulos/caso-estandarizacion-metodos-de-trabajo/' | relative_url }}">Leer el caso completo</a></div>
+    </div>
+    <figure class="screen" style="margin:0" aria-label="Comparación antes y después del método de trabajo">
+      <div class="sc-top"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span>MÉTODO ACTUAL vs PROPUESTO</span></div>
+      <div class="cmp">
+        <div class="cmp-row"><small>TIEMPO POR LOTE · <span class="delta">−40.8%</span></small><div class="bar2"><span>ANTES</span><i style="width:100%"></i><b>179 min</b></div><div class="bar2 new"><span>DESPUÉS</span><i style="width:59%"></i><b>106 min</b></div></div>
+        <div class="cmp-row"><small>ACTIVIDADES · <span class="delta">−31.7%</span></small><div class="bar2"><span>ANTES</span><i style="width:100%"></i><b>41</b></div><div class="bar2 new"><span>DESPUÉS</span><i style="width:68%"></i><b>28</b></div></div>
+        <div class="cmp-row"><small>DISTANCIA RECORRIDA · <span class="delta">−50%</span></small><div class="bar2"><span>ANTES</span><i style="width:100%"></i><b>40 m</b></div><div class="bar2 new"><span>DESPUÉS</span><i style="width:50%"></i><b>20 m</b></div></div>
+        <div class="cmp-row"><small>INSPECCIONES · <span class="delta">−9 pasos</span></small><div class="bar2"><span>ANTES</span><i style="width:100%"></i><b>12</b></div><div class="bar2 new"><span>DESPUÉS</span><i style="width:25%"></i><b>3</b></div></div>
+      </div>
+      <figcaption class="sc-note">Datos reales del DAP de la línea, sin nombres ni detalles internos.</figcaption>
+    </figure>
   </div>
-  <figure class="screen" style="margin:0" aria-label="Tablero de ejemplo de una línea de envasado">
-    <div class="sc-top"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span>LÍNEA DE ENVASADO · EJEMPLO</span></div>
-    <div class="kpis"><div class="kpi"><small>OEE</small><b>82%</b><em>▲ 4 pts</em></div><div class="kpi"><small>RECHAZO</small><b>1.8%</b><em>▼ 0.6 pts</em></div><div class="kpi"><small>PRODUCCIÓN</small><b>7 640</b><em>unidades</em></div></div>
-    <div class="chart"><svg viewBox="0 0 320 120" style="width:100%;display:block" role="img" aria-label="Pareto de causas de rechazo">
-      <g fill="#8098f9"><rect x="14" y="14" width="30" height="86" rx="3"/><rect x="54" y="38" width="30" height="62" rx="3"/><rect x="94" y="61" width="30" height="39" rx="3"/><rect x="134" y="79" width="30" height="21" rx="3"/></g>
-      <g fill="rgba(255,255,255,.22)"><rect x="174" y="86" width="30" height="14" rx="3"/><rect x="214" y="89" width="30" height="11" rx="3"/><rect x="254" y="93" width="30" height="7" rx="3"/></g>
-      <line x1="8" y1="30" x2="312" y2="30" stroke="#c6d7fe" stroke-dasharray="4 4" stroke-width="1"/>
-      <polyline fill="none" stroke="#fff" stroke-width="2" points="29,70 69,48 109,35 149,27 189,22 229,18 269,15"/>
-      <text x="312" y="24" fill="#c6d7fe" font-size="9" text-anchor="end" font-family="monospace">80%</text>
-    </svg></div>
-    <figcaption class="sc-note">Datos de ejemplo con fines educativos.</figcaption>
-  </figure>
-</div></div></section>
+  <div class="grid3 cases">
+    <a class="card card-link case" href="{{ '/articulos/caso-estandarizacion-metodos-de-trabajo/' | relative_url }}"><span class="tag">Lean · DAP</span><h3>Estandarización de métodos de trabajo</h3><dl><div><dt>Problema</dt><dd>Una línea con 41 actividades y 12 inspecciones por lote.</dd></div><div><dt>Solución</dt><dd>Análisis con DOP y DAP, eliminé pasos sin valor y reordené el puesto.</dd></div></dl><div class="res"><b>−41%</b><span>tiempo por lote</span></div><span class="meta">Leer el caso →</span></a>
+    <a class="card card-link case" href="{{ '/articulos/caso-registro-de-produccion-con-excel-e-ia/' | relative_url }}"><span class="tag">Excel · IA</span><h3>Registro de producción automatizado</h3><dl><div><dt>Problema</dt><dd>La producción de dos turnos se anotaba a mano y se pasaba celda por celda, con más de 30 tipos de material.</dd></div><div><dt>Solución</dt><dd>Base de datos limpia, reporte con SUMAR.SI.CONJUNTO y carga con foto del cuaderno + IA (OCR).</dd></div></dl><div class="res"><b>Horas → min</b><span>sin errores de digitación</span></div><span class="meta">Leer el caso →</span></a>
+    <a class="card card-link case" href="{{ '/articulos/caso-bot-telegram-formulacion-por-lote/' | relative_url }}"><span class="tag">Python · Telegram</span><h3>Asistente de formulación por lote</h3><dl><div><dt>Problema</dt><dd>Calcular a mano la materia prima de cada lote toma tiempo y se presta a errores.</dd></div><div><dt>Solución</dt><dd>Un bot que lee la hoja de formulación y calcula cada lote aprovechando los saldos.</dd></div></dl><div class="res"><b>Uso diario</b><span>por los operarios de planta</span></div><span class="meta">Leer el caso →</span></a>
+  </div>
+</div></section>
 
-<section class="s band-wash"><div class="wrap">
+<section class="s"><div class="wrap">
   <div class="head"><span class="eyebrow">Artículos</span><h2>La carrera, explicada fácil</h2><p>Cada herramienta de la Ingeniería Industrial con un caso real y sin tecnicismos.</p></div>
   <div class="grid3">
-    {% for post in site.posts limit:3 %}{% include post-card.html post=post nuevo=forloop.first %}{% endfor %}
-    {% if site.posts.size < 3 %}
+    {% assign guias = site.posts | where_exp: "p", "p.categoria != 'Casos reales'" %}
+    {% for post in guias limit:3 %}{% include post-card.html post=post nuevo=forloop.first %}{% endfor %}
+    {% if guias.size < 3 %}
     <a class="card card-link" href="{{ '/ingenieria-industrial/' | relative_url }}"><div class="card-top">{% include icon-area.html a="procesos" %}<span class="tag">La carrera</span></div><h3>¿Qué es la Ingeniería Industrial?</h3><p>Qué se estudia, dónde se trabaja y las herramientas que vas a usar.</p><span class="meta">Conoce la carrera →</span></a>
     {% endif %}
-    {% if site.posts.size < 2 %}
+    {% if guias.size < 2 %}
     <a class="card card-link" href="{{ '/sobre-mi/' | relative_url }}"><div class="card-top">{% include icon-area.html a="producción" %}<span class="tag">Experiencia</span></div><h3>Así se vive la carrera en planta</h3><p>Mi recorrido de más de 8 años: de operaciones a control de producción y procesos.</p><span class="meta">Conóceme →</span></a>
     {% endif %}
   </div>
   <div style="margin-top:32px"><a class="more" href="{{ '/articulos/' | relative_url }}">Ver todos los artículos →</a></div>
 </div></section>
 
-<section class="s"><div class="wrap">
+<section class="s" style="padding-top:0"><div class="wrap">
   <div class="head"><span class="eyebrow">Recursos</span><h2>Aprende y practica</h2><p>Cursos gratuitos con sus clases ordenadas y las plantillas que uso en el trabajo.</p></div>
   <div class="grid2">
-    <a class="card card-link big" href="{{ '/cursos/' | relative_url }}"><span class="ico-box ico-lg">{% include icon.html n="play" %}</span><h3>Cursos gratuitos</h3><p>{{ site.cursos.size }} cursos de la UNI: Power BI, SQL, Python, Lean, Six Sigma y más, con todas sus sesiones.</p><span class="meta">Ver cursos →</span></a>
-    <a class="card card-link big" href="{{ '/plantillas/' | relative_url }}"><span class="ico-box ico-lg">{% include icon.html n="tabla" %}</span><h3>Plantillas de Excel</h3><p>Las plantillas que uso para Ishikawa, Pareto, Gantt y cotizaciones, listas para usar.</p><span class="meta">Ver plantillas →</span></a>
+    <a class="show show-indigo" href="{{ '/cursos/' | relative_url }}"><span class="show-k">{{ site.cursos.size }} CURSOS · GRATIS</span><h3>Cursos gratuitos</h3><p>Cursos de la UNI: Power BI, SQL, Python, Lean, Six Sigma y más, con todas sus sesiones.</p><span class="show-cta">Ver cursos {% include icon.html n="flecha" %}</span><span class="show-ico" aria-hidden="true">{% include icon.html n="play" %}</span></a>
+    <a class="show show-ink" href="{{ '/plantillas/' | relative_url }}"><span class="show-k">EXCEL · VBA</span><h3>Plantillas de Excel</h3><p>Las plantillas que uso para Ishikawa, Pareto, Gantt y cotizaciones, listas para usar.</p><span class="show-cta">Ver plantillas {% include icon.html n="flecha" %}</span><span class="show-ico" aria-hidden="true">{% include icon.html n="tabla" %}</span></a>
   </div>
+</div></section>
+
+<section class="cta-final plano plano-full"><div class="wrap">
+  <span class="eyebrow">Hablemos</span>
+  <h2>¿Tienes un proceso que mejorar?</h2>
+  <p>Si eres estudiante, tienes un negocio o buscas a alguien que conecte la planta con los datos, escríbeme.</p>
+  <div class="ctas"><a class="btn btn-ink" href="{{ '/sobre-mi/' | relative_url }}#contacto">Contáctame</a><a class="btn btn-ghost" href="{{ '/articulos/' | relative_url }}">Ver artículos</a></div>
 </div></section>

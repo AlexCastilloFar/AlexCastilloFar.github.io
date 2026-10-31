@@ -6,6 +6,8 @@ categoria: Casos reales
 resumen: "De 179 a 106 minutos por lote en una línea de producción, usando DAP y estandarización."
 respuesta: "analicé la línea con un DAP, eliminé actividades que no agregaban valor (sobre todo inspecciones repetidas y traslados) y dejé un método estándar para todos. El tiempo por lote bajó de 179 a 106 minutos (−40.8%) y la distancia recorrida, de 40 a 20 metros."
 date: 2026-10-31 07:00:00 -0500
+grafico: caso-dap
+historia: "El lote pasó de 179 a 106 minutos sin comprar ninguna máquina"
 ---
 
 > Este caso es de mis prácticas preprofesionales en una planta de manufactura. Por confidencialidad no menciono la empresa, el producto ni detalles internos del proceso: solo el método y los resultados.

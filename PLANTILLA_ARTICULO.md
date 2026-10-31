@@ -6,6 +6,8 @@ categoria: Calidad
 resumen: "Una línea que se ve en la tarjeta del artículo."
 respuesta: "la respuesta directa en 1 o 2 líneas, empezando en minúscula."
 plantilla: ishikawa-pareto
+grafico: pareto        # dibujo de la tarjeta: pareto, ishikawa, gantt, dap, 5s, caso-dap, registro, bot (o déjalo vacío)
+historia: "El resultado contado en una frase, con un número (ej.: 4 de 8 causas explican el 85% de las fallas)"
 ---
 
 ## ¿Para qué sirve?

@@ -6,6 +6,8 @@ categoria: Planeamiento
 resumen: "Con el caso de un trabajo final de la U que siempre se termina a última hora."
 respuesta: "el diagrama de Gantt es un cronograma en barras: cada fila es una tarea y cada barra muestra cuándo empieza y cuándo termina. Te dice de un vistazo qué hacer primero, qué va en paralelo y qué tareas no pueden retrasarse (la ruta crítica)."
 plantilla: gantt
+grafico: gantt
+historia: "La ruta crítica dura 16 días; el marco teórico tiene 6 días de holgura"
 ---
 
 ## ¿Para qué sirve?

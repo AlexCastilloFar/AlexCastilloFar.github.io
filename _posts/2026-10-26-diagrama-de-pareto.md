@@ -6,6 +6,8 @@ categoria: Calidad
 resumen: "Con el caso de una línea de envasado que pierde botellas mal selladas."
 respuesta: "el diagrama de Pareto ordena las causas de un problema de mayor a menor frecuencia y te muestra cuáles explican cerca del 80% de los casos. Así sabes qué atacar primero."
 plantilla: ishikawa-pareto
+grafico: pareto
+historia: "4 de 8 causas explican el 85% de las botellas rechazadas"
 ---
 
 ## ¿Para qué sirve?

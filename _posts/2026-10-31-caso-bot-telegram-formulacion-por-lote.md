@@ -6,6 +6,8 @@ categoria: Casos reales
 resumen: "Un asistente en Telegram que los operarios usan a diario para calcular cada lote."
 respuesta: "hice con Python un bot de Telegram que lee la hoja de formulación en Excel. El operario escribe qué va a preparar, cuántos kilos y qué saldos tiene, y el bot le responde cuánto de cada materia prima debe agregar en cada olla. Se usa a diario en planta."
 date: 2026-10-31 05:00:00 -0500
+grafico: bot
+historia: "Los operarios calculan cada lote en segundos, todos los días"
 ---
 
 > Caso de una planta de manufactura donde trabajo. Por confidencialidad no muestro las fórmulas, los productos ni los porcentajes reales: los números de abajo son de ejemplo.

@@ -4,20 +4,53 @@ seccion: articulos
 title: Artículos de Ingeniería Industrial
 description: "Guías de Ingeniería Industrial explicadas fácil, con casos reales: procesos, calidad, producción y datos."
 ---
+{% assign cats = site.posts | map: "categoria" | uniq %}
 <section class="view wrap">
-  <div class="sec-head"><span class="eyebrow">Artículos</span><h1>La carrera, explicada fácil</h1><p class="lead">Una herramienta por artículo, explicada con un caso real y sin tecnicismos.</p></div>
-  {% assign cats = site.posts | map: "categoria" | uniq %}
-  {% if cats.size > 1 %}
-  <div class="filtros" role="group" aria-label="Filtrar por área">
-    <button class="filtro" type="button" data-f="todas" aria-pressed="true">Todas</button>
-    {% for c in cats %}<button class="filtro" type="button" data-f="{{ c | slugify }}" aria-pressed="false">{{ c }}</button>{% endfor %}
+  <div class="gal-head">
+    <span class="eyebrow">Artículos de Ingeniería Industrial</span>
+    <h1>Una herramienta para cada problema.</h1>
+    <p class="lead">Guías y casos reales explicados con un ejemplo concreto y sin tecnicismos. Cada tarjeta te muestra el resultado antes de leer.</p>
+    <a class="more" href="#lista-completa">Ir a la lista completa ↓</a>
   </div>
-  {% endif %}
-  <div class="grid2" id="lista">
-    {% for post in site.posts %}<div data-cat="{{ post.categoria | slugify }}" style="display:grid">{% include post-card.html post=post nuevo=forloop.first %}</div>{% endfor %}
+
+  <div class="gal">
+    <nav class="gal-nav" aria-label="Áreas">
+      <span class="side-k">Áreas</span>
+      {% for c in cats %}{% assign n = site.posts | where: "categoria", c | size %}
+      <a href="#{{ c | slugify }}"><span>{{ c }}</span><small>{{ n }}</small></a>
+      {% endfor %}
+    </nav>
+
+    <div class="gal-main">
+      {% for c in cats %}
+      {% assign lista = site.posts | where: "categoria", c %}
+      <section class="gal-sec" id="{{ c | slugify }}" aria-labelledby="t-{{ c | slugify }}">
+        <h2 id="t-{{ c | slugify }}">{{ c }}</h2>
+        <div class="gal-grid">
+          {% for post in lista %}{% include post-card.html post=post nuevo=false %}{% endfor %}
+        </div>
+      </section>
+      {% endfor %}
+    </div>
   </div>
-  <p class="note" id="vacio" hidden>No hay artículos en esta área todavía.</p>
+
+  <section class="gal-lista" id="lista-completa" aria-labelledby="t-lista">
+    <h2 id="t-lista">Lista completa de artículos</h2>
+    <p class="muted">Todos los temas, ordenados por área.</p>
+    <div class="gal-cols">
+      {% for c in cats %}
+      <div><span class="side-k">{{ c }}</span>
+        <ul>{% assign lista = site.posts | where: "categoria", c %}{% for post in lista %}{% assign t = post.title | split: ": " %}<li><a href="{{ post.url | relative_url }}">{% if t[0] == "Caso real" %}{{ t[1] | slice: 0 | upcase }}{{ t[1] | slice: 1, 200 }}{% else %}{{ t[0] }}{% endif %}</a></li>{% endfor %}</ul>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
 </section>
 <script>
-(function(){var bs=document.querySelectorAll(".filtro"),it=document.querySelectorAll("#lista>[data-cat]"),v=document.getElementById("vacio");bs.forEach(function(b){b.addEventListener("click",function(){var f=b.dataset.f,n=0;bs.forEach(function(x){x.setAttribute("aria-pressed",x===b)});it.forEach(function(i){var ok=f==="todas"||i.dataset.cat===f;i.hidden=!ok;if(ok)n++});v.hidden=n>0})})})();
+(function(){
+  // Resalta en el menú lateral el área que estás viendo
+  var ls=document.querySelectorAll(".gal-nav a");if(!("IntersectionObserver" in window))return;
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){ls.forEach(function(a){a.classList.toggle("on",a.getAttribute("href")==="#"+e.target.id)})}})},{rootMargin:"-30% 0px -60% 0px"});
+  document.querySelectorAll(".gal-sec").forEach(function(s){io.observe(s)});
+})();
 </script>

@@ -559,3 +559,8 @@ body:not(.s-inicio):not(.l-post) main{background:linear-gradient(180deg,#e6ecff 
 body:not(.s-inicio):not(.l-post) .band-wash{background:#fff}
 .ses-btn,.buybox{box-shadow:0 0 0 1px var(--line)}
 .warn{background:#fff;box-shadow:inset 3px 0 0 var(--accent),0 0 0 1px var(--line)}
+/* Miniaturas de plantillas en la paleta índigo */
+.mg-h{background:#3e57da}.mg-h span:first-child{background:#0d0f2c}
+.mg-r b{background:var(--mist);color:var(--ink)}
+.mg-r i[style*="1f3a5f"]{background:#3e57da!important}
+.mg-r i[style*="bdd7ee"]{background:#c6d0f7!important}

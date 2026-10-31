@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="color-scheme" content="light">
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Diagrama de Pareto: qué es, cómo hacerlo y ejemplo en Excel | Alex Castillo</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Diagrama de Pareto: qué es, cómo hacerlo y ejemplo en Excel" />
+<meta name="author" content="Alex Castillo" />
+<meta property="og:locale" content="es" />
+<meta name="description" content="Qué es el diagrama de Pareto, para qué sirve y cómo hacerlo paso a paso, con un ejemplo real de una línea de envasado y plantilla de Excel." />
+<meta property="og:description" content="Qué es el diagrama de Pareto, para qué sirve y cómo hacerlo paso a paso, con un ejemplo real de una línea de envasado y plantilla de Excel." />
+<link rel="canonical" href="https://alexcastillofar.github.io/articulos/diagrama-de-pareto/" />
+<meta property="og:url" content="https://alexcastillofar.github.io/articulos/diagrama-de-pareto/" />
+<meta property="og:site_name" content="Alex Castillo" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-26T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Diagrama de Pareto: qué es, cómo hacerlo y ejemplo en Excel" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Alex Castillo"},"dateModified":"2026-10-26T00:00:00-05:00","datePublished":"2026-10-26T00:00:00-05:00","description":"Qué es el diagrama de Pareto, para qué sirve y cómo hacerlo paso a paso, con un ejemplo real de una línea de envasado y plantilla de Excel.","headline":"Diagrama de Pareto: qué es, cómo hacerlo y ejemplo en Excel","mainEntityOfPage":{"@type":"WebPage","@id":"https://alexcastillofar.github.io/articulos/diagrama-de-pareto/"},"url":"https://alexcastillofar.github.io/articulos/diagrama-de-pareto/"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=IBM+Plex+Mono:wght@500&display=swap">
+  <link rel="stylesheet" href="/assets/css/style.css?v=1793466590">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%233e57da'/%3E%3Ctext x='16' y='21' font-family='Arial' font-weight='700' font-size='13' fill='white' text-anchor='middle'%3EAC%3C/text%3E%3C/svg%3E">
+</head>
+<body class="l-post s-x">
+
+<a class="btn btn-ink" href="#contenido" style="position:absolute;left:-9999px;top:8px;z-index:50" onfocus="this.style.left='16px'" onblur="this.style.left='-9999px'">Saltar al contenido</a>
+<header>
+  <div class="wrap bar">
+    <a class="logo" href="/" aria-label="Alex Castillo, inicio"><span><b>Alex Castillo</b><small>Ingeniero Industrial</small></span></a>
+    <nav class="nav" id="menu" aria-label="Secciones">
+      <a href="/" >Inicio</a>
+      <a href="/ingenieria-industrial/" >Ingeniería Industrial</a>
+      <a href="/articulos/" >Artículos</a>
+      <a href="/recursos/" >Recursos</a>
+      <a href="/sobre-mi/" >Sobre mí</a>
+    </nav>
+    <a class="btn btn-ink bar-cta" href="/sobre-mi/#contacto">Contáctame</a>
+    <button class="menu-btn" type="button" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú"><span class="i-abrir"><svg class="ico " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+</span><span class="i-cerrar"><svg class="ico " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg>
+</span></button>
+  </div>
+</header>
+
+<main id="contenido">
+
+
+
+
+<div class="leer-barra" aria-hidden="true"><span id="leer-progreso"></span></div>
+
+<section class="art-head plano plano-full">
+  <div class="wrap">
+    <div class="art-head-in">
+      <nav class="crumbs" aria-label="Ruta"><a href="/articulos/">Artículos</a> <span aria-hidden="true">/</span> Calidad</nav>
+      <span class="pill-cat"><i aria-hidden="true"></i>Calidad · 2 min de lectura</span>
+      <h1>Diagrama de Pareto: qué es, cómo hacerlo y ejemplo en Excel</h1>
+      <p class="lead">Con el caso de una línea de envasado que pierde botellas mal selladas.</p>
+      <div class="byline"><span class="av"><img src="/assets/img/alex.jpg" alt="" width="40" height="40"></span><span><b>Alex Castillo</b> · Ingeniero industrial<br>26 oct 2026</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="art-body">
+  <div class="wrap art-grid">
+    <article class="art-card">
+      <div class="answer"><span class="answer-k">En pocas palabras</span><p>El diagrama de Pareto ordena las causas de un problema de mayor a menor frecuencia y te muestra cuáles explican cerca del 80% de los casos. Así sabes qué atacar primero.</p></div>
+      <details class="toc-movil" id="toc-movil"><summary>En este artículo</summary><ol class="toc-lista"></ol></details>
+      <div class="prose" id="prose">
+<h2 id="para-qué-sirve">¿Para qué sirve?</h2>
+
+<ul>
+  <li>Decidir qué problema resolver primero cuando tienes muchos.</li>
+  <li>Justificar con datos una mejora ante tu jefe o tu profesor.</li>
+  <li>Comparar el antes y el después de una mejora.</li>
+</ul>
+
+<h2 id="ejemplo-botellas-mal-selladas-en-una-línea-de-envasado">Ejemplo: botellas mal selladas en una línea de envasado</h2>
+
+<p>Durante un mes, el supervisor anotó por qué se rechazaron 138 botellas. Estos son los datos ya ordenados de mayor a menor:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Causa</th>
+      <th style="text-align: right">Frecuencia</th>
+      <th style="text-align: right">% individual</th>
+      <th style="text-align: right">% acumulado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Tapas fuera de especificación</strong></td>
+      <td style="text-align: right">48</td>
+      <td style="text-align: right">34.8%</td>
+      <td style="text-align: right">34.8%</td>
+    </tr>
+    <tr>
+      <td><strong>Cabezal de sellado desgastado</strong></td>
+      <td style="text-align: right">35</td>
+      <td style="text-align: right">25.4%</td>
+      <td style="text-align: right">60.1%</td>
+    </tr>
+    <tr>
+      <td><strong>Temperatura de sellado inestable</strong></td>
+      <td style="text-align: right">22</td>
+      <td style="text-align: right">15.9%</td>
+      <td style="text-align: right">76.1%</td>
+    </tr>
+    <tr>
+      <td><strong>Operarios nuevos sin capacitación</strong></td>
+      <td style="text-align: right">12</td>
+      <td style="text-align: right">8.7%</td>
+      <td style="text-align: right">84.8%</td>
+    </tr>
+    <tr>
+      <td>Botellas con rebabas en el cuello</td>
+      <td style="text-align: right">8</td>
+      <td style="text-align: right">5.8%</td>
+      <td style="text-align: right">90.6%</td>
+    </tr>
+    <tr>
+      <td>Torquímetro sin calibrar</td>
+      <td style="text-align: right">6</td>
+      <td style="text-align: right">4.3%</td>
+      <td style="text-align: right">94.9%</td>
+    </tr>
+    <tr>
+      <td>Humedad alta en la planta</td>
+      <td style="text-align: right">4</td>
+      <td style="text-align: right">2.9%</td>
+      <td style="text-align: right">97.8%</td>
+    </tr>
+    <tr>
+      <td>Otros</td>
+      <td style="text-align: right">3</td>
+      <td style="text-align: right">2.2%</td>
+      <td style="text-align: right">100.0%</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="cómo-hacerlo-paso-a-paso">Cómo hacerlo paso a paso</h2>
+
+<ol>
+  <li>Anota cada causa y cuántas veces ocurrió en el mismo periodo.</li>
+  <li>Ordena de mayor a menor frecuencia.</li>
+  <li>Calcula el % individual: frecuencia ÷ total (48 ÷ 138 = 34.8%).</li>
+  <li>Calcula el % acumulado sumando fila por fila.</li>
+  <li>Grafica barras con la frecuencia y una línea con el % acumulado.</li>
+  <li>Marca el 80%: las causas que quedan antes de esa línea son las <strong>pocas vitales</strong>.</li>
+</ol>
+
+<p><strong>Resultado:</strong> solo 4 de 8 causas explican el 85% de las botellas rechazadas. Si la empresa cambia de proveedor de tapas y repara el cabezal, ataca más de la mitad del problema.</p>
+
+<h2 id="errores-comunes">Errores comunes</h2>
+
+<ul>
+  <li>Mezclar datos de periodos distintos (una semana con un mes).</li>
+  <li>Poner “Otros” al inicio: siempre va al final, aunque sea grande.</li>
+  <li>Creer que el 80/20 es exacto. Es una guía, no una ley.</li>
+</ul>
+
+      </div>
+      
+        
+        
+        <div class="cta-box">
+          <span class="eyebrow">Recurso relacionado</span>
+          <h3>Practica con la plantilla Ishikawa + Pareto</h3>
+          <p>Dibuja la espina de pescado y el Pareto, y te dice qué causas atacar primero.</p>
+          <a class="btn" href="/plantillas/ishikawa-pareto/">Ver la plantilla →</a>
+        </div>
+        
+      
+    </article>
+
+    <aside class="art-side" aria-label="Índice del artículo">
+      <div class="side-box">
+        <span class="side-k">En este artículo</span>
+        <ol class="toc-lista" id="toc"></ol>
+      </div>
+      <div class="side-box side-autor">
+        <span class="av"><img src="/assets/img/alex.jpg" alt="" width="40" height="40"></span>
+        <p><b>Alex Castillo</b><br>Más de 8 años en una planta de manufactura. Explico la carrera con casos reales.</p>
+        <a class="more" href="/sobre-mi/">Conóceme →</a>
+      </div>
+    </aside>
+  </div>
+</section>
+
+
+
+
+<section class="s art-mas"><div class="wrap">
+  <div class="head"><span class="eyebrow">Sigue leyendo</span><h2>Más guías y casos reales</h2></div>
+  <div class="grid3">
+    
+    
+
+<a class="gcard" href="/articulos/diagrama-de-ishikawa/">
+  <span class="gcard-top"><span class="gcard-cat">Calidad</span></span>
+  <h3>El panadero nuevo era solo una espina: el problema estaba en el método</h3>
+  <p>Diagrama de Ishikawa: qué es, las 6M y ejemplo resuelto</p>
+  <div class="gcard-graf"><svg class="graf" viewBox="0 0 320 150" role="img" aria-label="Gráfico de ejemplo" font-family="IBM Plex Mono, monospace" font-size="8" fill="#5b627c"><line x1="20" y1="75" x2="250" y2="75" stroke="#0d0f2c" stroke-width="2"/>
+  <rect x="250" y="56" width="62" height="38" rx="8" fill="#3e57da"/><text x="281" y="78" text-anchor="middle" fill="#fff" font-size="9">Problema</text>
+  <g stroke="#3e57da" stroke-width="1.6"><line x1="60" y1="22" x2="90" y2="75"/><line x1="130" y1="22" x2="160" y2="75"/><line x1="200" y1="22" x2="230" y2="75"/><line x1="60" y1="128" x2="90" y2="75"/><line x1="130" y1="128" x2="160" y2="75"/><line x1="200" y1="128" x2="230" y2="75"/></g>
+  <g stroke="#c6d0f7" stroke-width="1.2"><line x1="70" y1="40" x2="48" y2="40"/><line x1="140" y1="40" x2="118" y2="40"/><line x1="210" y1="40" x2="188" y2="40"/><line x1="70" y1="110" x2="48" y2="110"/><line x1="140" y1="110" x2="118" y2="110"/><line x1="210" y1="110" x2="188" y2="110"/><line x1="78" y1="54" x2="56" y2="54"/><line x1="148" y1="54" x2="126" y2="54"/><line x1="218" y1="96" x2="196" y2="96"/></g>
+  <g fill="#0d0f2c"><text x="60" y="15" text-anchor="middle">MANO DE OBRA</text><text x="130" y="15" text-anchor="middle">MÉTODO</text><text x="200" y="15" text-anchor="middle">MÁQUINA</text><text x="60" y="142" text-anchor="middle">MATERIAL</text><text x="130" y="142" text-anchor="middle">MEDICIÓN</text><text x="200" y="142" text-anchor="middle">ENTORNO</text></g></svg>
+</div>
+  <span class="gcard-pie"><span>ISHIKAWA · 27 oct</span><b>Leer guía →</b></span>
+</a>
+
+    
+
+<a class="gcard" href="/articulos/caso-estandarizacion-metodos-de-trabajo/">
+  <span class="gcard-top"><span class="gcard-cat">Casos reales</span></span>
+  <h3>El lote pasó de 179 a 106 minutos sin comprar ninguna máquina</h3>
+  <p>Caso real: reduje 41% el tiempo por lote estandarizando el método de trabajo</p>
+  <div class="gcard-graf"><svg class="graf" viewBox="0 0 320 150" role="img" aria-label="Gráfico de ejemplo" font-family="IBM Plex Mono, monospace" font-size="8" fill="#5b627c"><g font-size="8"><text x="8" y="26">TIEMPO/LOTE</text><text x="8" y="58">ACTIVIDADES</text><text x="8" y="90">DISTANCIA</text><text x="8" y="122">INSPECCIONES</text></g>
+  <g stroke="#e6eaf4"><line x1="90" y1="23" x2="300" y2="23"/><line x1="90" y1="55" x2="300" y2="55"/><line x1="90" y1="87" x2="300" y2="87"/><line x1="90" y1="119" x2="300" y2="119"/></g>
+  <g stroke="#c6d0f7" stroke-width="3"><line x1="300" y1="23" x2="214" y2="23"/><line x1="300" y1="55" x2="233" y2="55"/><line x1="300" y1="87" x2="195" y2="87"/><line x1="300" y1="119" x2="142" y2="119"/></g>
+  <g fill="#d1d6e5"><circle cx="300" cy="23" r="5"/><circle cx="300" cy="55" r="5"/><circle cx="300" cy="87" r="5"/><circle cx="300" cy="119" r="5"/></g>
+  <g fill="#3e57da"><circle cx="214" cy="23" r="5"/><circle cx="233" cy="55" r="5"/><circle cx="195" cy="87" r="5"/><circle cx="142" cy="119" r="5"/></g>
+  <g fill="#0d0f2c" text-anchor="end"><text x="206" y="18">−41%</text><text x="225" y="50">−32%</text><text x="187" y="82">−50%</text><text x="134" y="114">−75%</text></g>
+  <g><circle cx="94" cy="142" r="3" fill="#d1d6e5"/><text x="100" y="145">antes</text><circle cx="140" cy="142" r="3" fill="#3e57da"/><text x="146" y="145">después</text></g></svg>
+</div>
+  <span class="gcard-pie"><span>CASO DAP · 31 oct</span><b>Leer caso →</b></span>
+</a>
+
+
+<a class="gcard" href="/articulos/caso-registro-de-produccion-con-excel-e-ia/">
+  <span class="gcard-top"><span class="gcard-cat">Casos reales</span></span>
+  <h3>De horas digitando un cuaderno a un par de minutos con una foto</h3>
+  <p>Caso real: automaticé el registro diario de producción con Excel e IA</p>
+  <div class="gcard-graf"><svg class="graf" viewBox="0 0 320 150" role="img" aria-label="Gráfico de ejemplo" font-family="IBM Plex Mono, monospace" font-size="8" fill="#5b627c"><g font-size="8.5" text-anchor="middle">
+    <rect x="6" y="46" width="64" height="44" rx="10" fill="#f2f4f8" stroke="#d1d6e5"/><text x="38" y="66" fill="#0d0f2c">Cuaderno</text><text x="38" y="78">a mano</text>
+    <rect x="86" y="46" width="64" height="44" rx="10" fill="#eef1ff" stroke="#c6d0f7"/><text x="118" y="66" fill="#0d0f2c">Foto + IA</text><text x="118" y="78">OCR</text>
+    <rect x="166" y="46" width="64" height="44" rx="10" fill="#eef1ff" stroke="#c6d0f7"/><text x="198" y="66" fill="#0d0f2c">Base de</text><text x="198" y="78" fill="#0d0f2c">datos</text>
+    <rect x="246" y="46" width="68" height="44" rx="10" fill="#3e57da"/><text x="280" y="66" fill="#fff">Reporte</text><text x="280" y="78" fill="#dfe5ff">automático</text>
+  </g>
+  <g stroke="#3e57da" stroke-width="1.6" fill="none"><path d="M72 68h11m-4-4 4 4-4 4"/><path d="M152 68h11m-4-4 4 4-4 4"/><path d="M232 68h11m-4-4 4 4-4 4"/></g>
+  <text x="160" y="120" text-anchor="middle" fill="#0d0f2c" font-size="10">horas  →  un par de minutos</text>
+  <text x="160" y="28" text-anchor="middle">SUMAR.SI.CONJUNTO · +30 TIPOS DE MATERIAL</text></svg>
+</div>
+  <span class="gcard-pie"><span>REGISTRO · 31 oct</span><b>Leer caso →</b></span>
+</a>
+
+  </div>
+</div></section>
+
+<script>
+(function(){
+  // Índice automático con los subtítulos (##) del artículo
+  var hs=document.querySelectorAll("#prose h2"),listas=document.querySelectorAll(".toc-lista");
+  if(hs.length<2){document.querySelectorAll(".art-side .side-box:first-child,#toc-movil").forEach(function(e){e.hidden=true})}
+  hs.forEach(function(h,i){if(!h.id)h.id="s"+(i+1);listas.forEach(function(l){var li=document.createElement("li"),a=document.createElement("a");a.href="#"+h.id;a.textContent=h.textContent;li.appendChild(a);l.appendChild(li)})});
+  document.querySelectorAll("#toc-movil a").forEach(function(a){a.addEventListener("click",function(){document.getElementById("toc-movil").open=false})});
+  // Sección actual resaltada en el índice
+  var links=document.querySelectorAll("#toc a");
+  if("IntersectionObserver" in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.classList.toggle("on",a.getAttribute("href")==="#"+e.target.id)})}})},{rootMargin:"-20% 0px -70% 0px"});hs.forEach(function(h){io.observe(h)})}
+  // Barra de lectura
+  var b=document.getElementById("leer-progreso"),art=document.querySelector(".art-card");
+  function act(){var r=art.getBoundingClientRect(),t=r.height-innerHeight;var p=t>0?Math.min(1,Math.max(0,-r.top/t)):1;b.style.transform="scaleX("+p+")"}
+  addEventListener("scroll",act,{passive:true});act();
+})();
+</script>
+
+</main>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div class="stack" style="gap:12px;max-width:360px">
+      <a class="logo" href="/"><span><b>Alex Castillo</b><small>Ingeniero Industrial</small></span></a>
+      <p>La Ingeniería Industrial explicada fácil, desde la experiencia de planta: procesos, calidad, productividad y datos.</p>
+    </div>
+    <nav class="foot-col" aria-label="Secciones del sitio">
+      <span class="eyebrow">Secciones</span>
+      <a href="/ingenieria-industrial/">Ingeniería Industrial</a>
+      <a href="/articulos/">Artículos</a>
+      <a href="/cursos/">Cursos gratuitos</a>
+      <a href="/plantillas/">Plantillas</a>
+      <a href="/sobre-mi/">Sobre mí</a>
+    </nav>
+    <div class="foot-col">
+      <span class="eyebrow">Contacto</span>
+      <a href="https://www.linkedin.com/in/alexw-castillo-farfan/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      
+      
+      
+    </div>
+  </div>
+  <div class="wrap foot-bottom"><span>© 2026 Alex Castillo · Ingeniero Industrial</span><span>Hecho en Lima, Perú</span></div>
+</footer>
+
+
+<button class="float buy" type="button">Comprar por Telegram</button>
+
+<div class="toast" id="toast" role="status" hidden>El bot de Telegram estará disponible muy pronto.</div>
+<script>
+  // Menú del celular
+  (function(){var b=document.querySelector(".menu-btn"),h=document.querySelector("header");if(!b)return;function cerrar(){h.classList.remove("abierto");b.setAttribute("aria-expanded","false");b.setAttribute("aria-label","Abrir menú")}b.addEventListener("click",function(){var o=h.classList.toggle("abierto");b.setAttribute("aria-expanded",o);b.setAttribute("aria-label",o?"Cerrar menú":"Abrir menú")});document.addEventListener("keydown",function(e){if(e.key==="Escape"&&h.classList.contains("abierto")){cerrar();b.focus()}});document.addEventListener("click",function(e){if(h.classList.contains("abierto")&&!h.contains(e.target))cerrar()})})();
+  // Aviso mientras el bot de Telegram no exista (cuando pongas el enlace en _config.yml, los botones lo abren directo)
+  (function(){var t=document.getElementById("toast"),k;document.addEventListener("click",function(e){if(e.target.closest(".buy")){t.hidden=false;clearTimeout(k);k=setTimeout(function(){t.hidden=true},2500)}})})();
+</script>
+</body>
+</html>

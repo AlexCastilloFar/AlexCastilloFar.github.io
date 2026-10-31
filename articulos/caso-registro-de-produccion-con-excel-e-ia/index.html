@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="color-scheme" content="light">
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Caso real: automaticé el registro diario de producción con Excel e IA | Alex Castillo</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Caso real: automaticé el registro diario de producción con Excel e IA" />
+<meta name="author" content="Alex Castillo" />
+<meta property="og:locale" content="es" />
+<meta name="description" content="Cómo pasé de horas transcribiendo un cuaderno de producción a un par de minutos, con una base de datos en Excel, SUMAR.SI.CONJUNTO y una foto leída por IA." />
+<meta property="og:description" content="Cómo pasé de horas transcribiendo un cuaderno de producción a un par de minutos, con una base de datos en Excel, SUMAR.SI.CONJUNTO y una foto leída por IA." />
+<link rel="canonical" href="https://alexcastillofar.github.io/articulos/caso-registro-de-produccion-con-excel-e-ia/" />
+<meta property="og:url" content="https://alexcastillofar.github.io/articulos/caso-registro-de-produccion-con-excel-e-ia/" />
+<meta property="og:site_name" content="Alex Castillo" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-31T06:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Caso real: automaticé el registro diario de producción con Excel e IA" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Alex Castillo"},"dateModified":"2026-10-31T06:00:00-05:00","datePublished":"2026-10-31T06:00:00-05:00","description":"Cómo pasé de horas transcribiendo un cuaderno de producción a un par de minutos, con una base de datos en Excel, SUMAR.SI.CONJUNTO y una foto leída por IA.","headline":"Caso real: automaticé el registro diario de producción con Excel e IA","mainEntityOfPage":{"@type":"WebPage","@id":"https://alexcastillofar.github.io/articulos/caso-registro-de-produccion-con-excel-e-ia/"},"url":"https://alexcastillofar.github.io/articulos/caso-registro-de-produccion-con-excel-e-ia/"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=IBM+Plex+Mono:wght@500&display=swap">
+  <link rel="stylesheet" href="/assets/css/style.css?v=1793466590">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%233e57da'/%3E%3Ctext x='16' y='21' font-family='Arial' font-weight='700' font-size='13' fill='white' text-anchor='middle'%3EAC%3C/text%3E%3C/svg%3E">
+</head>
+<body class="l-post s-x">
+
+<a class="btn btn-ink" href="#contenido" style="position:absolute;left:-9999px;top:8px;z-index:50" onfocus="this.style.left='16px'" onblur="this.style.left='-9999px'">Saltar al contenido</a>
+<header>
+  <div class="wrap bar">
+    <a class="logo" href="/" aria-label="Alex Castillo, inicio"><span><b>Alex Castillo</b><small>Ingeniero Industrial</small></span></a>
+    <nav class="nav" id="menu" aria-label="Secciones">
+      <a href="/" >Inicio</a>
+      <a href="/ingenieria-industrial/" >Ingeniería Industrial</a>
+      <a href="/articulos/" >Artículos</a>
+      <a href="/recursos/" >Recursos</a>
+      <a href="/sobre-mi/" >Sobre mí</a>
+    </nav>
+    <a class="btn btn-ink bar-cta" href="/sobre-mi/#contacto">Contáctame</a>
+    <button class="menu-btn" type="button" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú"><span class="i-abrir"><svg class="ico " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+</span><span class="i-cerrar"><svg class="ico " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg>
+</span></button>
+  </div>
+</header>
+
+<main id="contenido">
+
+
+
+
+<div class="leer-barra" aria-hidden="true"><span id="leer-progreso"></span></div>
+
+<section class="art-head plano plano-full">
+  <div class="wrap">
+    <div class="art-head-in">
+      <nav class="crumbs" aria-label="Ruta"><a href="/articulos/">Artículos</a> <span aria-hidden="true">/</span> Casos reales</nav>
+      <span class="pill-cat"><i aria-hidden="true"></i>Casos reales · 3 min de lectura</span>
+      <h1>Caso real: automaticé el registro diario de producción con Excel e IA</h1>
+      <p class="lead">Del cuaderno a un reporte automático en minutos, sin errores de digitación.</p>
+      <div class="byline"><span class="av"><img src="/assets/img/alex.jpg" alt="" width="40" height="40"></span><span><b>Alex Castillo</b> · Ingeniero industrial<br>31 oct 2026</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="art-body">
+  <div class="wrap art-grid">
+    <article class="art-card">
+      <div class="answer"><span class="answer-k">En pocas palabras</span><p>Separé los datos en una tabla limpia (base de datos), hice que el reporte general se llene solo con SUMAR.SI.CONJUNTO y, en vez de digitar el cuaderno, le tomo una foto y una IA me devuelve la tabla lista para pegar. Pasé de horas a un par de minutos.</p></div>
+      <details class="toc-movil" id="toc-movil"><summary>En este artículo</summary><ol class="toc-lista"></ol></details>
+      <div class="prose" id="prose">
+<blockquote>
+  <p>Caso de una planta de manufactura donde trabajo. Por confidencialidad no muestro los formatos ni los datos reales: los ejemplos de abajo son ilustrativos.</p>
+</blockquote>
+
+<h2 id="el-problema-el-cuaderno-y-la-digitación">El problema: el cuaderno y la digitación</h2>
+
+<p>En planta, la producción de los turnos de día y de noche se anota <strong>a mano en un cuaderno</strong>. Luego alguien tenía que pasar esos números <strong>celda por celda</strong> a un Excel con el reporte general.</p>
+
+<p>El problema era doble:</p>
+
+<ul>
+  <li>Hay <strong>más de 30 tipos de material</strong>, que además cambian según el formato y el mercado. El reporte tenía muchísimas celdas.</li>
+  <li>Digitar todo tomaba <strong>horas</strong> y era fácil equivocarse de fila o de número. Un error en el reporte se arrastra a todos los indicadores.</li>
+</ul>
+
+<h2 id="la-solución-en-3-pasos">La solución en 3 pasos</h2>
+
+<h3 id="1-una-base-de-datos-limpia">1. Una base de datos limpia</h3>
+
+<p>Creé una pestaña nueva con una tabla simple, donde <strong>cada fila es un registro</strong> y solo hay 5 columnas:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Mercado</th>
+      <th>Mes</th>
+      <th style="text-align: right">Día</th>
+      <th>Tipo</th>
+      <th style="text-align: right">Peso (kg)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Local</td>
+      <td>Octubre</td>
+      <td style="text-align: right">14</td>
+      <td>Tipo A</td>
+      <td style="text-align: right">125</td>
+    </tr>
+    <tr>
+      <td>Local</td>
+      <td>Octubre</td>
+      <td style="text-align: right">14</td>
+      <td>Tipo B</td>
+      <td style="text-align: right">75</td>
+    </tr>
+    <tr>
+      <td>Exportación</td>
+      <td>Octubre</td>
+      <td style="text-align: right">14</td>
+      <td>Tipo A</td>
+      <td style="text-align: right">200</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><em>(Datos de ejemplo.)</em></p>
+
+<p>Este es el cambio más importante: <strong>los datos se guardan en un solo lugar y en formato de tabla</strong>, no repartidos en un reporte lleno de celdas combinadas.</p>
+
+<h3 id="2-el-reporte-se-llena-solo">2. El reporte se llena solo</h3>
+
+<p>El reporte general ya no se digita. Cada celda tiene una fórmula <strong>SUMAR.SI.CONJUNTO</strong> que busca en la base de datos:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>=SUMAR.SI.CONJUNTO(Base[Peso]; Base[Mercado]; "Local"; Base[Tipo]; $A5; Base[Día]; C$4)
+</code></pre></div></div>
+
+<p>En palabras: <em>“suma los kilos donde el mercado sea Local, el tipo sea el de esta fila y el día sea el de esta columna”</em>. Copias la fórmula a todo el reporte y listo: <strong>se llena al 100% de forma automática</strong>.</p>
+
+<h3 id="3-de-la-foto-a-la-tabla-con-ia">3. De la foto a la tabla con IA</h3>
+
+<p>Faltaba lo más pesado: pasar el cuaderno a la base de datos. Ahora:</p>
+
+<ol>
+  <li>Tomo una <strong>foto del cuaderno</strong> con el celular.</li>
+  <li>Se la paso a una IA con lectura de imágenes (OCR) y le pido que me devuelva una tabla con <strong>los mismos encabezados</strong> de mi base: Mercado, Mes, Día, Tipo, Peso.</li>
+  <li><strong>Reviso rápido</strong> que los números coincidan con la foto.</li>
+  <li>Copio y pego en la base de datos. El reporte se actualiza solo.</li>
+</ol>
+
+<h2 id="resultados">Resultados</h2>
+
+<ul>
+  <li><strong>De horas a un par de minutos</strong> para registrar la producción del día.</li>
+  <li><strong>Cero errores de digitación:</strong> ya no se escribe número por número.</li>
+  <li>Los datos quedan listos para hacer gráficos, tablas dinámicas o un tablero en Power BI.</li>
+</ul>
+
+<h2 id="lo-que-aprendí">Lo que aprendí</h2>
+
+<ul>
+  <li><strong>Primero ordena los datos, después automatiza.</strong> Sin la base de datos limpia, ni la fórmula ni la IA habrían servido.</li>
+  <li><strong>La IA no reemplaza la revisión.</strong> Siempre comparo la tabla con la foto, sobre todo cuando la letra no es clara.</li>
+  <li><strong>No hace falta programar.</strong> Todo esto se hizo con una fórmula de Excel y una herramienta de IA gratuita.</li>
+</ul>
+
+<h2 id="cómo-aplicarlo-en-tu-negocio-o-trabajo">Cómo aplicarlo en tu negocio o trabajo</h2>
+
+<p>Sirve para cualquier registro que se lleve en papel: ventas de una bodega, asistencia, inventario, mermas. La receta es la misma:</p>
+
+<ol>
+  <li>Define las columnas mínimas que necesitas (fecha, producto, cantidad…).</li>
+  <li>Crea la tabla de base de datos (en Excel: <strong>Insertar → Tabla</strong>).</li>
+  <li>Haz tu reporte con <strong>SUMAR.SI.CONJUNTO</strong> o con una tabla dinámica.</li>
+  <li>Usa la foto + IA para cargar los datos y revisa antes de pegar.</li>
+</ol>
+
+      </div>
+      
+    </article>
+
+    <aside class="art-side" aria-label="Índice del artículo">
+      <div class="side-box">
+        <span class="side-k">En este artículo</span>
+        <ol class="toc-lista" id="toc"></ol>
+      </div>
+      <div class="side-box side-autor">
+        <span class="av"><img src="/assets/img/alex.jpg" alt="" width="40" height="40"></span>
+        <p><b>Alex Castillo</b><br>Más de 8 años en una planta de manufactura. Explico la carrera con casos reales.</p>
+        <a class="more" href="/sobre-mi/">Conóceme →</a>
+      </div>
+    </aside>
+  </div>
+</section>
+
+
+
+
+<section class="s art-mas"><div class="wrap">
+  <div class="head"><span class="eyebrow">Sigue leyendo</span><h2>Más guías y casos reales</h2></div>
+  <div class="grid3">
+    
+    
+
+<a class="gcard" href="/articulos/caso-estandarizacion-metodos-de-trabajo/">
+  <span class="gcard-top"><span class="gcard-cat">Casos reales</span></span>
+  <h3>El lote pasó de 179 a 106 minutos sin comprar ninguna máquina</h3>
+  <p>Caso real: reduje 41% el tiempo por lote estandarizando el método de trabajo</p>
+  <div class="gcard-graf"><svg class="graf" viewBox="0 0 320 150" role="img" aria-label="Gráfico de ejemplo" font-family="IBM Plex Mono, monospace" font-size="8" fill="#5b627c"><g font-size="8"><text x="8" y="26">TIEMPO/LOTE</text><text x="8" y="58">ACTIVIDADES</text><text x="8" y="90">DISTANCIA</text><text x="8" y="122">INSPECCIONES</text></g>
+  <g stroke="#e6eaf4"><line x1="90" y1="23" x2="300" y2="23"/><line x1="90" y1="55" x2="300" y2="55"/><line x1="90" y1="87" x2="300" y2="87"/><line x1="90" y1="119" x2="300" y2="119"/></g>
+  <g stroke="#c6d0f7" stroke-width="3"><line x1="300" y1="23" x2="214" y2="23"/><line x1="300" y1="55" x2="233" y2="55"/><line x1="300" y1="87" x2="195" y2="87"/><line x1="300" y1="119" x2="142" y2="119"/></g>
+  <g fill="#d1d6e5"><circle cx="300" cy="23" r="5"/><circle cx="300" cy="55" r="5"/><circle cx="300" cy="87" r="5"/><circle cx="300" cy="119" r="5"/></g>
+  <g fill="#3e57da"><circle cx="214" cy="23" r="5"/><circle cx="233" cy="55" r="5"/><circle cx="195" cy="87" r="5"/><circle cx="142" cy="119" r="5"/></g>
+  <g fill="#0d0f2c" text-anchor="end"><text x="206" y="18">−41%</text><text x="225" y="50">−32%</text><text x="187" y="82">−50%</text><text x="134" y="114">−75%</text></g>
+  <g><circle cx="94" cy="142" r="3" fill="#d1d6e5"/><text x="100" y="145">antes</text><circle cx="140" cy="142" r="3" fill="#3e57da"/><text x="146" y="145">después</text></g></svg>
+</div>
+  <span class="gcard-pie"><span>CASO DAP · 31 oct</span><b>Leer caso →</b></span>
+</a>
+
+
+<a class="gcard" href="/articulos/caso-bot-telegram-formulacion-por-lote/">
+  <span class="gcard-top"><span class="gcard-cat">Casos reales</span></span>
+  <h3>Los operarios calculan cada lote en segundos, todos los días</h3>
+  <p>Caso real: un bot de Telegram que calcula la materia prima de cada lote</p>
+  <div class="gcard-graf"><svg class="graf" viewBox="0 0 320 150" role="img" aria-label="Gráfico de ejemplo" font-family="IBM Plex Mono, monospace" font-size="8" fill="#5b627c"><rect x="150" y="14" width="160" height="34" rx="12" fill="#f2f4f8"/><text x="162" y="35" fill="#0d0f2c" font-size="9">Producto X 300 kg</text>
+  <rect x="10" y="60" width="200" height="72" rx="12" fill="#3e57da"/>
+  <g fill="#fff" font-size="9"><text x="22" y="80">3 ollas × 100 kg</text></g>
+  <g fill="#dfe5ff" font-size="8.5"><text x="22" y="98">A  94.00 kg</text><text x="22" y="110">B   4.000 kg</text><text x="22" y="122">C   2.000 kg</text></g>
+  <text x="310" y="128" text-anchor="end">NÚMEROS DE EJEMPLO</text></svg>
+</div>
+  <span class="gcard-pie"><span>BOT · 31 oct</span><b>Leer caso →</b></span>
+</a>
+
+    
+
+<a class="gcard" href="/articulos/metodologia-5s/">
+  <span class="gcard-top"><span class="gcard-cat">Gestión</span></span>
+  <h3>De 4 minutos a menos de 1 para encontrar cada producto</h3>
+  <p>Metodología 5S: qué es, las 5 etapas y ejemplo práctico</p>
+  <div class="gcard-graf"><svg class="graf" viewBox="0 0 320 150" role="img" aria-label="Gráfico de ejemplo" font-family="IBM Plex Mono, monospace" font-size="8" fill="#5b627c"><g fill="#0d0f2c" font-size="9"><text x="8" y="30">ANTES</text><text x="8" y="62">DESPUÉS</text></g>
+  <rect x="70" y="20" width="230" height="14" rx="4" fill="#d1d6e5"/><text x="296" y="30" text-anchor="end" fill="#0d0f2c">4 min</text>
+  <rect x="70" y="52" width="52" height="14" rx="4" fill="#3e57da"/><text x="128" y="62" fill="#0d0f2c">&lt; 1 min</text>
+  <text x="8" y="90">TIEMPO PARA ENCONTRAR UN PRODUCTO</text>
+  <g font-size="9"><rect x="8" y="104" width="54" height="30" rx="8" fill="#eef1ff"/><rect x="69" y="104" width="54" height="30" rx="8" fill="#eef1ff"/><rect x="130" y="104" width="54" height="30" rx="8" fill="#eef1ff"/><rect x="191" y="104" width="54" height="30" rx="8" fill="#eef1ff"/><rect x="252" y="104" width="60" height="30" rx="8" fill="#3e57da"/>
+  <g fill="#3e57da" text-anchor="middle"><text x="35" y="122">Clasificar</text><text x="96" y="122">Ordenar</text><text x="157" y="122">Limpiar</text><text x="218" y="122">Estándar</text></g><text x="282" y="122" text-anchor="middle" fill="#fff">Disciplina</text></g></svg>
+</div>
+  <span class="gcard-pie"><span>5S · 30 oct</span><b>Leer guía →</b></span>
+</a>
+
+  </div>
+</div></section>
+
+<script>
+(function(){
+  // Índice automático con los subtítulos (##) del artículo
+  var hs=document.querySelectorAll("#prose h2"),listas=document.querySelectorAll(".toc-lista");
+  if(hs.length<2){document.querySelectorAll(".art-side .side-box:first-child,#toc-movil").forEach(function(e){e.hidden=true})}
+  hs.forEach(function(h,i){if(!h.id)h.id="s"+(i+1);listas.forEach(function(l){var li=document.createElement("li"),a=document.createElement("a");a.href="#"+h.id;a.textContent=h.textContent;li.appendChild(a);l.appendChild(li)})});
+  document.querySelectorAll("#toc-movil a").forEach(function(a){a.addEventListener("click",function(){document.getElementById("toc-movil").open=false})});
+  // Sección actual resaltada en el índice
+  var links=document.querySelectorAll("#toc a");
+  if("IntersectionObserver" in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.classList.toggle("on",a.getAttribute("href")==="#"+e.target.id)})}})},{rootMargin:"-20% 0px -70% 0px"});hs.forEach(function(h){io.observe(h)})}
+  // Barra de lectura
+  var b=document.getElementById("leer-progreso"),art=document.querySelector(".art-card");
+  function act(){var r=art.getBoundingClientRect(),t=r.height-innerHeight;var p=t>0?Math.min(1,Math.max(0,-r.top/t)):1;b.style.transform="scaleX("+p+")"}
+  addEventListener("scroll",act,{passive:true});act();
+})();
+</script>
+
+</main>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div class="stack" style="gap:12px;max-width:360px">
+      <a class="logo" href="/"><span><b>Alex Castillo</b><small>Ingeniero Industrial</small></span></a>
+      <p>La Ingeniería Industrial explicada fácil, desde la experiencia de planta: procesos, calidad, productividad y datos.</p>
+    </div>
+    <nav class="foot-col" aria-label="Secciones del sitio">
+      <span class="eyebrow">Secciones</span>
+      <a href="/ingenieria-industrial/">Ingeniería Industrial</a>
+      <a href="/articulos/">Artículos</a>
+      <a href="/cursos/">Cursos gratuitos</a>
+      <a href="/plantillas/">Plantillas</a>
+      <a href="/sobre-mi/">Sobre mí</a>
+    </nav>
+    <div class="foot-col">
+      <span class="eyebrow">Contacto</span>
+      <a href="https://www.linkedin.com/in/alexw-castillo-farfan/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      
+      
+      
+    </div>
+  </div>
+  <div class="wrap foot-bottom"><span>© 2026 Alex Castillo · Ingeniero Industrial</span><span>Hecho en Lima, Perú</span></div>
+</footer>
+
+
+<div class="toast" id="toast" role="status" hidden>El bot de Telegram estará disponible muy pronto.</div>
+<script>
+  // Menú del celular
+  (function(){var b=document.querySelector(".menu-btn"),h=document.querySelector("header");if(!b)return;function cerrar(){h.classList.remove("abierto");b.setAttribute("aria-expanded","false");b.setAttribute("aria-label","Abrir menú")}b.addEventListener("click",function(){var o=h.classList.toggle("abierto");b.setAttribute("aria-expanded",o);b.setAttribute("aria-label",o?"Cerrar menú":"Abrir menú")});document.addEventListener("keydown",function(e){if(e.key==="Escape"&&h.classList.contains("abierto")){cerrar();b.focus()}});document.addEventListener("click",function(e){if(h.classList.contains("abierto")&&!h.contains(e.target))cerrar()})})();
+  // Aviso mientras el bot de Telegram no exista (cuando pongas el enlace en _config.yml, los botones lo abren directo)
+  (function(){var t=document.getElementById("toast"),k;document.addEventListener("click",function(e){if(e.target.closest(".buy")){t.hidden=false;clearTimeout(k);k=setTimeout(function(){t.hidden=true},2500)}})})();
+</script>
+</body>
+</html>

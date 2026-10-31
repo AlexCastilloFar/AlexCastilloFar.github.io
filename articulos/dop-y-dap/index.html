@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="color-scheme" content="light">
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>DOP y DAP: qué son, diferencias, símbolos y ejemplo | Alex Castillo</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="DOP y DAP: qué son, diferencias, símbolos y ejemplo" />
+<meta name="author" content="Alex Castillo" />
+<meta property="og:locale" content="es" />
+<meta name="description" content="Qué es el diagrama de operaciones (DOP) y el diagrama de análisis de procesos (DAP), sus símbolos ASME y cómo hacerlos con un ejemplo de una juguería." />
+<meta property="og:description" content="Qué es el diagrama de operaciones (DOP) y el diagrama de análisis de procesos (DAP), sus símbolos ASME y cómo hacerlos con un ejemplo de una juguería." />
+<link rel="canonical" href="https://alexcastillofar.github.io/articulos/dop-y-dap/" />
+<meta property="og:url" content="https://alexcastillofar.github.io/articulos/dop-y-dap/" />
+<meta property="og:site_name" content="Alex Castillo" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-10-29T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="DOP y DAP: qué son, diferencias, símbolos y ejemplo" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Alex Castillo"},"dateModified":"2026-10-29T00:00:00-05:00","datePublished":"2026-10-29T00:00:00-05:00","description":"Qué es el diagrama de operaciones (DOP) y el diagrama de análisis de procesos (DAP), sus símbolos ASME y cómo hacerlos con un ejemplo de una juguería.","headline":"DOP y DAP: qué son, diferencias, símbolos y ejemplo","mainEntityOfPage":{"@type":"WebPage","@id":"https://alexcastillofar.github.io/articulos/dop-y-dap/"},"url":"https://alexcastillofar.github.io/articulos/dop-y-dap/"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=IBM+Plex+Mono:wght@500&display=swap">
+  <link rel="stylesheet" href="/assets/css/style.css?v=1793466590">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%233e57da'/%3E%3Ctext x='16' y='21' font-family='Arial' font-weight='700' font-size='13' fill='white' text-anchor='middle'%3EAC%3C/text%3E%3C/svg%3E">
+</head>
+<body class="l-post s-x">
+
+<a class="btn btn-ink" href="#contenido" style="position:absolute;left:-9999px;top:8px;z-index:50" onfocus="this.style.left='16px'" onblur="this.style.left='-9999px'">Saltar al contenido</a>
+<header>
+  <div class="wrap bar">
+    <a class="logo" href="/" aria-label="Alex Castillo, inicio"><span><b>Alex Castillo</b><small>Ingeniero Industrial</small></span></a>
+    <nav class="nav" id="menu" aria-label="Secciones">
+      <a href="/" >Inicio</a>
+      <a href="/ingenieria-industrial/" >Ingeniería Industrial</a>
+      <a href="/articulos/" >Artículos</a>
+      <a href="/recursos/" >Recursos</a>
+      <a href="/sobre-mi/" >Sobre mí</a>
+    </nav>
+    <a class="btn btn-ink bar-cta" href="/sobre-mi/#contacto">Contáctame</a>
+    <button class="menu-btn" type="button" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú"><span class="i-abrir"><svg class="ico " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+</span><span class="i-cerrar"><svg class="ico " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg>
+</span></button>
+  </div>
+</header>
+
+<main id="contenido">
+
+
+
+
+<div class="leer-barra" aria-hidden="true"><span id="leer-progreso"></span></div>
+
+<section class="art-head plano plano-full">
+  <div class="wrap">
+    <div class="art-head-in">
+      <nav class="crumbs" aria-label="Ruta"><a href="/articulos/">Artículos</a> <span aria-hidden="true">/</span> Procesos</nav>
+      <span class="pill-cat"><i aria-hidden="true"></i>Procesos · 4 min de lectura</span>
+      <h1>DOP y DAP: qué son, diferencias, símbolos y ejemplo</h1>
+      <p class="lead">Con el caso de una juguería de mercado y los símbolos ASME explicados.</p>
+      <div class="byline"><span class="av"><img src="/assets/img/alex.jpg" alt="" width="40" height="40"></span><span><b>Alex Castillo</b> · Ingeniero industrial<br>29 oct 2026</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="art-body">
+  <div class="wrap art-grid">
+    <article class="art-card">
+      <div class="answer"><span class="answer-k">En pocas palabras</span><p>El DOP muestra solo las operaciones e inspecciones de un proceso (lo que transforma el producto). El DAP es más detallado: agrega traslados, esperas y almacenamientos, que es justo donde se esconden los desperdicios.</p></div>
+      <details class="toc-movil" id="toc-movil"><summary>En este artículo</summary><ol class="toc-lista"></ol></details>
+      <div class="prose" id="prose">
+<h2 id="para-qué-sirven">¿Para qué sirven?</h2>
+
+<ul>
+  <li><strong>DOP (Diagrama de Operaciones del Proceso):</strong> ver el proceso completo de un vistazo, con sus materiales y en qué orden se juntan.</li>
+  <li><strong>DAP (Diagrama de Análisis del Proceso):</strong> analizar al detalle cada paso, con tiempos y distancias, para <strong>eliminar lo que no agrega valor</strong>.</li>
+</ul>
+
+<p>En la universidad casi siempre te piden los dos: el DOP para entender y el DAP para mejorar.</p>
+
+<h2 id="los-5-símbolos-asme">Los 5 símbolos ASME</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Símbolo</th>
+      <th>Actividad</th>
+      <th style="text-align: center">¿Agrega valor?</th>
+      <th>Ejemplo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">○</td>
+      <td><strong>Operación</strong></td>
+      <td style="text-align: center">Sí</td>
+      <td>Licuar la fruta</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">□</td>
+      <td><strong>Inspección</strong></td>
+      <td style="text-align: center">No (pero a veces es necesaria)</td>
+      <td>Probar el dulzor</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">⇨</td>
+      <td><strong>Transporte</strong></td>
+      <td style="text-align: center">No</td>
+      <td>Llevar la fruta a la licuadora</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">D</td>
+      <td><strong>Espera / demora</strong></td>
+      <td style="text-align: center">No</td>
+      <td>Esperar que se desocupe la licuadora</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">▽</td>
+      <td><strong>Almacenamiento</strong></td>
+      <td style="text-align: center">No</td>
+      <td>Guardar la fruta en la refrigeradora</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>El DOP solo usa <strong>operación e inspección</strong> (y el símbolo combinado ○ con □ dentro, cuando se hacen a la vez). El DAP usa los cinco.</p>
+
+<h2 id="ejemplo-un-jugo-surtido-en-una-juguería-de-mercado">Ejemplo: un jugo surtido en una juguería de mercado</h2>
+
+<p><strong>DAP del método actual</strong> (tiempos medidos con cronómetro):</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Actividad</th>
+      <th style="text-align: center">Símbolo</th>
+      <th style="text-align: right">Tiempo</th>
+      <th style="text-align: right">Distancia</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Sacar fruta de la refrigeradora</td>
+      <td style="text-align: center">▽ → ⇨</td>
+      <td style="text-align: right">20 s</td>
+      <td style="text-align: right">3 m</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Llevar fruta a la mesa</td>
+      <td style="text-align: center">⇨</td>
+      <td style="text-align: right">10 s</td>
+      <td style="text-align: right">2 m</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Lavar la fruta</td>
+      <td style="text-align: center">○</td>
+      <td style="text-align: right">40 s</td>
+      <td style="text-align: right">—</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Pelar y picar</td>
+      <td style="text-align: center">○</td>
+      <td style="text-align: right">90 s</td>
+      <td style="text-align: right">—</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Buscar la licuadora libre</td>
+      <td style="text-align: center">D</td>
+      <td style="text-align: right">30 s</td>
+      <td style="text-align: right">—</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Licuar</td>
+      <td style="text-align: center">○</td>
+      <td style="text-align: right">45 s</td>
+      <td style="text-align: right">—</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>Probar el dulzor</td>
+      <td style="text-align: center">□</td>
+      <td style="text-align: right">10 s</td>
+      <td style="text-align: right">—</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>Ir por el azúcar a otro estante</td>
+      <td style="text-align: center">⇨</td>
+      <td style="text-align: right">15 s</td>
+      <td style="text-align: right">3 m</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>Servir</td>
+      <td style="text-align: center">○</td>
+      <td style="text-align: right">15 s</td>
+      <td style="text-align: right">—</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Resumen:</strong> 4 operaciones, 1 inspección, 3 transportes, 1 espera. Tiempo total: <strong>275 s</strong>, distancia: <strong>8 m</strong>.</p>
+
+<p><strong>¿Qué mejoramos?</strong></p>
+
+<ul>
+  <li>Dejar la fruta del día picada en táperes junto a la licuadora: se eliminan los pasos 1 y 2.</li>
+  <li>Poner el azúcar al lado de la licuadora: se elimina el paso 8.</li>
+  <li>Una segunda jarra de licuadora: se reduce la espera.</li>
+</ul>
+
+<p>Con esos cambios, el mismo jugo puede salir en unos <strong>200 s y casi sin caminar</strong>. En hora punta eso son varios clientes más atendidos.</p>
+
+<h2 id="cómo-hacerlo-paso-a-paso">Cómo hacerlo paso a paso</h2>
+
+<ol>
+  <li><strong>Define el inicio y el fin</strong> del proceso (desde que entra la fruta hasta que se sirve).</li>
+  <li><strong>Observa el proceso real</strong>, no el que “debería ser”. Anota cada paso.</li>
+  <li><strong>Clasifica cada paso</strong> con su símbolo.</li>
+  <li><strong>Mide tiempos y distancias</strong> (cronómetro y wincha).</li>
+  <li><strong>Haz el cuadro resumen:</strong> cuántas actividades de cada tipo, tiempo total y distancia total.</li>
+  <li><strong>Pregunta a cada paso que no agrega valor:</strong> ¿se puede eliminar, combinar, reordenar o simplificar?</li>
+  <li><strong>Dibuja el DAP propuesto</strong> y compara el antes y el después.</li>
+</ol>
+
+<h2 id="errores-comunes">Errores comunes</h2>
+
+<ul>
+  <li>Hacer el DAP de memoria, desde un escritorio.</li>
+  <li>Confundir inspección con operación (“pesar” es inspección si solo verificas).</li>
+  <li>Olvidar las esperas: son desperdicios invisibles y muchas veces los más grandes.</li>
+  <li>No poner el cuadro resumen: es lo que demuestra la mejora con números.</li>
+</ul>
+
+<h2 id="funciona-en-una-planta-de-verdad">¿Funciona en una planta de verdad?</h2>
+
+<p>Sí. Usando un DAP en una línea de producción logré reducir <strong>41% el tiempo por lote</strong>. Te cuento cómo en <a href="/articulos/caso-estandarizacion-metodos-de-trabajo/">este caso real</a>.</p>
+
+      </div>
+      
+    </article>
+
+    <aside class="art-side" aria-label="Índice del artículo">
+      <div class="side-box">
+        <span class="side-k">En este artículo</span>
+        <ol class="toc-lista" id="toc"></ol>
+      </div>
+      <div class="side-box side-autor">
+        <span class="av"><img src="/assets/img/alex.jpg" alt="" width="40" height="40"></span>
+        <p><b>Alex Castillo</b><br>Más de 8 años en una planta de manufactura. Explico la carrera con casos reales.</p>
+        <a class="more" href="/sobre-mi/">Conóceme →</a>
+      </div>
+    </aside>
+  </div>
+</section>
+
+
+
+
+<section class="s art-mas"><div class="wrap">
+  <div class="head"><span class="eyebrow">Sigue leyendo</span><h2>Más guías y casos reales</h2></div>
+  <div class="grid3">
+    
+    
+    
+
+<a class="gcard" href="/articulos/caso-estandarizacion-metodos-de-trabajo/">
+  <span class="gcard-top"><span class="gcard-cat">Casos reales</span></span>
+  <h3>El lote pasó de 179 a 106 minutos sin comprar ninguna máquina</h3>
+  <p>Caso real: reduje 41% el tiempo por lote estandarizando el método de trabajo</p>
+  <div class="gcard-graf"><svg class="graf" viewBox="0 0 320 150" role="img" aria-label="Gráfico de ejemplo" font-family="IBM Plex Mono, monospace" font-size="8" fill="#5b627c"><g font-size="8"><text x="8" y="26">TIEMPO/LOTE</text><text x="8" y="58">ACTIVIDADES</text><text x="8" y="90">DISTANCIA</text><text x="8" y="122">INSPECCIONES</text></g>
+  <g stroke="#e6eaf4"><line x1="90" y1="23" x2="300" y2="23"/><line x1="90" y1="55" x2="300" y2="55"/><line x1="90" y1="87" x2="300" y2="87"/><line x1="90" y1="119" x2="300" y2="119"/></g>
+  <g stroke="#c6d0f7" stroke-width="3"><line x1="300" y1="23" x2="214" y2="23"/><line x1="300" y1="55" x2="233" y2="55"/><line x1="300" y1="87" x2="195" y2="87"/><line x1="300" y1="119" x2="142" y2="119"/></g>
+  <g fill="#d1d6e5"><circle cx="300" cy="23" r="5"/><circle cx="300" cy="55" r="5"/><circle cx="300" cy="87" r="5"/><circle cx="300" cy="119" r="5"/></g>
+  <g fill="#3e57da"><circle cx="214" cy="23" r="5"/><circle cx="233" cy="55" r="5"/><circle cx="195" cy="87" r="5"/><circle cx="142" cy="119" r="5"/></g>
+  <g fill="#0d0f2c" text-anchor="end"><text x="206" y="18">−41%</text><text x="225" y="50">−32%</text><text x="187" y="82">−50%</text><text x="134" y="114">−75%</text></g>
+  <g><circle cx="94" cy="142" r="3" fill="#d1d6e5"/><text x="100" y="145">antes</text><circle cx="140" cy="142" r="3" fill="#3e57da"/><text x="146" y="145">después</text></g></svg>
+</div>
+  <span class="gcard-pie"><span>CASO DAP · 31 oct</span><b>Leer caso →</b></span>
+</a>
+
+
+<a class="gcard" href="/articulos/caso-registro-de-produccion-con-excel-e-ia/">
+  <span class="gcard-top"><span class="gcard-cat">Casos reales</span></span>
+  <h3>De horas digitando un cuaderno a un par de minutos con una foto</h3>
+  <p>Caso real: automaticé el registro diario de producción con Excel e IA</p>
+  <div class="gcard-graf"><svg class="graf" viewBox="0 0 320 150" role="img" aria-label="Gráfico de ejemplo" font-family="IBM Plex Mono, monospace" font-size="8" fill="#5b627c"><g font-size="8.5" text-anchor="middle">
+    <rect x="6" y="46" width="64" height="44" rx="10" fill="#f2f4f8" stroke="#d1d6e5"/><text x="38" y="66" fill="#0d0f2c">Cuaderno</text><text x="38" y="78">a mano</text>
+    <rect x="86" y="46" width="64" height="44" rx="10" fill="#eef1ff" stroke="#c6d0f7"/><text x="118" y="66" fill="#0d0f2c">Foto + IA</text><text x="118" y="78">OCR</text>
+    <rect x="166" y="46" width="64" height="44" rx="10" fill="#eef1ff" stroke="#c6d0f7"/><text x="198" y="66" fill="#0d0f2c">Base de</text><text x="198" y="78" fill="#0d0f2c">datos</text>
+    <rect x="246" y="46" width="68" height="44" rx="10" fill="#3e57da"/><text x="280" y="66" fill="#fff">Reporte</text><text x="280" y="78" fill="#dfe5ff">automático</text>
+  </g>
+  <g stroke="#3e57da" stroke-width="1.6" fill="none"><path d="M72 68h11m-4-4 4 4-4 4"/><path d="M152 68h11m-4-4 4 4-4 4"/><path d="M232 68h11m-4-4 4 4-4 4"/></g>
+  <text x="160" y="120" text-anchor="middle" fill="#0d0f2c" font-size="10">horas  →  un par de minutos</text>
+  <text x="160" y="28" text-anchor="middle">SUMAR.SI.CONJUNTO · +30 TIPOS DE MATERIAL</text></svg>
+</div>
+  <span class="gcard-pie"><span>REGISTRO · 31 oct</span><b>Leer caso →</b></span>
+</a>
+
+
+<a class="gcard" href="/articulos/caso-bot-telegram-formulacion-por-lote/">
+  <span class="gcard-top"><span class="gcard-cat">Casos reales</span></span>
+  <h3>Los operarios calculan cada lote en segundos, todos los días</h3>
+  <p>Caso real: un bot de Telegram que calcula la materia prima de cada lote</p>
+  <div class="gcard-graf"><svg class="graf" viewBox="0 0 320 150" role="img" aria-label="Gráfico de ejemplo" font-family="IBM Plex Mono, monospace" font-size="8" fill="#5b627c"><rect x="150" y="14" width="160" height="34" rx="12" fill="#f2f4f8"/><text x="162" y="35" fill="#0d0f2c" font-size="9">Producto X 300 kg</text>
+  <rect x="10" y="60" width="200" height="72" rx="12" fill="#3e57da"/>
+  <g fill="#fff" font-size="9"><text x="22" y="80">3 ollas × 100 kg</text></g>
+  <g fill="#dfe5ff" font-size="8.5"><text x="22" y="98">A  94.00 kg</text><text x="22" y="110">B   4.000 kg</text><text x="22" y="122">C   2.000 kg</text></g>
+  <text x="310" y="128" text-anchor="end">NÚMEROS DE EJEMPLO</text></svg>
+</div>
+  <span class="gcard-pie"><span>BOT · 31 oct</span><b>Leer caso →</b></span>
+</a>
+
+  </div>
+</div></section>
+
+<script>
+(function(){
+  // Índice automático con los subtítulos (##) del artículo
+  var hs=document.querySelectorAll("#prose h2"),listas=document.querySelectorAll(".toc-lista");
+  if(hs.length<2){document.querySelectorAll(".art-side .side-box:first-child,#toc-movil").forEach(function(e){e.hidden=true})}
+  hs.forEach(function(h,i){if(!h.id)h.id="s"+(i+1);listas.forEach(function(l){var li=document.createElement("li"),a=document.createElement("a");a.href="#"+h.id;a.textContent=h.textContent;li.appendChild(a);l.appendChild(li)})});
+  document.querySelectorAll("#toc-movil a").forEach(function(a){a.addEventListener("click",function(){document.getElementById("toc-movil").open=false})});
+  // Sección actual resaltada en el índice
+  var links=document.querySelectorAll("#toc a");
+  if("IntersectionObserver" in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.classList.toggle("on",a.getAttribute("href")==="#"+e.target.id)})}})},{rootMargin:"-20% 0px -70% 0px"});hs.forEach(function(h){io.observe(h)})}
+  // Barra de lectura
+  var b=document.getElementById("leer-progreso"),art=document.querySelector(".art-card");
+  function act(){var r=art.getBoundingClientRect(),t=r.height-innerHeight;var p=t>0?Math.min(1,Math.max(0,-r.top/t)):1;b.style.transform="scaleX("+p+")"}
+  addEventListener("scroll",act,{passive:true});act();
+})();
+</script>
+
+</main>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div class="stack" style="gap:12px;max-width:360px">
+      <a class="logo" href="/"><span><b>Alex Castillo</b><small>Ingeniero Industrial</small></span></a>
+      <p>La Ingeniería Industrial explicada fácil, desde la experiencia de planta: procesos, calidad, productividad y datos.</p>
+    </div>
+    <nav class="foot-col" aria-label="Secciones del sitio">
+      <span class="eyebrow">Secciones</span>
+      <a href="/ingenieria-industrial/">Ingeniería Industrial</a>
+      <a href="/articulos/">Artículos</a>
+      <a href="/cursos/">Cursos gratuitos</a>
+      <a href="/plantillas/">Plantillas</a>
+      <a href="/sobre-mi/">Sobre mí</a>
+    </nav>
+    <div class="foot-col">
+      <span class="eyebrow">Contacto</span>
+      <a href="https://www.linkedin.com/in/alexw-castillo-farfan/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      
+      
+      
+    </div>
+  </div>
+  <div class="wrap foot-bottom"><span>© 2026 Alex Castillo · Ingeniero Industrial</span><span>Hecho en Lima, Perú</span></div>
+</footer>
+
+
+<div class="toast" id="toast" role="status" hidden>El bot de Telegram estará disponible muy pronto.</div>
+<script>
+  // Menú del celular
+  (function(){var b=document.querySelector(".menu-btn"),h=document.querySelector("header");if(!b)return;function cerrar(){h.classList.remove("abierto");b.setAttribute("aria-expanded","false");b.setAttribute("aria-label","Abrir menú")}b.addEventListener("click",function(){var o=h.classList.toggle("abierto");b.setAttribute("aria-expanded",o);b.setAttribute("aria-label",o?"Cerrar menú":"Abrir menú")});document.addEventListener("keydown",function(e){if(e.key==="Escape"&&h.classList.contains("abierto")){cerrar();b.focus()}});document.addEventListener("click",function(e){if(h.classList.contains("abierto")&&!h.contains(e.target))cerrar()})})();
+  // Aviso mientras el bot de Telegram no exista (cuando pongas el enlace en _config.yml, los botones lo abren directo)
+  (function(){var t=document.getElementById("toast"),k;document.addEventListener("click",function(e){if(e.target.closest(".buy")){t.hidden=false;clearTimeout(k);k=setTimeout(function(){t.hidden=true},2500)}})})();
+</script>
+</body>
+</html>

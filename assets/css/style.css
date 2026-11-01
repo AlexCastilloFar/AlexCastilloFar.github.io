@@ -1077,3 +1077,4 @@ body.s-plantillas main{background:#fff}
 /* Detalle de cada plantilla: botón de compra en verde */
 .buybox .btn-ink{background:var(--verde);box-shadow:0 10px 22px -12px rgba(21,128,61,.8)}
 .buybox .btn-ink:hover{background:var(--verde-d)}
+.more{min-height:44px}

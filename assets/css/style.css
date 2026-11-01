@@ -835,3 +835,8 @@ a.ii-item:hover{box-shadow:0 0 0 1px rgba(62,87,218,.4),0 12px 26px -18px rgba(1
 .ii-azul{background:linear-gradient(135deg,#25349a 0%,#1e2a7d 100%)}
 .ii-azul .ii-campo p{opacity:1;color:#eef1ff}
 .ii-azul .ii-h span{color:#d3daff}
+/* Herramientas clave: degradado suave lavanda → blanco (como las tarjetas de la captura) */
+.ii-item{background:linear-gradient(160deg,#eef1ff 0%,#fff 65%)}
+.ii-item:nth-child(4n+2),.ii-item:nth-child(4n+3){background:linear-gradient(180deg,#e9eeff 0%,#fff 68%)}
+.ii-item.ii-pronto{background:linear-gradient(160deg,#f2f4f8 0%,#fff 65%)}
+.ii-item-ico .ico-box{box-shadow:0 6px 14px -8px rgba(62,87,218,.6)}

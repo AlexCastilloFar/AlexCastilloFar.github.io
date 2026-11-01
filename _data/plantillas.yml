@@ -1,7 +1,9 @@
 # ============================================================
 # TUS PLANTILLAS — para cambiar un precio o un texto, edítalo aquí
+# Para agregar una nueva: copia un bloque completo (desde "- id:") y cambia los datos.
 # ============================================================
 - id: ishikawa-pareto
+  destacada: true   # muestra la etiqueta "Más vendida" (ponla solo en una o dos)
   nombre: Ishikawa + Pareto
   tag: Calidad
   precio: "S/ 19"

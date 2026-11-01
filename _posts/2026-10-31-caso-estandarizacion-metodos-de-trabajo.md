@@ -8,6 +8,9 @@ respuesta: "analicé la línea con un DAP, eliminé actividades que no agregaban
 date: 2026-10-31 07:00:00 -0500
 grafico: caso-dap
 historia: "El lote pasó de 179 a 106 minutos sin comprar ninguna máquina"
+imagen: /assets/img/articulos/caso-estandarizacion.webp
+image: /assets/img/articulos/caso-estandarizacion.webp
+imagen_alt: "Análisis de un diagrama de proceso y un gráfico de mejora en la planta"
 ---
 
 > Este caso es de mis prácticas preprofesionales en una planta de manufactura. Por confidencialidad no menciono la empresa, el producto ni detalles internos del proceso: solo el método y los resultados.

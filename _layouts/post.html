@@ -17,7 +17,7 @@ seccion: articulos
       {% if page.resumen %}<p class="lead">{{ page.resumen }}</p>{% endif %}
       <div class="byline"><span class="av"><img src="{{ '/assets/img/alex.jpg' | relative_url }}" alt="" width="40" height="40"></span><span><b>{{ site.author }}</b> · Ingeniero industrial<br>{{ page.date | date: "%-d" }} {{ meses[m] }} {{ page.date | date: "%Y" }}</span></div>
     </div>
-    {% if page.grafico %}<div class="art-portada" aria-hidden="true"><div class="gcard-pantalla">{% include grafico.html g=page.grafico %}</div></div>{% endif %}
+    {% if page.imagen %}<figure class="art-foto"><img src="{{ page.imagen | relative_url }}" alt="{{ page.imagen_alt }}" width="1200" height="675" fetchpriority="high"></figure>{% elsif page.grafico %}<div class="art-portada" aria-hidden="true"><div class="gcard-pantalla">{% include grafico.html g=page.grafico %}</div></div>{% endif %}
   </div>
 </section>
 

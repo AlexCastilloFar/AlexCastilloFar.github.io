@@ -800,3 +800,82 @@ a.ii-item:hover{box-shadow:0 0 0 1px rgba(62,87,218,.4),0 12px 26px -18px rgba(1
 .ii-circulo .eyebrow{color:#cfd7ff}
 .ii-circulo .ii-pill{box-shadow:none}
 .ii-hero .eyebrow{color:#e3e7fb}
+
+/* Ingeniería Industrial v3 · equilibrio: índigo (principal), violeta suave (acompañante), azul noche (portada), lavanda (fondos) */
+/* Diagrama: vuelve a claro, con nodos de color */
+.ii-oscuro{background:linear-gradient(180deg,#f5f7ff 0%,#eef1ff 100%);color:inherit}
+.ii-oscuro .ii-h{color:var(--ink)}
+.ii-oscuro .ii-split-txt p{color:var(--muted)}
+.ii-oscuro .ii-pill{background:#fff;color:var(--ink);box-shadow:0 0 0 1px var(--line)}
+.ii-oscuro .ii-lineas g{stroke:#b9c4f5}
+.ii-oscuro .ii-nodo-c{background:#fff;color:var(--accent);box-shadow:0 0 0 1px #d5dcfb,0 8px 18px -10px rgba(62,87,218,.55)}
+.ii-oscuro .ii-nodo small{background:#fff;color:var(--muted);box-shadow:0 0 0 1px var(--line)}
+.ii-oscuro a.ii-nodo:hover .ii-nodo-c{background:var(--accent);color:#fff;box-shadow:0 10px 22px -10px rgba(62,87,218,.8)}
+.ii-oscuro a.ii-nodo:hover small{color:var(--accent)}
+.ii-oscuro .ii-nodo.centro .ii-nodo-c{background:linear-gradient(150deg,#3e57da,#6a4fe0);color:#fff;box-shadow:0 0 0 10px rgba(62,87,218,.12),0 14px 30px -12px rgba(62,87,218,.7)}
+.ii-oscuro .ii-nodo.centro small{background:var(--ink);color:#fff;box-shadow:none}
+/* Tarjetas Mide/Analiza/Mejora: tres tonos que combinan (índigo, índigo profundo, violeta suave) */
+.ii-tint.t1{background:linear-gradient(160deg,#4a63e6 0%,#3e57da 100%)}
+.ii-tint.t2{background:linear-gradient(160deg,#3448c4 0%,#2c3fb4 100%)}
+.ii-tint.t3{background:linear-gradient(160deg,#6f5ae4 0%,#5d49d6 100%)}
+/* Banda de "¿Dónde trabaja?": índigo con un toque violeta, más sobria */
+.ii-azul{background:linear-gradient(135deg,#3e57da 0%,#4f4fdc 100%)}
+/* Cierre: círculo suave lavanda (no repetir otro bloque fuerte antes del pie oscuro) */
+.ii-circulo{background:radial-gradient(circle at 50% 30%,#dfe5ff 0%,#e9edff 55%,#f2f4ff 100%);color:inherit;box-shadow:none}
+.ii-circulo h2{color:var(--ink)}
+.ii-circulo p{color:var(--muted)}
+.ii-circulo .eyebrow{color:var(--accent)}
+.ii-circulo .ii-pill{background:var(--accent);color:#fff}
+.ii-circulo .ii-pill:hover{background:var(--accent-d);color:#fff}
+/* "¿Dónde trabaja?": índigo profundo para que el texto blanco se lea bien (contraste > 7:1), distinto del azul noche del pie */
+.ii-azul{background:linear-gradient(135deg,#2f43bd 0%,#2a379f 100%)}
+.ii-azul .ii-campo p{color:#fff;opacity:.92}
+.ii-azul .ii-h span{color:#c9d2ff}
+/* "¿Dónde trabaja?" un tono más oscuro (azul marino índigo), aún distinto del pie #0d0f2c */
+.ii-azul{background:linear-gradient(135deg,#25349a 0%,#1e2a7d 100%)}
+.ii-azul .ii-campo p{opacity:1;color:#eef1ff}
+.ii-azul .ii-h span{color:#d3daff}
+/* Herramientas clave: degradado suave lavanda → blanco (como las tarjetas de la captura) */
+.ii-item{background:linear-gradient(160deg,#eef1ff 0%,#fff 65%)}
+.ii-item:nth-child(4n+2),.ii-item:nth-child(4n+3){background:linear-gradient(180deg,#e9eeff 0%,#fff 68%)}
+.ii-item.ii-pronto{background:linear-gradient(160deg,#f2f4f8 0%,#fff 65%)}
+.ii-item-ico .ico-box{box-shadow:0 6px 14px -8px rgba(62,87,218,.6)}
+.ii-item{background:linear-gradient(160deg,#e6ebff 0%,#f3f5ff 45%,#fff 85%)}
+.ii-item:nth-child(4n+2),.ii-item:nth-child(4n+3){background:linear-gradient(180deg,#e3e9ff 0%,#f3f5ff 50%,#fff 90%)}
+/* Títulos en dos tonos: la segunda parte en índigo (como "fácil" en el inicio) en vez de gris */
+.ii-h span{color:var(--accent)}
+.ii-azul .ii-h span{color:#c3ccff}
+/* "¿Dónde trabaja?": jerarquía de color para que no se vea todo blanco */
+.ii-azul .ii-h span{color:#9fb0ff}
+.ii-azul .ii-campo p{color:#b8c4f5}
+.ii-azul .ii-campo p b{color:#fff}
+.ii-azul .ii-mini{background:rgba(159,176,255,.18);color:#c3ccff;box-shadow:inset 0 0 0 1px rgba(159,176,255,.35)}
+/* "¿Dónde trabaja?" v3: cada lugar en tarjeta blanca sobre la banda azul (máxima lectura) */
+.ii-azul .ii-h span{color:#b3c1ff}
+.ii-azul .ii-campo{gap:16px}
+.ii-azul .ii-campo>div{background:#fff;border-radius:16px;padding:20px;box-shadow:0 14px 30px -18px rgba(0,0,0,.55);gap:12px}
+.ii-azul .ii-mini{width:40px;height:40px;border-radius:12px;background:linear-gradient(150deg,#3e57da,#6a4fe0);color:#fff;box-shadow:0 6px 14px -8px rgba(62,87,218,.7)}
+.ii-azul .ii-campo p{color:var(--muted)}
+.ii-azul .ii-campo p b{color:var(--ink)}
+/* "¿Dónde trabaja?" v4: sin tarjetas, fondo azul claro, letra oscura y segunda parte del título en índigo */
+.ii-azul{background:linear-gradient(135deg,#d8e0ff 0%,#cdd7ff 100%);color:var(--ink)}
+.ii-azul .ii-h{color:var(--ink)}
+.ii-azul .ii-h span{color:var(--accent)}
+.ii-azul .ii-campo{gap:28px 32px}
+.ii-azul .ii-campo>div{background:none;border-radius:0;padding:0;box-shadow:none;gap:10px}
+.ii-azul .ii-mini{width:38px;height:38px;border-radius:10px;background:#fff;color:var(--accent);box-shadow:0 0 0 1px rgba(62,87,218,.25),0 6px 14px -8px rgba(62,87,218,.5)}
+.ii-azul .ii-campo p{color:#3a4160}
+.ii-azul .ii-campo p b{color:var(--ink)}
+/* Cierre de Ingeniería Industrial: tarjeta personal sencilla (foto + frase + botón) */
+.ii-cierre2{padding-block:clamp(48px,7vw,72px)!important}
+.ii-firma{position:relative;overflow:hidden;display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:28px;align-items:center;background:#fff;border-radius:20px;padding:28px 32px;box-shadow:0 0 0 1px var(--line),0 20px 40px -28px rgba(13,15,44,.35)}
+.ii-firma::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(180deg,#3e57da,#6a4fe0)}
+.ii-firma::after{content:"“";position:absolute;right:28px;top:-34px;font:600 160px/1 var(--f-ui);color:#eef1ff;pointer-events:none}
+.ii-firma>*{position:relative;z-index:1}
+.ii-firma-foto .photo{width:84px;height:84px;border-radius:50%;overflow:hidden;box-shadow:0 0 0 4px #eef1ff}
+.ii-firma-foto .photo img{width:100%;height:100%;object-fit:cover}
+.ii-firma-txt{display:grid;gap:6px}
+.ii-firma-cita{font:500 clamp(19px,2.2vw,23px)/1.3 var(--f-ui);letter-spacing:-.02em;color:var(--ink)}
+.ii-firma-nombre{font:500 12px/1 var(--f-mono);letter-spacing:.06em;color:var(--muted);text-transform:uppercase}
+@media (max-width:760px){.ii-firma{grid-template-columns:auto minmax(0,1fr);padding:24px 22px}.ii-firma .btn{grid-column:1/-1;justify-self:start}}
+@media (max-width:420px){.ii-firma{grid-template-columns:minmax(0,1fr);text-align:left}}

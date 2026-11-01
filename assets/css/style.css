@@ -1355,3 +1355,17 @@ body:not(.s-inicio):not(.l-post):not(.s-plantillas):not(.s-ingenieria) main{back
 .rc-cta h2{font-size:clamp(24px,3vw,32px);letter-spacing:-.03em}
 .rc-cta p{color:var(--muted)}
 .rc-fin{padding-bottom:clamp(56px,8vw,96px)}
+/* Aprende y practica compacto: texto e imagen lado a lado, altura contenida */
+.ap-card{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.95fr);grid-template-rows:auto auto 1fr auto;column-gap:20px;row-gap:8px;padding:24px 0 0 24px;border-radius:22px;min-height:0}
+.ap-ico{grid-column:1;margin-bottom:2px}
+.ap-ico .ico-box{width:40px;height:40px;border-radius:12px}
+.ap-card h3{grid-column:1;font-size:22px}
+.ap-card p{grid-column:1;font-size:14.5px;line-height:1.5}
+.ap-link{grid-column:1;align-self:end;margin-bottom:22px}
+.ap-img{grid-column:2;grid-row:1/5;margin:0;padding:16px 0 0;align-self:end;height:210px;overflow:hidden}
+.ap-img img{height:100%;width:auto;max-width:none;object-fit:cover;object-position:left top;border-radius:12px 0 0 0;transform:translateY(6px)}
+@media (max-width:560px){
+  .ap-card{grid-template-columns:minmax(0,1fr);padding:22px 22px 0}
+  .ap-img{grid-column:1;grid-row:auto;height:170px;margin-inline:0 -22px}
+  .ap-link{margin-bottom:4px}
+}

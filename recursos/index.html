@@ -44,7 +44,7 @@ description: Cursos gratuitos con sus clases ordenadas y plantillas de Excel par
         <h2>Herramientas listas para usar en tu trabajo o en la U</h2>
         <p>Nacieron de problemas reales en planta. Pensadas para quien no sabe Excel: hoja de instrucciones, botones claros y fórmulas protegidas.</p>
         <ul class="rc-checks">
-          {% for p in site.data.plantillas %}<li><b>{{ p.nombre }}.</b> {{ p.beneficio }}</li>{% endfor %}
+          {% for p in site.data.plantillas %}<li><span><b>{{ p.nombre }}.</b> {{ p.beneficio }}</span></li>{% endfor %}
         </ul>
         <div class="ctas"><a class="btn pl-btn-verde" href="{{ '/plantillas/' | relative_url }}">Ver plantillas y precios →</a></div>
       </div>

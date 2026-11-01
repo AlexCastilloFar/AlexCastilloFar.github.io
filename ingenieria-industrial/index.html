@@ -61,21 +61,7 @@ description: Qué es la Ingeniería Industrial, qué se estudia, sus herramienta
     </div>
   </section>
 
-  <!-- 5. Lista de herramientas -->
-  <section class="ii-sec">
-    <h2 class="ii-h">Herramientas clave. <span>Lo que usarás en la U y en el trabajo.</span></h2>
-    <div class="ii-lista">
-      {% for h in site.data.herramientas %}
-      {% if h.articulo %}<a class="ii-item" href="{{ h.articulo | relative_url }}">{% else %}<div class="ii-item ii-pronto">{% endif %}
-        <span class="ii-item-ico">{% include icon-area.html a=h.tag %}</span>
-        <p><b>{{ h.nombre }}.</b> {{ h.desc }}</p>
-        <span class="ii-item-pie">{% if h.articulo %}Leer la guía →{% else %}Muy pronto{% endif %}</span>
-      {% if h.articulo %}</a>{% else %}</div>{% endif %}
-      {% endfor %}
-    </div>
-  </section>
-
-  <!-- 6. Campo laboral: 3 columnas -->
+  <!-- 5. Campo laboral: 3 columnas -->
   <section class="ii-sec ii-azul">
     <h2 class="ii-h">¿Dónde trabaja? <span>Donde haya un proceso que mejorar.</span></h2>
     <div class="ii-campo">
@@ -88,14 +74,16 @@ description: Qué es la Ingeniería Industrial, qué se estudia, sus herramienta
     </div>
   </section>
 
-  <!-- 7. Cierre con círculo -->
-  <section class="ii-cierre">
-    <div class="ii-circulo">
-      <span class="ii-foto">{% include foto.html %}</span>
-      <span class="eyebrow">Así lo vivo yo</span>
-      <h2>Más de 8 años en planta</h2>
-      <p>Empecé en operaciones y hoy me encargo del control de producción y procesos: indicadores, reportes y estandarización del trabajo.</p>
-      <a class="ii-pill" href="{{ '/sobre-mi/' | relative_url }}">Conoce mi experiencia →</a>
+  <!-- 6. Cierre: tarjeta personal sencilla -->
+  <section class="ii-cierre2">
+    <div class="ii-firma">
+      <span class="ii-firma-foto">{% include foto.html %}</span>
+      <div class="ii-firma-txt">
+        <span class="eyebrow">Así lo vivo yo</span>
+        <p class="ii-firma-cita">Todo lo que explico aquí lo aplico en planta, todos los días.</p>
+        <span class="ii-firma-nombre">Alex Castillo · Ingeniero industrial</span>
+      </div>
+      <a class="btn btn-ink" href="{{ '/sobre-mi/' | relative_url }}">Conoce mi experiencia →</a>
     </div>
   </section>
 </div>

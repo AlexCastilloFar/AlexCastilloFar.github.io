@@ -1286,3 +1286,11 @@ body:not(.s-inicio):not(.l-post):not(.s-plantillas):not(.s-ingenieria) main{back
   .gal-nav::-webkit-scrollbar{display:none}
 }
 .gal-titulo{text-align:left}
+/* Casos reales del inicio con foto arriba */
+.card.case{padding-top:0}
+.case-foto{display:block;margin:0 -28px 6px;aspect-ratio:16/9;overflow:hidden;position:relative}
+@media (max-width:640px){.case-foto{margin-inline:-22px}}
+.case-foto img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease}
+.case:hover .case-foto img{transform:scale(1.04)}
+.grid3>.card.case::before{z-index:2}
+@media (prefers-reduced-motion:reduce){.case:hover .case-foto img{transform:none}}

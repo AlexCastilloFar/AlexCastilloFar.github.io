@@ -1140,3 +1140,119 @@ footer{background:var(--ink)}
 @media (max-width:900px){.art-portada{display:none}}
 .art-head .pill-cat i{background:var(--c1,var(--accent))}
 @media (max-width:900px){.art-portada{display:block;margin-top:16px;padding:16px 16px 0}}
+/* Más color visible en las portadas: pantalla más angosta, círculo decorativo */
+.gcard-graf{padding:26px 36px 0;overflow:hidden}
+.gcard-graf::after,.art-portada::after{content:"";position:absolute;width:180px;height:180px;border-radius:50%;right:-50px;top:-70px;background:rgba(255,255,255,.14);pointer-events:none}
+.gcard-pantalla{z-index:1;transform:rotate(-1.2deg)}
+.gcard:hover .gcard-pantalla{transform:rotate(0) translateY(-4px)}
+.gcard-cat{color:var(--c1,var(--muted))}
+.art-portada{padding:30px 40px 0}
+
+/* =========================================================
+   v8 · PALETA ÚNICA PARA TODA LA WEB (une las 3 paletas de Alex)
+   Neutros: Midnight/Navy (texto y bloques oscuros), Slate (texto), crema y lavanda (fondos), Frost (bordes).
+   Acción: índigo #3e57da. Compra: verde #15803d.
+   Color por área (se repite en toda la web):
+     cobalto  #2545ff  Calidad / Pareto / Ishikawa
+     violeta  #6736eb  Procesos / Mejora / Programación
+     bosque   #046645  Planeamiento / Proyectos / Gantt
+     cerúleo  #0074dd  Gestión / Datos
+     navy     #0c1754  Casos reales / Producción / Negocios
+     eléctrico #0f77ff solo decorativo (no para texto)
+   ========================================================= */
+:root{
+  --ink:#0c1754; --text:#36394a; --muted:#5d6170;
+  --canvas:#faf9f7; --mist:#f9f8f6; --wash:#f5f3ff; --lav2:#eaebf8;
+  --line:#e1e9f0; --cloud:#e1e9f0; --cream:#f0e9e1;
+  --a-cob:#2545ff; --t-cob:#e8ecff;
+  --a-vio:#6736eb; --t-vio:#efe9ff;
+  --a-bos:#046645; --t-bos:#e3f1ea;
+  --a-cer:#0074dd; --t-cer:#e3f0fb;
+  --a-nav:#0c1754; --t-nav:#e7e9f3;
+  --a-ele:#0f77ff; --t-ele:#e5f1ff;
+}
+h1,h2,h3{color:var(--ink)}
+
+/* Íconos con el color de su área (en todas las páginas) */
+.ico-box.ic-diana,.ico-box.ic-play{background:var(--t-cob);color:var(--a-cob)}
+.ico-box.ic-flujo,.ico-box.ic-codigo{background:var(--t-vio);color:var(--a-vio)}
+.ico-box.ic-calendario,.ico-box.ic-tabla{background:var(--t-bos);color:var(--a-bos)}
+.ico-box.ic-chart,.ico-box.ic-base{background:var(--t-cer);color:var(--a-cer)}
+.ico-box.ic-engranaje,.ico-box.ic-medalla,.ico-box.ic-maletin{background:var(--t-nav);color:var(--a-nav)}
+.ico-box.ic-escudo{background:var(--t-ele);color:#0a5bd1}
+
+/* Tarjetas: línea superior de color que va rotando (Sobre mí, Recursos, Cursos, etc.) */
+.grid2>.card,.grid3>.card{position:relative;overflow:hidden}
+.grid2>.card::before,.grid3>.card::before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:var(--a-cob)}
+.grid2>.card:nth-child(6n+2)::before,.grid3>.card:nth-child(6n+2)::before{background:var(--a-vio)}
+.grid2>.card:nth-child(6n+3)::before,.grid3>.card:nth-child(6n+3)::before{background:var(--a-bos)}
+.grid2>.card:nth-child(6n+4)::before,.grid3>.card:nth-child(6n+4)::before{background:var(--a-cer)}
+.grid2>.card:nth-child(6n+5)::before,.grid3>.card:nth-child(6n+5)::before{background:var(--a-nav)}
+.grid2>.card:nth-child(6n)::before,.grid3>.card:nth-child(6n)::before{background:var(--a-ele)}
+.card .tag.hot{background:var(--ink)}
+
+/* INICIO */
+.hero-sky{background:radial-gradient(60% 70% at 85% 10%,#ece8ff 0%,transparent 60%),radial-gradient(55% 70% at 0% 0%,#e3e9ff 0%,transparent 60%),linear-gradient(180deg,#f3f2fb 0%,var(--canvas) 100%)}
+.stats-band{background:var(--canvas);border-color:var(--cream)}
+.stats-band .st:nth-child(1) .st-n{color:var(--a-cob)}.stats-band .st:nth-child(2) .st-n{color:var(--a-vio)}
+.stats-band .st:nth-child(3) .st-n{color:var(--a-bos)}.stats-band .st:nth-child(4) .st-n{color:var(--a-cer)}
+.stats-band .st:nth-child(1){border-left-color:var(--a-cob)}.stats-band .st:nth-child(2){border-left-color:var(--a-vio)}
+.stats-band .st:nth-child(3){border-left-color:var(--a-bos)}.stats-band .st:nth-child(4){border-left-color:var(--a-cer)}
+.f.ic-engranaje::after{background:var(--a-nav)}.f.ic-flujo::after{background:var(--a-vio)}
+.f.ic-diana::after{background:var(--a-cob)}.f.ic-chart::after{background:var(--a-cer)}
+.f::after{width:100%;height:4px;border-radius:0}
+.band-wash.plano{background:var(--wash)}
+.dark{background:radial-gradient(70% 90% at 90% 10%,#1d2c9a 0%,#0c1754 55%,#091135 100%)}
+.cta-final{background:linear-gradient(180deg,var(--wash) 0%,#efedfb 100%);border-top:0}
+.show-indigo{background:radial-gradient(120% 140% at 100% 0%,#4f6bff 0%,#2545ff 50%,#1b34c8 100%)}
+.show-ink{background:radial-gradient(120% 140% at 100% 0%,#22307a 0%,#0c1754 55%,#091135 100%)}
+
+/* ARTÍCULOS: portadas de color por área */
+[data-cat="casos-reales"]{--c1:#0c1754;--c2:#24339a}
+[data-cat="calidad"]{--c1:#2545ff;--c2:#0f77ff}
+[data-cat="procesos"]{--c1:#6736eb;--c2:#8b5cf6}
+[data-cat="planeamiento"]{--c1:#046645;--c2:#0b8a5e}
+[data-cat="gestion"]{--c1:#0074dd;--c2:#127ee3}
+[data-cat="negocios"]{--c1:#0c1754;--c2:#3a3fb8}
+.gal-btn[data-f="casos-reales"] small{background:var(--t-nav)}
+.answer{background:var(--wash)}
+
+/* INGENIERÍA INDUSTRIAL */
+.ii-hero{background:radial-gradient(70% 90% at 50% 0%,#2a45e8 0%,#152384 45%,#0c1754 100%)}
+.ii-tint.t1{background:linear-gradient(160deg,#3a5bff 0%,#2545ff 100%)}
+.ii-tint.t2{background:linear-gradient(160deg,#1c2a8a 0%,#0c1754 100%)}
+.ii-tint.t3{background:linear-gradient(160deg,#7a4ff0 0%,#6736eb 100%)}
+.ii-area:nth-child(6n+1) .ii-blob{background:linear-gradient(150deg,#3a5bff,#2545ff)}
+.ii-area:nth-child(6n+2) .ii-blob{background:linear-gradient(150deg,#7a4ff0,#6736eb)}
+.ii-area:nth-child(6n+3) .ii-blob{background:linear-gradient(150deg,#0b8a5e,#046645)}
+.ii-area:nth-child(6n+4) .ii-blob{background:linear-gradient(150deg,#127ee3,#0074dd)}
+.ii-area:nth-child(6n+5) .ii-blob{background:linear-gradient(150deg,#24339a,#0c1754)}
+.ii-area:nth-child(6n) .ii-blob{background:linear-gradient(150deg,#3d8bff,#0f77ff)}
+.ii-oscuro .n1 .ii-nodo-c{color:var(--a-cob)}.ii-oscuro .n2 .ii-nodo-c{color:var(--a-cob)}
+.ii-oscuro .n3 .ii-nodo-c{color:var(--a-bos)}.ii-oscuro .n4 .ii-nodo-c{color:var(--a-vio)}
+.ii-oscuro .n5 .ii-nodo-c{color:var(--a-cer)}.ii-oscuro .n6 .ii-nodo-c{color:var(--a-nav)}
+.ii-azul{background:linear-gradient(135deg,#e3f0fb 0%,#dbe6ff 100%)}
+.ii-azul .ii-campo>div:nth-child(6n+1) .ii-mini{color:var(--a-nav)}
+.ii-azul .ii-campo>div:nth-child(6n+2) .ii-mini{color:var(--a-cer)}
+.ii-azul .ii-campo>div:nth-child(6n+3) .ii-mini{color:var(--a-vio)}
+.ii-azul .ii-campo>div:nth-child(6n+4) .ii-mini{color:var(--a-cob)}
+.ii-azul .ii-campo>div:nth-child(6n+5) .ii-mini{color:var(--a-bos)}
+.ii-azul .ii-campo>div:nth-child(6n) .ii-mini{color:#0a5bd1}
+.ii-firma::before{background:linear-gradient(180deg,var(--a-cob),var(--a-vio))}
+
+/* PLANTILLAS: panel de cada tarjeta con el color de su categoría */
+.pl-card[data-cat] .pl-card-vis{background:linear-gradient(140deg,var(--c1,#2545ff),var(--c2,#6736eb))}
+.pl-card-vis::before{background-image:linear-gradient(to right,rgba(255,255,255,.14) 1px,transparent 1px),linear-gradient(to bottom,rgba(255,255,255,.14) 1px,transparent 1px)}
+.c1 .pl-fi{background:var(--t-cob);color:var(--a-cob)}.c2 .pl-fi{background:var(--t-vio);color:var(--a-vio)}.c3 .pl-fi{background:var(--t-bos);color:var(--a-bos)}
+.pl-cta{background:linear-gradient(120deg,#2545ff 0%,#4a3df0 50%,#6736eb 100%)}
+
+/* RECURSOS / CURSOS / SOBRE MÍ: cabecera con cielo lavanda y tarjetas blancas */
+body:not(.s-inicio):not(.l-post):not(.s-plantillas):not(.s-ingenieria) main{background:radial-gradient(50% 380px at 85% 0%,#ece8ff 0%,transparent 70%),linear-gradient(180deg,#eef0fb 0,var(--canvas) 460px) var(--canvas)}
+.chips .tag:nth-child(6n+1){background:var(--t-cob);color:var(--a-cob)}
+.chips .tag:nth-child(6n+2){background:var(--t-cer);color:#005bb0}
+.chips .tag:nth-child(6n+3){background:var(--t-vio);color:var(--a-vio)}
+.chips .tag:nth-child(6n+4){background:var(--t-bos);color:var(--a-bos)}
+.chips .tag:nth-child(6n+5){background:var(--t-nav);color:var(--a-nav)}
+.chips .tag:nth-child(6n){background:var(--t-ele);color:#0a5bd1}
+.contacto{background:radial-gradient(70% 120% at 100% 0%,#1d2c9a 0%,#0c1754 60%,#091135 100%)}
+.ses-btn .ses-play{background:var(--a-cob)}

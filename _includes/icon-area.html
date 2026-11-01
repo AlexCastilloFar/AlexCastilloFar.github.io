@@ -10,4 +10,4 @@
 {%- elsif a contains "seguridad" -%}{%- assign nombre = "escudo" -%}
 {%- elsif a contains "log" -%}{%- assign nombre = "base" -%}
 {%- elsif a contains "gesti" -%}{%- assign nombre = "diana" -%}
-{%- endif -%}<span class="ico-box">{% include icon.html n=nombre %}</span>
+{%- endif -%}<span class="ico-box ic-{{ nombre }}">{% include icon.html n=nombre %}</span>

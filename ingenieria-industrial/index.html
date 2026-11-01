@@ -4,57 +4,98 @@ seccion: ingenieria
 title: ¿Qué es la Ingeniería Industrial? Explicado fácil
 description: Qué es la Ingeniería Industrial, qué se estudia, sus herramientas clave y dónde trabaja un ingeniero industrial, explicado con ejemplos cotidianos.
 ---
-<section class="plano">
-  <div class="wrap" style="padding-block:64px 72px">
-    <div class="article stack">
-      <span class="eyebrow">La carrera</span>
-      <h1>¿Qué es la Ingeniería Industrial?</h1>
-      <div class="answer"><strong>En pocas palabras:</strong> es la ingeniería que mejora cómo se hacen las cosas. Busca que un proceso, en una fábrica, un almacén, un banco o una bodega, produzca más y mejor, con menos tiempo, menos costo y menos errores.</div>
-      <p class="lead">Un ejemplo cotidiano: si en una panadería siempre se forma cola a las 7 a. m., un ingeniero industrial mide cuánto tarda cada paso, encuentra el cuello de botella y reorganiza el trabajo para atender más rápido sin contratar más gente.</p>
-    </div>
-  </div>
-</section>
+{%- comment -%} Diseño inspirado en Lens: marco punteado de plano, títulos en dos tonos, tarjetas con degradado suave y diagrama de nodos. {%- endcomment -%}
+<div class="marco">
 
-<section class="s band-wash"><div class="wrap">
-  <div class="head"><span class="eyebrow">Qué se estudia</span><h2>Las áreas de la carrera</h2></div>
-  <div class="feat">
-    <div class="f"><span class="ico-box">{% include icon.html n="flujo" %}</span><h3>Procesos</h3><p>Cómo se hace un producto o servicio, paso a paso, y cómo hacerlo mejor.</p><span class="mono">DOP · DAP · estudio de tiempos</span></div>
-    <div class="f"><span class="ico-box">{% include icon.html n="diana" %}</span><h3>Calidad</h3><p>Medir las fallas, encontrar sus causas y evitar que se repitan.</p><span class="mono">Ishikawa · Pareto · Six Sigma</span></div>
-    <div class="f"><span class="ico-box">{% include icon.html n="engranaje" %}</span><h3>Producción y logística</h3><p>Planificar qué producir, cuándo y con qué recursos; manejar inventarios y almacenes.</p><span class="mono">MRP · Gantt · Lean</span></div>
-    <div class="f"><span class="ico-box">{% include icon.html n="chart" %}</span><h3>Costos y datos</h3><p>Cuánto cuesta producir, dónde se puede ahorrar y cómo decidir con números.</p><span class="mono">Excel · Power BI · estadística</span></div>
-    <div class="f"><span class="ico-box">{% include icon.html n="escudo" %}</span><h3>Seguridad</h3><p>Trabajar sin accidentes y cumplir las normas de seguridad y salud.</p><span class="mono">SSOMA · IPERC</span></div>
-    <div class="f"><span class="ico-box">{% include icon.html n="calendario" %}</span><h3>Proyectos</h3><p>Planificar, ejecutar y controlar proyectos para que terminen a tiempo.</p><span class="mono">Gantt · ruta crítica · Scrum</span></div>
-  </div>
-</div></section>
+  <!-- 1. Portada centrada -->
+  <section class="ii-hero">
+    <span class="ii-emblema" aria-hidden="true">{% include icon.html n="engranaje" %}</span>
+    <span class="eyebrow">La carrera</span>
+    <h1>¿Qué es la Ingeniería Industrial?</h1>
+    <p class="lead">Es la ingeniería que mejora cómo se hacen las cosas: que un proceso produzca más y mejor, con menos tiempo, menos costo y menos errores.</p>
+    <div class="ctas"><a class="btn btn-ink" href="#herramientas">Ver las herramientas ↓</a><a class="btn btn-ghost" href="{{ '/articulos/' | relative_url }}">Leer las guías →</a></div>
+  </section>
 
-<section class="s"><div class="wrap">
-  <div class="head"><span class="eyebrow">Herramientas clave</span><h2>Lo que vas a usar en la U y en el trabajo</h2><p>Cada una tiene, o tendrá, su guía explicada con un caso real.</p></div>
-  <div class="grid3">
-    {% for h in site.data.herramientas %}
-      {% if h.articulo %}
-      <a class="card card-link" href="{{ h.articulo | relative_url }}"><div class="card-top">{% include icon-area.html a=h.tag %}<span class="tag">{{ h.tag }}</span></div><h3>{{ h.nombre }}</h3><p>{{ h.desc }}</p><span class="meta">Leer la guía →</span></a>
-      {% else %}
-      <div class="card"><div class="card-top">{% include icon-area.html a=h.tag %}<span class="tag">{{ h.tag }}</span></div><h3>{{ h.nombre }}</h3><p>{{ h.desc }}</p></div>
-      {% endif %}
-    {% endfor %}
-  </div>
-</div></section>
+  <!-- 2. Qué hace: 3 tarjetas con degradado -->
+  <section class="ii-sec">
+    <h2 class="ii-h">Mide, analiza y mejora. <span>Así trabaja un ingeniero industrial.</span></h2>
+    <div class="ii-tri">
+      <div class="ii-tint t1"><span class="ii-ico">{% include icon.html n="chart" %}</span><h3>Mide</h3><p>Toma tiempos, cuenta fallas y registra cuánto se produce. Sin datos no hay mejora.</p><a class="ii-pill" href="{{ '/articulos/caso-registro-de-produccion-con-excel-e-ia/' | relative_url }}">Ver un caso →</a></div>
+      <div class="ii-tint t2"><span class="ii-ico">{% include icon.html n="diana" %}</span><h3>Analiza</h3><p>Encuentra la causa raíz y el cuello de botella con herramientas como Ishikawa y Pareto.</p><a class="ii-pill" href="{{ '/articulos/diagrama-de-ishikawa/' | relative_url }}">Ver Ishikawa →</a></div>
+      <div class="ii-tint t3"><span class="ii-ico">{% include icon.html n="flujo" %}</span><h3>Mejora</h3><p>Rediseña el proceso, estandariza el método y comprueba el resultado con números.</p><a class="ii-pill" href="{{ '/articulos/caso-estandarizacion-metodos-de-trabajo/' | relative_url }}">Caso: −41% →</a></div>
+    </div>
+    <div class="ii-ejemplo"><span class="ii-ejemplo-k">EJEMPLO COTIDIANO</span><p>Si en una panadería siempre hay cola a las 7 a. m., un ingeniero industrial mide cuánto tarda cada paso, encuentra el cuello de botella y reorganiza el trabajo para atender más rápido <b>sin contratar más gente</b>.</p></div>
+  </section>
 
-<section class="s band-wash"><div class="wrap">
-  <div class="grid2" style="align-items:center;gap:48px">
-    <div class="stack">
-      <span class="eyebrow">Campo laboral</span>
-      <h2>¿Dónde trabaja un ingeniero industrial?</h2>
-      <p class="lead">En casi cualquier lugar donde haya un proceso que mejorar: fábricas, almacenes y centros de distribución, bancos, retail, minería, salud, consultoría o en su propio emprendimiento.</p>
-      <ul class="tech"><li>PRODUCCIÓN</li><li>LOGÍSTICA</li><li>CALIDAD</li><li>SEGURIDAD</li><li>DATOS</li></ul>
+  <!-- 3. Áreas: 6 tarjetas con ícono en esquina -->
+  <section class="ii-sec">
+    <h2 class="ii-h">Las áreas de la carrera. <span>Lo que vas a estudiar en la U.</span></h2>
+    <div class="ii-areas">
+      <div class="ii-area"><span class="ii-blob">{% include icon.html n="flujo" %}</span><p><b>Procesos.</b> Cómo se hace un producto o servicio, paso a paso, y cómo hacerlo mejor.</p><span class="mono">DOP · DAP · ESTUDIO DE TIEMPOS</span></div>
+      <div class="ii-area"><span class="ii-blob">{% include icon.html n="diana" %}</span><p><b>Calidad.</b> Medir las fallas, encontrar sus causas y evitar que se repitan.</p><span class="mono">ISHIKAWA · PARETO · SIX SIGMA</span></div>
+      <div class="ii-area"><span class="ii-blob">{% include icon.html n="engranaje" %}</span><p><b>Producción y logística.</b> Qué producir, cuándo y con qué recursos; inventarios y almacenes.</p><span class="mono">MRP · GANTT · LEAN</span></div>
+      <div class="ii-area"><span class="ii-blob">{% include icon.html n="chart" %}</span><p><b>Costos y datos.</b> Cuánto cuesta producir, dónde ahorrar y cómo decidir con números.</p><span class="mono">EXCEL · POWER BI · ESTADÍSTICA</span></div>
+      <div class="ii-area"><span class="ii-blob">{% include icon.html n="escudo" %}</span><p><b>Seguridad.</b> Trabajar sin accidentes y cumplir las normas de seguridad y salud.</p><span class="mono">SSOMA · IPERC</span></div>
+      <div class="ii-area"><span class="ii-blob">{% include icon.html n="calendario" %}</span><p><b>Proyectos.</b> Planificar, ejecutar y controlar proyectos para que terminen a tiempo.</p><span class="mono">GANTT · RUTA CRÍTICA · SCRUM</span></div>
     </div>
-    <div class="mini-me">
-      {% include foto.html %}
-      <div class="stack" style="gap:8px">
-        <span class="eyebrow">Así lo vivo yo</span>
-        <p style="color:var(--text)">Llevo más de 8 años en una planta de manufactura. Empecé en operaciones y hoy me encargo del control de producción y procesos: indicadores, reportes y estandarización del trabajo.</p>
-        <a class="more" href="{{ '/sobre-mi/' | relative_url }}">Conoce mi experiencia →</a>
-      </div>
+  </section>
+
+  <!-- 4. Diagrama: un proceso, muchas herramientas -->
+  <section class="ii-sec ii-split" id="herramientas">
+    <div class="ii-split-txt">
+      <h2 class="ii-h ii-h-sm">Un proceso, muchas herramientas.</h2>
+      <p>Cada herramienta ataca el proceso desde un ángulo distinto. Toca una para leer su guía con un ejemplo real.</p>
+      <a class="ii-pill" href="{{ '/articulos/' | relative_url }}">Todas las guías →</a>
     </div>
-  </div>
-</div></section>
+    <div class="ii-nodos" role="list" aria-label="Herramientas de la Ingeniería Industrial">
+      <svg class="ii-lineas" viewBox="0 0 400 320" aria-hidden="true" preserveAspectRatio="none"><g stroke="#c6d0f7" stroke-width="1.4" stroke-dasharray="4 4" fill="none"><line x1="200" y1="160" x2="200" y2="40"/><line x1="200" y1="160" x2="330" y2="95"/><line x1="200" y1="160" x2="330" y2="225"/><line x1="200" y1="160" x2="200" y2="285"/><line x1="200" y1="160" x2="70" y2="225"/><line x1="200" y1="160" x2="70" y2="95"/></g></svg>
+      <span class="ii-nodo centro"><span class="ii-nodo-c">{% include icon.html n="fabrica" %}</span><small>Proceso</small></span>
+      {% assign pos = "n1,n2,n3,n4,n5,n6" | split: "," %}
+      {% assign iconos = "chart,diana,calendario,flujo,base,engranaje" | split: "," %}
+      {% for h in site.data.herramientas limit:6 %}
+        {% assign i = forloop.index0 %}
+        {% if h.articulo %}<a class="ii-nodo {{ pos[i] }}" role="listitem" href="{{ h.articulo | relative_url }}">{% else %}<span class="ii-nodo {{ pos[i] }}" role="listitem">{% endif %}
+          <span class="ii-nodo-c">{% include icon.html n=iconos[i] %}</span><small>{{ h.nombre | replace: "Diagrama de ", "" | replace: "Metodología ", "" }}</small>
+        {% if h.articulo %}</a>{% else %}</span>{% endif %}
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- 5. Lista de herramientas -->
+  <section class="ii-sec">
+    <h2 class="ii-h">Herramientas clave. <span>Lo que usarás en la U y en el trabajo.</span></h2>
+    <div class="ii-lista">
+      {% for h in site.data.herramientas %}
+      {% if h.articulo %}<a class="ii-item" href="{{ h.articulo | relative_url }}">{% else %}<div class="ii-item ii-pronto">{% endif %}
+        <span class="ii-item-ico">{% include icon-area.html a=h.tag %}</span>
+        <p><b>{{ h.nombre }}.</b> {{ h.desc }}</p>
+        <span class="ii-item-pie">{% if h.articulo %}Leer la guía →{% else %}Muy pronto{% endif %}</span>
+      {% if h.articulo %}</a>{% else %}</div>{% endif %}
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- 6. Campo laboral: 3 columnas -->
+  <section class="ii-sec">
+    <h2 class="ii-h">¿Dónde trabaja? <span>Donde haya un proceso que mejorar.</span></h2>
+    <div class="ii-campo">
+      <div><span class="ii-mini">{% include icon.html n="fabrica" %}</span><p><b>Fábricas.</b> Producción, mantenimiento, calidad y mejora continua.</p></div>
+      <div><span class="ii-mini">{% include icon.html n="base" %}</span><p><b>Logística.</b> Almacenes, inventarios, centros de distribución y transporte.</p></div>
+      <div><span class="ii-mini">{% include icon.html n="maletin" %}</span><p><b>Servicios.</b> Bancos, retail, salud y telecomunicaciones: también tienen procesos.</p></div>
+      <div><span class="ii-mini">{% include icon.html n="chart" %}</span><p><b>Datos.</b> Análisis de indicadores, reportes y tableros en Power BI.</p></div>
+      <div><span class="ii-mini">{% include icon.html n="escudo" %}</span><p><b>Seguridad.</b> Gestión de riesgos, SSOMA y cumplimiento de normas.</p></div>
+      <div><span class="ii-mini">{% include icon.html n="medalla" %}</span><p><b>Emprendimiento.</b> Tu propio negocio, organizado y medido desde el día uno.</p></div>
+    </div>
+  </section>
+
+  <!-- 7. Cierre con círculo -->
+  <section class="ii-cierre">
+    <div class="ii-circulo">
+      <span class="ii-foto">{% include foto.html %}</span>
+      <span class="eyebrow">Así lo vivo yo</span>
+      <h2>Más de 8 años en planta</h2>
+      <p>Empecé en operaciones y hoy me encargo del control de producción y procesos: indicadores, reportes y estandarización del trabajo.</p>
+      <a class="ii-pill" href="{{ '/sobre-mi/' | relative_url }}">Conoce mi experiencia →</a>
+    </div>
+  </section>
+</div>

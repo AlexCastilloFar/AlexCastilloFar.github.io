@@ -4,22 +4,61 @@ seccion: recursos
 title: Recursos de Ingeniería Industrial
 description: Cursos gratuitos con sus clases ordenadas y plantillas de Excel para Ingeniería Industrial.
 ---
-<section class="view wrap">
-  <div class="sec-head"><span class="eyebrow">Recursos</span><h1>Aprende y practica</h1><p class="lead">Lo que he ido reuniendo en mi camino: cursos gratuitos con todas sus clases y las plantillas que uso en el trabajo.</p></div>
-  <div class="grid2">
-    <a class="card card-link big" href="{{ '/cursos/' | relative_url }}">
-      <span class="ico-box ico-lg ic-play">{% include icon.html n="play" %}</span>
-      <h3>Cursos gratuitos</h3>
-      <p>{{ site.cursos.size }} cursos de la UNI que llevé, con sus sesiones grabadas en orden: Power BI, SQL, Python, Lean, Six Sigma, MS Project y más.</p>
-      <ul class="tech"><li>DATOS</li><li>PROCESOS</li><li>CALIDAD</li><li>PROYECTOS</li></ul>
-      <span class="meta">Ver los {{ site.cursos.size }} cursos →</span>
-    </a>
-    <a class="card card-link big" href="{{ '/plantillas/' | relative_url }}">
-      <span class="ico-box ico-lg ic-tabla">{% include icon.html n="tabla" %}</span>
-      <h3>Plantillas de Excel</h3>
-      <p>Herramientas que nacieron de problemas reales en planta: Ishikawa + Pareto, Gantt con ruta crítica y un cotizador.</p>
-      <ul class="tech"><li>ISHIKAWA</li><li>PARETO</li><li>GANTT</li></ul>
-      <span class="meta">Ver las {{ site.data.plantillas.size }} plantillas →</span>
-    </a>
+{%- comment -%} Diseño inspirado en Dock: bloques alternados (panel oscuro + bloque claro), texto a un lado e imagen al otro. {%- endcomment -%}
+<section class="rc-hero">
+  <div class="wrap">
+    <span class="eyebrow">Recursos</span>
+    <h1>Todo lo que necesitas <span class="kw">para aprender y practicar</span></h1>
+    <p class="lead">Lo que he ido reuniendo en mi camino: cursos gratuitos con todas sus clases y las plantillas de Excel que uso en el trabajo.</p>
+    <div class="ctas"><a class="btn btn-ink" href="#cursos">Ver cursos</a><a class="btn btn-ghost" href="#plantillas">Ver plantillas</a></div>
+  </div>
+</section>
+
+<!-- 1. Cursos: panel oscuro -->
+<section class="rc-sec" id="cursos">
+  <div class="wrap">
+    <div class="rc-dark">
+      <div class="rc-txt">
+        <span class="rc-k">{% include icon.html n="play" %} Cursos gratuitos</span>
+        <h2>Aprende con clases ordenadas, paso a paso</h2>
+        <p>{{ site.cursos.size }} cursos de la UNI que llevé, con cada sesión grabada lista para abrir en YouTube. Sin buscar enlaces sueltos ni perder el orden.</p>
+        <ul class="rc-list">
+          <li><b>Datos:</b> Power BI, SQL, Python, Excel con IA y estadística.</li>
+          <li><b>Procesos y calidad:</b> Lean, Six Sigma, gestión por procesos y Bizagi.</li>
+          <li><b>Proyectos:</b> MS Project para planificar y controlar.</li>
+        </ul>
+        <div class="ctas"><a class="btn rc-btn-blanco" href="{{ '/cursos/' | relative_url }}">Ver los {{ site.cursos.size }} cursos →</a></div>
+        <div class="rc-sellos"><div><b>{{ site.cursos.size }}</b><small>CURSOS TERMINADOS</small></div><div><b>100%</b><small>GRATUITOS</small></div><div><b>{{ site.data.cursos_en_curso.size }}</b><small>EN CURSO</small></div></div>
+      </div>
+      <div class="rc-vis"><div class="rc-marco"><img src="{{ '/assets/img/recursos/cursos.webp' | relative_url }}" alt="Vista de un curso en video con lista de sesiones de Python, SQL, Power BI y Excel" width="1400" height="931" loading="lazy" decoding="async"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. Plantillas: bloque claro -->
+<section class="rc-sec" id="plantillas">
+  <div class="wrap">
+    <div class="rc-light">
+      <div class="rc-txt">
+        <span class="rc-k verde">{% include icon.html n="tabla" %} Plantillas de Excel</span>
+        <h2>Herramientas listas para usar en tu trabajo o en la U</h2>
+        <p>Nacieron de problemas reales en planta. Pensadas para quien no sabe Excel: hoja de instrucciones, botones claros y fórmulas protegidas.</p>
+        <ul class="rc-checks">
+          {% for p in site.data.plantillas %}<li><b>{{ p.nombre }}.</b> {{ p.beneficio }}</li>{% endfor %}
+        </ul>
+        <div class="ctas"><a class="btn pl-btn-verde" href="{{ '/plantillas/' | relative_url }}">Ver plantillas y precios →</a></div>
+      </div>
+      <div class="rc-vis"><div class="rc-marco claro"><img src="{{ '/assets/img/recursos/plantillas.webp' | relative_url }}" alt="Plantilla de Excel con diagrama de Ishikawa, Gantt y diagrama de Pareto" width="1400" height="931" loading="lazy" decoding="async"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. Cierre -->
+<section class="rc-sec rc-fin">
+  <div class="wrap">
+    <div class="rc-cta">
+      <div><h2>¿No sabes por dónde empezar?</h2><p>Lee las guías: cada herramienta explicada con un caso real y su plantilla al final.</p></div>
+      <a class="btn btn-ink" href="{{ '/articulos/' | relative_url }}">Ver artículos →</a>
+    </div>
   </div>
 </section>

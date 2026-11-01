@@ -87,10 +87,22 @@ title: Ingeniería Industrial explicada fácil
 </div></section>
 
 <section class="s" style="padding-top:0"><div class="wrap">
-  <div class="head"><span class="eyebrow">Recursos</span><h2>Aprende y practica</h2><p>Cursos gratuitos con sus clases ordenadas y las plantillas que uso en el trabajo.</p></div>
-  <div class="grid2">
-    <a class="show show-indigo" href="{{ '/cursos/' | relative_url }}"><span class="show-k">{{ site.cursos.size }} CURSOS · GRATIS</span><h3>Cursos gratuitos</h3><p>Cursos de la UNI: Power BI, SQL, Python, Lean, Six Sigma y más, con todas sus sesiones.</p><span class="show-cta">Ver cursos {% include icon.html n="flecha" %}</span><span class="show-ico" aria-hidden="true">{% include icon.html n="play" %}</span></a>
-    <a class="show show-ink" href="{{ '/plantillas/' | relative_url }}"><span class="show-k">EXCEL · VBA</span><h3>Plantillas de Excel</h3><p>Las plantillas que uso para Ishikawa, Pareto, Gantt y cotizaciones, listas para usar.</p><span class="show-cta">Ver plantillas {% include icon.html n="flecha" %}</span><span class="show-ico" aria-hidden="true">{% include icon.html n="tabla" %}</span></a>
+  <div class="head ap-head"><span class="eyebrow">Recursos</span><h2>Aprende y practica, <span class="kw">en un solo lugar</span></h2><p>Cursos gratuitos con sus clases ordenadas y las plantillas de Excel que uso en el trabajo.</p></div>
+  <div class="ap-grid">
+    <a class="ap-card" href="{{ '/cursos/' | relative_url }}">
+      <div class="ap-ico"><span class="ico-box ic-play">{% include icon.html n="play" %}</span><span class="ico-box ic-chart">{% include icon.html n="chart" %}</span></div>
+      <h3>Cursos gratuitos</h3>
+      <p>{{ site.cursos.size }} cursos de la UNI con todas sus sesiones grabadas en orden: Power BI, SQL, Python, Lean, Six Sigma y más. Tú solo das clic y aprendes.</p>
+      <span class="ap-link">Ver cursos →</span>
+      <div class="ap-img"><img src="{{ '/assets/img/recursos/cursos-760.webp' | relative_url }}" alt="Vista de un curso en video con lista de sesiones de Python, SQL, Power BI y Excel" width="760" height="506" loading="lazy" decoding="async"></div>
+    </a>
+    <a class="ap-card" href="{{ '/plantillas/' | relative_url }}">
+      <div class="ap-ico"><span class="ico-box ic-tabla">{% include icon.html n="tabla" %}</span><span class="ico-box ic-diana">{% include icon.html n="diana" %}</span></div>
+      <h3>Plantillas de Excel</h3>
+      <p>Ishikawa, Pareto, Gantt con ruta crítica y cotizador, listas para usar: botones claros, instrucciones y fórmulas protegidas.</p>
+      <span class="ap-link">Ver plantillas →</span>
+      <div class="ap-img"><img src="{{ '/assets/img/recursos/plantillas-760.webp' | relative_url }}" alt="Plantilla de Excel con diagrama de Ishikawa, Gantt y diagrama de Pareto" width="760" height="506" loading="lazy" decoding="async"></div>
+    </a>
   </div>
 </div></section>
 

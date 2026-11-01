@@ -76,7 +76,11 @@ description: Plantillas de Excel con macros para Ishikawa, Pareto, Gantt y cotiz
   <div class="wrap">
     <div class="pl-head"><span class="pl-tag verde">Precios</span><h2>Simple: <span class="pl-grad">pagas una vez</span> y es tuya</h2><p>Sin suscripción ni pagos mensuales. Recibes el archivo y lo usas las veces que quieras.</p></div>
     <div class="pl-precios">
-      {% for p in site.data.plantillas %}
+      {% assign top_p = site.data.plantillas | where: "id", destacada | first %}
+      {% assign otras = site.data.plantillas | where_exp: "x", "x.id != destacada" %}
+      {% assign orden = "" | split: "" %}
+      {% for x in otras %}{% if forloop.index == 1 %}{% assign orden = orden | push: x %}{% if top_p %}{% assign orden = orden | push: top_p %}{% endif %}{% else %}{% assign orden = orden | push: x %}{% endif %}{% endfor %}
+      {% for p in orden %}
       {% assign top = false %}{% if p.id == destacada %}{% assign top = true %}{% endif %}
       <div class="pl-precio{% if top %} top{% endif %}">
         {% if top %}<span class="pl-badge">Más vendida</span>{% endif %}

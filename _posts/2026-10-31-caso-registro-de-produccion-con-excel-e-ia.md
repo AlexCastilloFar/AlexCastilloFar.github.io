@@ -8,6 +8,9 @@ respuesta: "separé los datos en una tabla limpia (base de datos), hice que el r
 date: 2026-10-31 06:00:00 -0500
 grafico: registro
 historia: "De horas digitando un cuaderno a un par de minutos con una foto"
+imagen: /assets/img/articulos/caso-registro-produccion.webp
+image: /assets/img/articulos/caso-registro-produccion.webp
+imagen_alt: "Foto del cuaderno de producción con el celular y el reporte en Excel en la laptop"
 ---
 
 > Caso de una planta de manufactura donde trabajo. Por confidencialidad no muestro los formatos ni los datos reales: los ejemplos de abajo son ilustrativos.

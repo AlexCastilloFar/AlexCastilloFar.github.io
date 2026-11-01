@@ -8,6 +8,9 @@ respuesta: "el diagrama de Gantt es un cronograma en barras: cada fila es una ta
 plantilla: gantt
 grafico: gantt
 historia: "La ruta crítica dura 16 días; el marco teórico tiene 6 días de holgura"
+imagen: /assets/img/articulos/diagrama-de-gantt.webp
+image: /assets/img/articulos/diagrama-de-gantt.webp
+imagen_alt: "Estudiante planificando un cronograma de Gantt en papel y en la laptop"
 ---
 
 ## ¿Para qué sirve?

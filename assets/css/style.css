@@ -1256,3 +1256,16 @@ body:not(.s-inicio):not(.l-post):not(.s-plantillas):not(.s-ingenieria) main{back
 .chips .tag:nth-child(6n){background:var(--t-ele);color:#0a5bd1}
 .contacto{background:radial-gradient(70% 120% at 100% 0%,#1d2c9a 0%,#0c1754 60%,#091135 100%)}
 .ses-btn .ses-play{background:var(--a-cob)}
+
+/* Fotos de artículos (tarjetas y cabecera) */
+.gcard-foto{order:-1;position:relative;aspect-ratio:16/9;overflow:hidden;margin-bottom:14px;background:var(--c1,#2545ff)}
+.gcard-foto img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease}
+.gcard:hover .gcard-foto img{transform:scale(1.04)}
+.gcard-foto::after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:linear-gradient(90deg,var(--c1,#2545ff),var(--c2,#6736eb))}
+.art-foto{margin:0;align-self:end;border-radius:18px 18px 0 0;overflow:hidden;aspect-ratio:16/10;box-shadow:0 30px 60px -36px rgba(12,23,84,.6);position:relative}
+.art-foto img{width:100%;height:100%;object-fit:cover;display:block}
+.art-foto::after{content:"";position:absolute;left:0;right:0;bottom:0;height:5px;background:linear-gradient(90deg,var(--c1,#2545ff),var(--c2,#6736eb))}
+@media (max-width:900px){.art-foto{margin-top:16px;border-radius:16px 16px 0 0}}
+.prose img{width:100%;height:auto;border-radius:14px}
+.prose img+em,.prose p>em:only-child{display:block;font-size:14px;color:var(--muted);text-align:center;margin-top:-8px}
+@media (prefers-reduced-motion:reduce){.gcard:hover .gcard-foto img{transform:none}}

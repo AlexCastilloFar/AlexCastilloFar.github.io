@@ -8,6 +8,9 @@ respuesta: "hice con Python un bot de Telegram que lee la hoja de formulación e
 date: 2026-10-31 05:00:00 -0500
 grafico: bot
 historia: "Los operarios calculan cada lote en segundos, todos los días"
+imagen: /assets/img/articulos/caso-bot-telegram.webp
+image: /assets/img/articulos/caso-bot-telegram.webp
+imagen_alt: "Operario usando un asistente en el celular junto a la balanza y la calculadora"
 ---
 
 > Caso de una planta de manufactura donde trabajo. Por confidencialidad no muestro las fórmulas, los productos ni los porcentajes reales: los números de abajo son de ejemplo.

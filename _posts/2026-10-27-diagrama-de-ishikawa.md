@@ -8,6 +8,9 @@ respuesta: "el diagrama de Ishikawa (o espina de pescado) ordena todas las causa
 plantilla: ishikawa-pareto
 grafico: ishikawa
 historia: "El panadero nuevo era solo una espina: el problema estaba en el método"
+imagen: /assets/img/articulos/diagrama-de-ishikawa.webp
+image: /assets/img/articulos/diagrama-de-ishikawa.webp
+imagen_alt: "Ingeniero explicando un diagrama de Ishikawa en una pizarra dentro de la planta"
 ---
 
 ## ¿Para qué sirve?

@@ -5,6 +5,6 @@
   <span class="gcard-top">{% if include.nuevo %}<span class="gcard-new">Nuevo</span>{% endif %}<span class="gcard-cat">{{ include.post.categoria | default: "Guía" }}</span></span>
   <h3>{{ include.post.historia | default: include.post.title }}</h3>
   <p>{{ include.post.title }}</p>
-  <div class="gcard-graf"><div class="gcard-pantalla">{% include grafico.html g=include.post.grafico %}</div></div>
+  {% if include.post.imagen %}<div class="gcard-foto"><img src="{{ include.post.imagen | replace: '.webp', '-640.webp' | relative_url }}" alt="" width="640" height="360" loading="lazy" decoding="async"></div>{% else %}<div class="gcard-graf"><div class="gcard-pantalla">{% include grafico.html g=include.post.grafico %}</div></div>{% endif %}
   <span class="gcard-pie"><span>{{ include.post.grafico | default: "guía" | replace: "-", " " | upcase }} · {{ include.post.date | date: "%-d" }} {{ meses[m] }}</span><b>{% if include.post.categoria == "Casos reales" %}Leer caso{% else %}Leer guía{% endif %} →</b></span>
 </a>

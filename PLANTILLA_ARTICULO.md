@@ -7,6 +7,9 @@ resumen: "Una línea que se ve en la tarjeta del artículo."
 respuesta: "la respuesta directa en 1 o 2 líneas, empezando en minúscula."
 plantilla: ishikawa-pareto
 grafico: pareto        # dibujo de la tarjeta: pareto, ishikawa, gantt, dap, 5s, caso-dap, registro, bot (o déjalo vacío)
+imagen: /assets/img/articulos/nombre.webp   # foto de portada (opcional; si no hay, se usa el gráfico)
+image: /assets/img/articulos/nombre.webp    # la misma, para que se vea al compartir en LinkedIn/WhatsApp
+imagen_alt: "Describe la foto en una frase"
 historia: "El resultado contado en una frase, con un número (ej.: 4 de 8 causas explican el 85% de las fallas)"
 ---
 

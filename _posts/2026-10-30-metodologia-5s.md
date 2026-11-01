@@ -7,6 +7,9 @@ resumen: "Con el caso de una ferretería que pierde tiempo buscando productos."
 respuesta: "las 5S son cinco pasos japoneses para tener un lugar de trabajo ordenado, limpio y que se mantenga así: clasificar, ordenar, limpiar, estandarizar y disciplina. Menos tiempo buscando cosas significa más tiempo produciendo o vendiendo."
 grafico: 5s
 historia: "De 4 minutos a menos de 1 para encontrar cada producto"
+imagen: /assets/img/articulos/metodologia-5s.webp
+image: /assets/img/articulos/metodologia-5s.webp
+imagen_alt: "Almacén ordenado con estantes rotulados y panel de herramientas, aplicando 5S"
 ---
 
 ## ¿Para qué sirve?

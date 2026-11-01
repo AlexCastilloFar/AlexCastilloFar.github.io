@@ -8,6 +8,9 @@ respuesta: "el diagrama de Pareto ordena las causas de un problema de mayor a me
 plantilla: ishikawa-pareto
 grafico: pareto
 historia: "4 de 8 causas explican el 85% de las botellas rechazadas"
+imagen: /assets/img/articulos/diagrama-de-pareto.webp
+image: /assets/img/articulos/diagrama-de-pareto.webp
+imagen_alt: "Ingeniero revisando botellas en una línea de envasado con un diagrama de Pareto en la laptop"
 ---
 
 ## ¿Para qué sirve?

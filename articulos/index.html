@@ -46,7 +46,7 @@ description: "Guías de Ingeniería Industrial explicadas fácil, con casos real
 <script>
 (function(){
   // Filtro por área + "Ver más" (6 tarjetas por vez). Funciona también con enlaces tipo /articulos/#casos-reales
-  var POR_PAGINA=6,bs=document.querySelectorAll(".gal-btn"),its=[].slice.call(document.querySelectorAll(".gal-item")),
+  var POR_PAGINA=9,bs=document.querySelectorAll(".gal-btn"),its=[].slice.call(document.querySelectorAll(".gal-item")),
       mas=document.getElementById("gal-mas"),tit=document.getElementById("gal-titulo"),filtro="todos",visibles=POR_PAGINA;
   function pintar(){
     var lista=its.filter(function(i){return filtro==="todos"||i.dataset.cat===filtro});

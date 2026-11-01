@@ -1269,3 +1269,20 @@ body:not(.s-inicio):not(.l-post):not(.s-plantillas):not(.s-ingenieria) main{back
 .prose img{width:100%;height:auto;border-radius:14px}
 .prose img+em,.prose p>em:only-child{display:block;font-size:14px;color:var(--muted);text-align:center;margin-top:-8px}
 @media (prefers-reduced-motion:reduce){.gcard:hover .gcard-foto img{transform:none}}
+
+/* Artículos: filtro arriba en píldoras (estilo Workleap) y grilla de 3 columnas */
+.gal{grid-template-columns:minmax(0,1fr);gap:28px}
+.gal-nav{position:static;display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:0;padding:0;background:none;overflow:visible}
+.gal-nav .side-k{display:none}
+.gal-btn{width:auto;flex:none;min-height:44px;padding:0 18px;border-radius:999px;background:var(--wash);box-shadow:none;color:var(--ink);font-weight:500}
+.gal-btn:hover{background:#e3e0fb;color:var(--ink)}
+.gal-btn small{background:#fff}
+.gal-btn[aria-pressed="true"]{background:var(--accent);color:#fff}
+.gal-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+@media (max-width:1000px){.gal-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){
+  .gal-grid{grid-template-columns:minmax(0,1fr)}
+  .gal-nav{flex-wrap:nowrap;justify-content:flex-start;overflow-x:auto;margin-inline:-16px;padding:4px 16px 8px;scrollbar-width:none}
+  .gal-nav::-webkit-scrollbar{display:none}
+}
+.gal-titulo{text-align:left}

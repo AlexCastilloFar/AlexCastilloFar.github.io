@@ -827,3 +827,7 @@ a.ii-item:hover{box-shadow:0 0 0 1px rgba(62,87,218,.4),0 12px 26px -18px rgba(1
 .ii-circulo .eyebrow{color:var(--accent)}
 .ii-circulo .ii-pill{background:var(--accent);color:#fff}
 .ii-circulo .ii-pill:hover{background:var(--accent-d);color:#fff}
+/* "¿Dónde trabaja?": índigo profundo para que el texto blanco se lea bien (contraste > 7:1), distinto del azul noche del pie */
+.ii-azul{background:linear-gradient(135deg,#2f43bd 0%,#2a379f 100%)}
+.ii-azul .ii-campo p{color:#fff;opacity:.92}
+.ii-azul .ii-h span{color:#c9d2ff}

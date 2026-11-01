@@ -8,8 +8,8 @@ seccion: articulos
 {% assign minutos = palabras | divided_by: 200 | plus: 1 %}
 <div class="leer-barra" aria-hidden="true"><span id="leer-progreso"></span></div>
 
-<section class="art-head plano plano-full">
-  <div class="wrap">
+<section class="art-head plano plano-full" data-cat="{{ page.categoria | slugify }}">
+  <div class="wrap art-head-grid">
     <div class="art-head-in">
       <nav class="crumbs" aria-label="Ruta"><a href="{{ '/articulos/' | relative_url }}">Artículos</a> <span aria-hidden="true">/</span> {{ page.categoria | default: "Guía" }}</nav>
       <span class="pill-cat"><i aria-hidden="true"></i>{{ page.categoria | default: "Guía" }} · {{ minutos }} min de lectura</span>
@@ -17,6 +17,7 @@ seccion: articulos
       {% if page.resumen %}<p class="lead">{{ page.resumen }}</p>{% endif %}
       <div class="byline"><span class="av"><img src="{{ '/assets/img/alex.jpg' | relative_url }}" alt="" width="40" height="40"></span><span><b>{{ site.author }}</b> · Ingeniero industrial<br>{{ page.date | date: "%-d" }} {{ meses[m] }} {{ page.date | date: "%Y" }}</span></div>
     </div>
+    {% if page.grafico %}<div class="art-portada" aria-hidden="true"><div class="gcard-pantalla">{% include grafico.html g=page.grafico %}</div></div>{% endif %}
   </div>
 </section>
 

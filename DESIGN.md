@@ -82,3 +82,22 @@ Cada sección se distingue de la anterior, sin agregar colores de marca nuevos:
 - **Ingeniería Industrial:** estilo Lens: marco punteado, portada azul noche con brillo índigo, títulos en dos tonos, tarjetas Mide/Analiza/Mejora en índigo · índigo profundo · violeta, áreas sobre lavanda con burbujas de color, diagrama de nodos (proceso + herramientas, cada nodo enlaza su guía), banda índigo "¿Dónde trabaja?" y cierre con círculo lavanda.
 - **Actualización de paleta (pedido de Alex, nov 2026):** solo azules se veía monótono. Se acepta **verde como acento** (estilo DataPulse): botones de compra, checks, etiqueta "Más vendida" y estados de confirmación. Verde para fondo de botón `#15803d` (contraste 5:1 con blanco), hover `#166534`, fondo suave `#e8f7ee`. Violeta `#6a4fe0` como acompañante (degradados de texto y bloques). Sigue prohibido usar verde u otros colores como fondo de secciones grandes.
 - **Plantillas (tienda):** portada con texto en degradado índigo→violeta y vista de la plantilla con tarjetas flotantes, 6 beneficios (íconos en índigo/violeta/verde), vista previa con pestañas, catálogo escalable: tarjetas con miniatura en panel degradado, nombre, frase, precio y "Ver detalle" (lleva a la página de la plantilla con el botón de comprar en verde), filtro por categoría y "Ver más" cada 6; etiqueta "Más vendida" con el campo `destacada: true` en _data/plantillas.yml; panel grande con los 3 pasos de compra (estilo Workleap), cómo comprar en 3 pasos + 4 sellos, preguntas frecuentes desplegables y banda final con degradado índigo→violeta.
+
+## 9. PALETA ÚNICA (vigente desde nov 2026 — reemplaza las notas de color anteriores)
+Une las paletas que trajo Alex (Workleap, DataPulse y similares). **Toda la web usa estos colores, sección por sección.**
+
+| Rol | Color | Uso |
+|---|---|---|
+| Texto fuerte y bloques oscuros | Ink Navy `#0c1754` (Midnight `#091135` en degradados) | Títulos, panel del caso, portada de Ingeniería, pie, bloque de contacto |
+| Texto | Slate `#36394a` · secundario `#5d6170` | Párrafos y metadatos (AA sobre crema y blanco) |
+| Fondo de página | Canvas Cream `#faf9f7` · franjas `#f9f8f6` | Fondo cálido "de papel" |
+| Fondo de zona | Lavender Wash `#f5f3ff` / `#eaebf8` | Secciones destacadas, respuesta directa, cierres |
+| Bordes | Frost `#e1e9f0` · crema `#f0e9e1` | Tarjetas, divisores |
+| Acción | Índigo `#3e57da` | Botones principales y enlaces |
+| Compra / confirmación | Verde `#15803d` | Comprar, checks, "Más vendida" |
+
+**Un color por área (fijo en toda la web):** Calidad = cobalto `#2545ff` · Procesos/Mejora = violeta `#6736eb` · Planeamiento/Proyectos = bosque `#046645` · Gestión/Datos = cerúleo `#0074dd` · Casos reales/Producción/Negocios = navy `#0c1754` · eléctrico `#0f77ff` solo decorativo.
+- Íconos: fondo tenue + ícono del color de su área (clases `ic-*`, salen solas desde `icon-area.html`).
+- Tarjetas en grillas: línea superior de 4px que rota entre los colores de área.
+- Portadas de artículos y tarjetas de plantillas: panel con degradado del color de su área + cuadrícula + "pantalla" blanca con el gráfico.
+- Títulos en dos tonos: segunda parte en degradado cobalto → violeta.

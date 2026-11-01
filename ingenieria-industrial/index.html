@@ -55,7 +55,7 @@ description: Qué es la Ingeniería Industrial, qué se estudia, sus herramienta
       {% for h in site.data.herramientas limit:6 %}
         {% assign i = forloop.index0 %}
         {% if h.articulo %}<a class="ii-nodo {{ pos[i] }}" role="listitem" href="{{ h.articulo | relative_url }}">{% else %}<span class="ii-nodo {{ pos[i] }}" role="listitem">{% endif %}
-          <span class="ii-nodo-c">{% include icon.html n=iconos[i] %}</span><small>{{ h.nombre | replace: "Diagrama de ", "" | replace: "Metodología ", "" }}</small>
+          {% assign ic = iconos[i] %}<span class="ii-nodo-c">{% include icon.html n=ic %}</span><small>{{ h.nombre | replace: "Diagrama de ", "" | replace: "Metodología ", "" }}</small>
         {% if h.articulo %}</a>{% else %}</span>{% endif %}
       {% endfor %}
     </div>

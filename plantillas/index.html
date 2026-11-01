@@ -6,7 +6,6 @@ title: Plantillas de Excel para Ingeniería Industrial
 description: Plantillas de Excel con macros para Ishikawa, Pareto, Gantt y cotizaciones. Listas para usar, con instrucciones. Pago por Yape o Plin.
 ---
 {%- comment -%} Diseño inspirado en DataPulse: índigo (principal) + violeta (acompañante) + verde (acento de compra y confirmación). {%- endcomment -%}
-{% assign destacada = "ishikawa-pareto" %}
 
 <!-- 1. Portada -->
 <section class="pl-hero">
@@ -15,7 +14,7 @@ description: Plantillas de Excel con macros para Ishikawa, Pareto, Gantt y cotiz
       <span class="pl-pill"><i></i>Plantillas de Excel · listas para usar</span>
       <h1>Plantillas que hacen <span class="pl-grad">el trabajo por ti</span></h1>
       <p class="lead">Nacieron de problemas reales en planta. Hechas para quien no sabe Excel: botones claros, instrucciones paso a paso y fórmulas protegidas.</p>
-      <div class="ctas"><a class="btn pl-btn-verde" href="#precios">Ver plantillas y precios →</a><a class="btn btn-ghost" href="#como-comprar">Cómo comprar</a></div>
+      <div class="ctas"><a class="btn pl-btn-verde" href="#catalogo">Ver plantillas →</a><a class="btn btn-ghost" href="#como-comprar">Cómo comprar</a></div>
       <div class="pl-mini">
         <div><b>{{ site.data.plantillas.size }}</b><span>plantillas</span></div>
         <div><b>Pago único</b><span>sin suscripción</span></div>
@@ -33,8 +32,40 @@ description: Plantillas de Excel con macros para Ishikawa, Pareto, Gantt y cotiz
   </div>
 </section>
 
-<!-- 2. Beneficios -->
-<section class="pl-sec">
+<!-- 2. Catálogo (escala a muchas plantillas: filtro por categoría + "Ver más") -->
+{% assign cats = site.data.plantillas | map: "tag" | uniq %}
+<section class="pl-sec pl-suave" id="catalogo">
+  <div class="wrap">
+    <div class="pl-head"><span class="pl-tag verde">Catálogo</span><h2>Elige tu plantilla, <span class="pl-grad">pago único</span></h2><p>Toca una plantilla para ver qué incluye, su precio y comprarla.</p></div>
+    {% if cats.size > 1 %}
+    <div class="pl-filtros" role="group" aria-label="Filtrar plantillas por categoría">
+      <button class="pl-filtro" type="button" data-f="todas" aria-pressed="true">Todas <small>{{ site.data.plantillas.size }}</small></button>
+      {% for c in cats %}{% assign n = site.data.plantillas | where: "tag", c | size %}<button class="pl-filtro" type="button" data-f="{{ c | slugify }}" aria-pressed="false">{{ c }} <small>{{ n }}</small></button>{% endfor %}
+    </div>
+    {% endif %}
+    <div class="pl-grid" id="pl-grid">
+      {% for p in site.data.plantillas %}
+      <a class="pl-card" href="{{ '/plantillas/' | append: p.id | append: '/' | relative_url }}" data-cat="{{ p.tag | slugify }}">
+        <div class="pl-card-vis">
+          {% if p.destacada %}<span class="pl-badge-card">Más vendida</span>{% endif %}
+          <div class="pl-card-screen"><div class="pl-screen-top"><span class="dots"><i></i><i></i><i></i></span><span>.xlsm</span></div><div class="pl-panel-img">{% include {{ p.thumb }} %}</div></div>
+        </div>
+        <div class="pl-card-body">
+          <span class="pl-tag">{{ p.tag }}</span>
+          <h3>{{ p.nombre }}</h3>
+          <p>{{ p.desc }}</p>
+          <div class="pl-card-pie"><span class="pl-card-precio"><b>{{ p.precio }}</b><small>pago único</small></span><span class="pl-card-ver">Ver detalle →</span></div>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+    <div class="pl-mas"><button class="btn btn-ghost" type="button" id="pl-mas" hidden>Ver más plantillas</button></div>
+    <p class="pl-nota"><span class="pl-ok sm">✓</span> Requisito: Excel para Windows con macros activadas (no funciona completo en Mac ni en el celular).</p>
+  </div>
+</section>
+
+<!-- 3. Beneficios -->
+<section class="pl-sec pl-ben">
   <div class="wrap">
     <div class="pl-head"><span class="pl-tag">Por qué funcionan</span><h2>Todo lo que necesitas para <span class="pl-grad">no complicarte</span></h2><p>Cada plantilla sigue las mismas reglas, para que la uses aunque nunca hayas programado en Excel.</p></div>
     <div class="pl-feats">
@@ -48,77 +79,27 @@ description: Plantillas de Excel con macros para Ishikawa, Pareto, Gantt y cotiz
   </div>
 </section>
 
-<!-- 3. Vista previa con pestañas -->
-<section class="pl-sec pl-suave">
+<!-- 4. Cómo comprar: 3 pasos dentro de un panel grande (estilo Workleap) -->
+<section class="pl-sec" id="como-comprar">
   <div class="wrap">
-    <div class="pl-head"><span class="pl-tag violeta">Vista previa</span><h2>Mira lo que <span class="pl-grad">vas a obtener</span></h2><p>Así se ve cada plantilla por dentro. Pronto, con video de cada una funcionando.</p></div>
-    <div class="pl-preview">
-      <div class="pl-tabs" role="tablist" aria-label="Elegir plantilla">
-        {% for p in site.data.plantillas %}<button class="pl-tab" role="tab" type="button" id="tab-{{ p.id }}" aria-controls="pan-{{ p.id }}" aria-selected="{% if forloop.first %}true{% else %}false{% endif %}">{{ p.nombre }}</button>{% endfor %}
+    <div class="pl-panel3">
+      <div class="pl-head"><span class="pl-tag">Cómo comprar</span><h2>Una compra sencilla. <span class="pl-grad">En 3 pasos y en minutos.</span></h2><p>Sin tarjetas ni registros: todo desde tu celular.</p></div>
+      <div class="pl-pasos2">
+        <div class="pl-paso2"><div class="pl-mock"><span class="pl-mock-k">YAPE · PLIN</span><b>S/ 19.00</b><span class="pl-mock-ok">Pago realizado</span></div><span class="pl-n">1</span><h3>Pagas por Yape o Plin</h3><p>Eliges tu plantilla y pagas desde tu celular.</p></div>
+        <div class="pl-paso2"><div class="pl-mock"><span class="pl-mock-k">TELEGRAM</span><span class="pl-mock-msg">📎 captura_pago.jpg</span><span class="pl-mock-msg yo">¡Listo, enviado!</span></div><span class="pl-n">2</span><h3>Envías la captura</h3><p>Mandas la captura del pago por Telegram.</p></div>
+        <div class="pl-paso2"><div class="pl-mock"><span class="pl-mock-k">ARCHIVO</span><span class="pl-mock-file">{% include icon.html n="tabla" %} Plantilla.xlsm</span><span class="pl-mock-ok">Enviado ✓</span></div><span class="pl-n verde">3</span><h3>Recibes tu archivo</h3><p>Confirmo el pago y te llega la plantilla.</p></div>
       </div>
-      {% for p in site.data.plantillas %}
-      <div class="pl-panel" role="tabpanel" id="pan-{{ p.id }}" aria-labelledby="tab-{{ p.id }}" {% unless forloop.first %}hidden{% endunless %}>
-        <div class="pl-panel-vis"><div class="pl-screen-top"><span class="dots"><i></i><i></i><i></i></span><span>{{ p.nombre }}.xlsm</span></div><div class="pl-panel-img">{% include {{ p.thumb }} %}</div></div>
-        <div class="pl-panel-txt">
-          <span class="pl-tag">{{ p.tag }}</span>
-          <h3>{{ p.beneficio }}</h3>
-          <ul class="pl-checks">{% for i in p.incluye limit:4 %}<li>{{ i }}</li>{% endfor %}</ul>
-          <a class="more" href="{{ '/plantillas/' | append: p.id | append: '/' | relative_url }}">Ver detalle de la plantilla →</a>
-        </div>
+      <div class="pl-sellos">
+        <div><span class="pl-si s1">{% include icon.html n="check" %}</span><b>Pago único</b><small>Sin suscripción</small></div>
+        <div><span class="pl-si s2">{% include icon.html n="correo" %}</span><b>Envío rápido</b><small>Apenas confirmo tu pago</small></div>
+        <div><span class="pl-si s3">{% include icon.html n="libro" %}</span><b>Instrucciones</b><small>Dentro del archivo</small></div>
+        <div><span class="pl-si s1">{% include icon.html n="escudo" %}</span><b>Ayuda incluida</b><small>Por Telegram</small></div>
       </div>
-      {% endfor %}
     </div>
   </div>
 </section>
 
-<!-- 4. Precios -->
-<section class="pl-sec" id="precios">
-  <div class="wrap">
-    <div class="pl-head"><span class="pl-tag verde">Precios</span><h2>Simple: <span class="pl-grad">pagas una vez</span> y es tuya</h2><p>Sin suscripción ni pagos mensuales. Recibes el archivo y lo usas las veces que quieras.</p></div>
-    <div class="pl-precios">
-      {% assign top_p = site.data.plantillas | where: "id", destacada | first %}
-      {% assign otras = site.data.plantillas | where_exp: "x", "x.id != destacada" %}
-      {% assign orden = "" | split: "" %}
-      {% for x in otras %}{% if forloop.index == 1 %}{% assign orden = orden | push: x %}{% if top_p %}{% assign orden = orden | push: top_p %}{% endif %}{% else %}{% assign orden = orden | push: x %}{% endif %}{% endfor %}
-      {% for p in orden %}
-      {% assign top = false %}{% if p.id == destacada %}{% assign top = true %}{% endif %}
-      <div class="pl-precio{% if top %} top{% endif %}">
-        {% if top %}<span class="pl-badge">Más vendida</span>{% endif %}
-        <span class="pl-tag">{{ p.tag }}</span>
-        <h3>{{ p.nombre }}</h3>
-        <p class="pl-precio-desc">{{ p.desc }}</p>
-        <div class="pl-monto"><b>{{ p.precio }}</b><span>pago único</span></div>
-        <ul class="pl-checks">{% for i in p.incluye %}<li>{{ i }}</li>{% endfor %}</ul>
-        <div class="pl-precio-ctas">
-          {% if top %}{% include comprar-btn.html texto="Comprar por Yape o Plin" %}{% else %}<a class="btn btn-ghost" href="{{ '/plantillas/' | append: p.id | append: '/' | relative_url }}">Ver detalle</a>{% endif %}
-          {% if top %}<a class="more" href="{{ '/plantillas/' | append: p.id | append: '/' | relative_url }}">Ver detalle →</a>{% else %}{% include comprar-btn.html texto="Comprar" %}{% endif %}
-        </div>
-      </div>
-      {% endfor %}
-    </div>
-    <p class="pl-nota"><span class="pl-ok sm">✓</span> Requisito: Excel para Windows con macros activadas (no funciona completo en Mac ni en el celular).</p>
-  </div>
-</section>
-
-<!-- 5. Cómo comprar + sellos -->
-<section class="pl-sec pl-suave" id="como-comprar">
-  <div class="wrap">
-    <div class="pl-head"><span class="pl-tag">Cómo comprar</span><h2>En 3 pasos y <span class="pl-grad">en minutos</span></h2></div>
-    <div class="pl-pasos">
-      <div class="pl-paso"><span class="pl-n">1</span><h3>Pagas por Yape o Plin</h3><p>Eliges tu plantilla y haces el pago desde tu celular.</p></div>
-      <div class="pl-paso"><span class="pl-n">2</span><h3>Envías la captura</h3><p>Mandas la captura del pago por Telegram.</p></div>
-      <div class="pl-paso"><span class="pl-n verde">3</span><h3>Recibes tu archivo</h3><p>Confirmo el pago y te llega la plantilla al instante.</p></div>
-    </div>
-    <div class="pl-sellos">
-      <div><span class="pl-si s1">{% include icon.html n="check" %}</span><b>Pago único</b><small>Sin suscripción</small></div>
-      <div><span class="pl-si s2">{% include icon.html n="correo" %}</span><b>Envío rápido</b><small>Apenas confirmo tu pago</small></div>
-      <div><span class="pl-si s3">{% include icon.html n="libro" %}</span><b>Instrucciones</b><small>Dentro del archivo</small></div>
-      <div><span class="pl-si s1">{% include icon.html n="escudo" %}</span><b>Ayuda incluida</b><small>Por Telegram</small></div>
-    </div>
-  </div>
-</section>
-
-<!-- 6. Preguntas -->
+<!-- 5. Preguntas -->
 <section class="pl-sec">
   <div class="wrap pl-faq-wrap">
     <div class="pl-head izq"><span class="pl-tag violeta">Dudas</span><h2>Preguntas frecuentes</h2><p>¿Otra duda? Escríbeme por LinkedIn o Telegram.</p></div>
@@ -131,13 +112,13 @@ description: Plantillas de Excel con macros para Ishikawa, Pareto, Gantt y cotiz
   </div>
 </section>
 
-<!-- 7. Cierre con degradado -->
+<!-- 6. Cierre con degradado -->
 <section class="pl-cierre">
   <div class="wrap">
     <div class="pl-cta">
       <h2>¿Listo para ahorrar horas en Excel?</h2>
       <p>Elige tu plantilla, paga por Yape o Plin y empieza hoy mismo.</p>
-      <div class="ctas"><a class="btn pl-btn-blanco" href="#precios">Ver precios →</a><a class="btn pl-btn-borde" href="{{ '/articulos/' | relative_url }}">Leer las guías</a></div>
+      <div class="ctas"><a class="btn pl-btn-blanco" href="#catalogo">Ver plantillas →</a><a class="btn pl-btn-borde" href="{{ '/articulos/' | relative_url }}">Leer las guías</a></div>
       <small>Pago único · Archivo al confirmar el pago · Ayuda por Telegram</small>
     </div>
   </div>
@@ -145,9 +126,11 @@ description: Plantillas de Excel con macros para Ishikawa, Pareto, Gantt y cotiz
 
 <script>
 (function(){
-  // Pestañas de la vista previa (teclado: flechas izquierda/derecha)
-  var tabs=[].slice.call(document.querySelectorAll(".pl-tab"));
-  function ver(t){tabs.forEach(function(x){var on=x===t;x.setAttribute("aria-selected",on);x.tabIndex=on?0:-1;document.getElementById(x.getAttribute("aria-controls")).hidden=!on})}
-  tabs.forEach(function(t,i){t.tabIndex=i?-1:0;t.addEventListener("click",function(){ver(t)});t.addEventListener("keydown",function(e){var d=e.key==="ArrowRight"?1:e.key==="ArrowLeft"?-1:0;if(d){var n=tabs[(i+d+tabs.length)%tabs.length];ver(n);n.focus()}})});
+  // Filtro por categoría + "Ver más" (6 plantillas por vez)
+  var POR=6,bs=[].slice.call(document.querySelectorAll(".pl-filtro")),cs=[].slice.call(document.querySelectorAll(".pl-card")),mas=document.getElementById("pl-mas"),f="todas",vis=POR;
+  function pintar(){var l=cs.filter(function(c){return f==="todas"||c.dataset.cat===f});cs.forEach(function(c){c.hidden=true});l.forEach(function(c,i){c.hidden=i>=vis});mas.hidden=l.length<=vis}
+  bs.forEach(function(b){b.addEventListener("click",function(){f=b.dataset.f;vis=POR;bs.forEach(function(x){x.setAttribute("aria-pressed",x===b)});pintar()})});
+  mas.addEventListener("click",function(){vis+=POR;pintar()});
+  pintar();
 })();
 </script>

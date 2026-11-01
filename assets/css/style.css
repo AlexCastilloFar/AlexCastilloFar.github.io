@@ -840,3 +840,5 @@ a.ii-item:hover{box-shadow:0 0 0 1px rgba(62,87,218,.4),0 12px 26px -18px rgba(1
 .ii-item:nth-child(4n+2),.ii-item:nth-child(4n+3){background:linear-gradient(180deg,#e9eeff 0%,#fff 68%)}
 .ii-item.ii-pronto{background:linear-gradient(160deg,#f2f4f8 0%,#fff 65%)}
 .ii-item-ico .ico-box{box-shadow:0 6px 14px -8px rgba(62,87,218,.6)}
+.ii-item{background:linear-gradient(160deg,#e6ebff 0%,#f3f5ff 45%,#fff 85%)}
+.ii-item:nth-child(4n+2),.ii-item:nth-child(4n+3){background:linear-gradient(180deg,#e3e9ff 0%,#f3f5ff 50%,#fff 90%)}

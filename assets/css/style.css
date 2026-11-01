@@ -1077,3 +1077,66 @@ body.s-plantillas main{background:#fff}
 /* Detalle de cada plantilla: botón de compra en verde */
 .buybox .btn-ink{background:var(--verde);box-shadow:0 10px 22px -12px rgba(21,128,61,.8)}
 .buybox .btn-ink:hover{background:var(--verde-d)}
+.more{min-height:44px}
+
+/* =========================================================
+   v7 · Paleta cálida "de planta" (nov 2026, pedido de Alex)
+   Crema cálido de fondo + azul marino editorial + cobalto, violeta y verde bosque como acentos.
+   ========================================================= */
+:root{
+  --ink:#0c1754;          /* Ink Navy: títulos, bloques oscuros, pie */
+  --text:#2d2d2d;         /* Mid Graphite: texto principal (13:1) */
+  --muted:#5d6170;        /* texto secundario (5.9:1 en crema) */
+  --canvas:#faf9f7;       /* Canvas Cream: fondo de página */
+  --surface:#fbfaf7;      /* Surface Ivory */
+  --mist:#f9f8f6;         /* Warm Canvas: franjas suaves */
+  --cream:#f0e9e1;        /* Cream Border */
+  --line:#ebe3d9;         /* bordes finos cálidos (un tono más visible que el crema) */
+  --cloud:#ebe3d9;
+  --hair:#d6e4f1;         /* Powder Blue: bordes de botones fantasma */
+  --wash:#eaebf8;         /* Lavender Mist */
+  --lila:#f4f0ff;
+  --cobalto:#2545ff;      /* Electric Cobalt: detalles */
+  --cobalto2:#0068f9;
+  --ceruleo:#0074dd;
+  --violeta:#6736eb;      /* Vivid Violet */
+  --bosque:#046645;       /* Forest */
+}
+body{background:var(--canvas)}
+body:not(.s-inicio):not(.l-post) main{background:linear-gradient(180deg,#e9ecfb 0,var(--canvas) 460px) var(--canvas)}
+.art-body,.gal-nav a:hover{background:var(--canvas)}
+footer{background:var(--ink)}
+/* Segundo tono de los títulos y palabras destacadas: cobalto → violeta */
+.kw,.ii-h span,.pl-grad,.ii-h-sm span{background:linear-gradient(90deg,var(--cobalto),var(--violeta));-webkit-background-clip:text;background-clip:text;color:transparent}
+.ii-azul .ii-h span{background:none;color:var(--cobalto)}
+.btn-ghost{box-shadow:inset 0 0 0 1px var(--hair)}
+.tag,.pl-tag{background:var(--wash)}
+.pl-tag.violeta{background:var(--lila);color:var(--violeta)}
+.pl-tag.verde{background:#e3f1ea;color:var(--bosque)}
+.pl-checks li::before{background-color:#e3f1ea}
+/* Bandas suaves en crema en vez de gris frío */
+.band-wash,.stats-band{background:var(--mist);border-color:var(--cream)}
+.pl-suave{background:linear-gradient(180deg,#f7f5f1 0%,var(--mist) 100%)}
+.ii-lav{background:linear-gradient(180deg,#eceefb 0%,#f5f3fb 100%)}
+
+/* Portadas de color por área (artículos): panel de color + "pantalla" blanca con el gráfico */
+.gcard{padding:0;overflow:hidden;border-radius:16px;background:#fff}
+.gcard-top,.gcard h3,.gcard p,.gcard-pie{margin-inline:18px}
+.gcard-graf{order:-1;margin:0 0 14px;border-radius:0;padding:18px 18px 0;position:relative;background:linear-gradient(140deg,var(--c1,#3e57da),var(--c2,#6736eb))}
+.gcard-graf::before,.art-portada::before{content:"";position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(to right,rgba(255,255,255,.12) 1px,transparent 1px),linear-gradient(to bottom,rgba(255,255,255,.12) 1px,transparent 1px);background-size:22px 22px}
+.gcard-pantalla{position:relative;background:#fff;border-radius:10px 10px 0 0;padding:10px 10px 4px;box-shadow:0 -8px 24px -12px rgba(0,0,0,.35);transition:transform .25s ease}
+.gcard:hover .gcard-pantalla{transform:translateY(-4px)}
+.gcard-top{margin-top:2px}
+.gcard-pie{margin-top:auto}
+[data-cat="casos-reales"]{--c1:#0c1754;--c2:#2b3aa8}
+[data-cat="calidad"]{--c1:#2545ff;--c2:#0068f9}
+[data-cat="procesos"]{--c1:#6736eb;--c2:#8b5cf6}
+[data-cat="planeamiento"]{--c1:#046645;--c2:#0b8a5e}
+[data-cat="gestion"]{--c1:#0074dd;--c2:#024bb1}
+/* Cabecera del artículo con portada de color */
+.art-head-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,420px);gap:40px;align-items:end}
+@media (max-width:900px){.art-head-grid{grid-template-columns:minmax(0,1fr);gap:8px}}
+.art-portada{position:relative;align-self:end;border-radius:18px 18px 0 0;padding:22px 22px 0;background:linear-gradient(140deg,var(--c1,#3e57da),var(--c2,#6736eb));box-shadow:0 30px 60px -36px rgba(12,23,84,.6);overflow:hidden}
+@media (max-width:900px){.art-portada{display:none}}
+.art-head .pill-cat i{background:var(--c1,var(--accent))}
+@media (max-width:900px){.art-portada{display:block;margin-top:16px;padding:16px 16px 0}}

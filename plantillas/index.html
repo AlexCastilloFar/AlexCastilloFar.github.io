@@ -3,20 +3,147 @@ layout: default
 seccion: plantillas
 comprar: true
 title: Plantillas de Excel para Ingeniería Industrial
-description: Plantillas de Excel con macros para Ishikawa, Pareto, Gantt y cotizaciones. Pago por Yape o Plin.
+description: Plantillas de Excel con macros para Ishikawa, Pareto, Gantt y cotizaciones. Listas para usar, con instrucciones. Pago por Yape o Plin.
 ---
-<section class="view wrap">
-  <div class="sec-head"><span class="eyebrow">Tienda</span><h1>Plantillas de Excel</h1><p class="lead">Herramientas que nacieron de problemas reales en planta. Hechas para quien no sabe Excel: hoja de instrucciones, botones claros y fórmulas protegidas.</p></div>
-  <div class="grid3">{% for p in site.data.plantillas %}{% include prod-card.html p=p %}{% endfor %}</div>
-  <p class="note" style="margin-top:14px">Requisito: Excel para Windows con macros activadas.</p>
+{%- comment -%} Diseño inspirado en DataPulse: índigo (principal) + violeta (acompañante) + verde (acento de compra y confirmación). {%- endcomment -%}
+{% assign destacada = "ishikawa-pareto" %}
 
-  <div class="block">
-    <div class="sec-head"><span class="eyebrow">Dudas</span><h2>Preguntas frecuentes</h2></div>
-    <div class="grid2">
-      <div class="card"><h3>¿Cuánto tarda en llegar?</h3><p>Apenas confirmo tu pago, el bot te envía el archivo. Normalmente en minutos.</p></div>
-      <div class="card"><h3>¿Funciona en Mac o en el celular?</h3><p>No. Las plantillas usan macros, que solo funcionan completas en Excel para Windows.</p></div>
-      <div class="card"><h3>¿Puedo probarla antes?</h3><p>Sí. En mi TikTok hay versiones gratis y recortadas de cada plantilla.</p></div>
-      <div class="card"><h3>¿Y si tengo un problema?</h3><p>Escríbeme por Telegram con una captura y lo vemos juntos.</p></div>
+<!-- 1. Portada -->
+<section class="pl-hero">
+  <div class="wrap pl-hero-in">
+    <div class="pl-hero-txt">
+      <span class="pl-pill"><i></i>Plantillas de Excel · listas para usar</span>
+      <h1>Plantillas que hacen <span class="pl-grad">el trabajo por ti</span></h1>
+      <p class="lead">Nacieron de problemas reales en planta. Hechas para quien no sabe Excel: botones claros, instrucciones paso a paso y fórmulas protegidas.</p>
+      <div class="ctas"><a class="btn pl-btn-verde" href="#precios">Ver plantillas y precios →</a><a class="btn btn-ghost" href="#como-comprar">Cómo comprar</a></div>
+      <div class="pl-mini">
+        <div><b>{{ site.data.plantillas.size }}</b><span>plantillas</span></div>
+        <div><b>Pago único</b><span>sin suscripción</span></div>
+        <div><b>Yape · Plin</b><span>confirmado a mano</span></div>
+      </div>
+    </div>
+    <div class="pl-hero-vis" aria-hidden="true">
+      <div class="pl-screen">
+        <div class="pl-screen-top"><span class="dots"><i></i><i></i><i></i></span><span>Gantt_con_ruta_critica.xlsm</span></div>
+        <div class="pl-screen-body">{% include thumb-gantt.html %}</div>
+      </div>
+      <div class="pl-float f1"><span class="pl-ok">✓</span><span><b>Archivo enviado</b><small>al confirmar tu pago</small></span></div>
+      <div class="pl-float f2"><span class="pl-ico">{% include icon.html n="chart" %}</span><span><b>Ruta crítica</b><small>en 1 clic</small></span></div>
     </div>
   </div>
 </section>
+
+<!-- 2. Beneficios -->
+<section class="pl-sec">
+  <div class="wrap">
+    <div class="pl-head"><span class="pl-tag">Por qué funcionan</span><h2>Todo lo que necesitas para <span class="pl-grad">no complicarte</span></h2><p>Cada plantilla sigue las mismas reglas, para que la uses aunque nunca hayas programado en Excel.</p></div>
+    <div class="pl-feats">
+      <div class="pl-feat c1"><span class="pl-fi">{% include icon.html n="libro" %}</span><h3>Hoja de instrucciones</h3><p>Paso a paso dentro del mismo archivo. No necesitas ver tutoriales.</p></div>
+      <div class="pl-feat c2"><span class="pl-fi">{% include icon.html n="flecha" %}</span><h3>Botones claros</h3><p>Generar, limpiar, exportar: todo se hace con un clic.</p></div>
+      <div class="pl-feat c3"><span class="pl-fi">{% include icon.html n="check" %}</span><h3>Celdas de entrada marcadas</h3><p>Sabes exactamente dónde escribir; lo demás se calcula solo.</p></div>
+      <div class="pl-feat c1"><span class="pl-fi">{% include icon.html n="escudo" %}</span><h3>Fórmulas protegidas</h3><p>No se rompen aunque borres algo por error.</p></div>
+      <div class="pl-feat c2"><span class="pl-fi">{% include icon.html n="tabla" %}</span><h3>Ejemplo resuelto</h3><p>Viene con datos de ejemplo para practicar antes de usar los tuyos.</p></div>
+      <div class="pl-feat c3"><span class="pl-fi">{% include icon.html n="correo" %}</span><h3>Ayuda por Telegram</h3><p>Si algo no funciona, me escribes con una captura y lo vemos.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. Vista previa con pestañas -->
+<section class="pl-sec pl-suave">
+  <div class="wrap">
+    <div class="pl-head"><span class="pl-tag violeta">Vista previa</span><h2>Mira lo que <span class="pl-grad">vas a obtener</span></h2><p>Así se ve cada plantilla por dentro. Pronto, con video de cada una funcionando.</p></div>
+    <div class="pl-preview">
+      <div class="pl-tabs" role="tablist" aria-label="Elegir plantilla">
+        {% for p in site.data.plantillas %}<button class="pl-tab" role="tab" type="button" id="tab-{{ p.id }}" aria-controls="pan-{{ p.id }}" aria-selected="{% if forloop.first %}true{% else %}false{% endif %}">{{ p.nombre }}</button>{% endfor %}
+      </div>
+      {% for p in site.data.plantillas %}
+      <div class="pl-panel" role="tabpanel" id="pan-{{ p.id }}" aria-labelledby="tab-{{ p.id }}" {% unless forloop.first %}hidden{% endunless %}>
+        <div class="pl-panel-vis"><div class="pl-screen-top"><span class="dots"><i></i><i></i><i></i></span><span>{{ p.nombre }}.xlsm</span></div><div class="pl-panel-img">{% include {{ p.thumb }} %}</div></div>
+        <div class="pl-panel-txt">
+          <span class="pl-tag">{{ p.tag }}</span>
+          <h3>{{ p.beneficio }}</h3>
+          <ul class="pl-checks">{% for i in p.incluye limit:4 %}<li>{{ i }}</li>{% endfor %}</ul>
+          <a class="more" href="{{ '/plantillas/' | append: p.id | append: '/' | relative_url }}">Ver detalle de la plantilla →</a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- 4. Precios -->
+<section class="pl-sec" id="precios">
+  <div class="wrap">
+    <div class="pl-head"><span class="pl-tag verde">Precios</span><h2>Simple: <span class="pl-grad">pagas una vez</span> y es tuya</h2><p>Sin suscripción ni pagos mensuales. Recibes el archivo y lo usas las veces que quieras.</p></div>
+    <div class="pl-precios">
+      {% for p in site.data.plantillas %}
+      {% assign top = false %}{% if p.id == destacada %}{% assign top = true %}{% endif %}
+      <div class="pl-precio{% if top %} top{% endif %}">
+        {% if top %}<span class="pl-badge">Más vendida</span>{% endif %}
+        <span class="pl-tag">{{ p.tag }}</span>
+        <h3>{{ p.nombre }}</h3>
+        <p class="pl-precio-desc">{{ p.desc }}</p>
+        <div class="pl-monto"><b>{{ p.precio }}</b><span>pago único</span></div>
+        <ul class="pl-checks">{% for i in p.incluye %}<li>{{ i }}</li>{% endfor %}</ul>
+        <div class="pl-precio-ctas">
+          {% if top %}{% include comprar-btn.html texto="Comprar por Yape o Plin" %}{% else %}<a class="btn btn-ghost" href="{{ '/plantillas/' | append: p.id | append: '/' | relative_url }}">Ver detalle</a>{% endif %}
+          {% if top %}<a class="more" href="{{ '/plantillas/' | append: p.id | append: '/' | relative_url }}">Ver detalle →</a>{% else %}{% include comprar-btn.html texto="Comprar" %}{% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <p class="pl-nota"><span class="pl-ok sm">✓</span> Requisito: Excel para Windows con macros activadas (no funciona completo en Mac ni en el celular).</p>
+  </div>
+</section>
+
+<!-- 5. Cómo comprar + sellos -->
+<section class="pl-sec pl-suave" id="como-comprar">
+  <div class="wrap">
+    <div class="pl-head"><span class="pl-tag">Cómo comprar</span><h2>En 3 pasos y <span class="pl-grad">en minutos</span></h2></div>
+    <div class="pl-pasos">
+      <div class="pl-paso"><span class="pl-n">1</span><h3>Pagas por Yape o Plin</h3><p>Eliges tu plantilla y haces el pago desde tu celular.</p></div>
+      <div class="pl-paso"><span class="pl-n">2</span><h3>Envías la captura</h3><p>Mandas la captura del pago por Telegram.</p></div>
+      <div class="pl-paso"><span class="pl-n verde">3</span><h3>Recibes tu archivo</h3><p>Confirmo el pago y te llega la plantilla al instante.</p></div>
+    </div>
+    <div class="pl-sellos">
+      <div><span class="pl-si s1">{% include icon.html n="check" %}</span><b>Pago único</b><small>Sin suscripción</small></div>
+      <div><span class="pl-si s2">{% include icon.html n="correo" %}</span><b>Envío rápido</b><small>Apenas confirmo tu pago</small></div>
+      <div><span class="pl-si s3">{% include icon.html n="libro" %}</span><b>Instrucciones</b><small>Dentro del archivo</small></div>
+      <div><span class="pl-si s1">{% include icon.html n="escudo" %}</span><b>Ayuda incluida</b><small>Por Telegram</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. Preguntas -->
+<section class="pl-sec">
+  <div class="wrap pl-faq-wrap">
+    <div class="pl-head izq"><span class="pl-tag violeta">Dudas</span><h2>Preguntas frecuentes</h2><p>¿Otra duda? Escríbeme por LinkedIn o Telegram.</p></div>
+    <div class="pl-faq">
+      <details><summary>¿Cuánto tarda en llegar?</summary><p>Apenas confirmo tu pago, te envío el archivo. Normalmente en minutos.</p></details>
+      <details><summary>¿Funciona en Mac o en el celular?</summary><p>No. Las plantillas usan macros, que solo funcionan completas en Excel para Windows.</p></details>
+      <details><summary>¿Puedo probarla antes de comprar?</summary><p>Sí. En mi TikTok hay versiones gratis y recortadas de cada plantilla.</p></details>
+      <details><summary>¿Y si tengo un problema?</summary><p>Escríbeme por Telegram con una captura y lo resolvemos juntos.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- 7. Cierre con degradado -->
+<section class="pl-cierre">
+  <div class="wrap">
+    <div class="pl-cta">
+      <h2>¿Listo para ahorrar horas en Excel?</h2>
+      <p>Elige tu plantilla, paga por Yape o Plin y empieza hoy mismo.</p>
+      <div class="ctas"><a class="btn pl-btn-blanco" href="#precios">Ver precios →</a><a class="btn pl-btn-borde" href="{{ '/articulos/' | relative_url }}">Leer las guías</a></div>
+      <small>Pago único · Archivo al confirmar el pago · Ayuda por Telegram</small>
+    </div>
+  </div>
+</section>
+
+<script>
+(function(){
+  // Pestañas de la vista previa (teclado: flechas izquierda/derecha)
+  var tabs=[].slice.call(document.querySelectorAll(".pl-tab"));
+  function ver(t){tabs.forEach(function(x){var on=x===t;x.setAttribute("aria-selected",on);x.tabIndex=on?0:-1;document.getElementById(x.getAttribute("aria-controls")).hidden=!on})}
+  tabs.forEach(function(t,i){t.tabIndex=i?-1:0;t.addEventListener("click",function(){ver(t)});t.addEventListener("keydown",function(e){var d=e.key==="ArrowRight"?1:e.key==="ArrowLeft"?-1:0;if(d){var n=tabs[(i+d+tabs.length)%tabs.length];ver(n);n.focus()}})});
+})();
+</script>

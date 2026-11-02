@@ -1381,3 +1381,12 @@ body:not(.s-inicio):not(.l-post):not(.s-plantillas):not(.s-ingenieria) main{back
 .rc-dark p,.rc-dark li{color:#e3e7fb}
 .rc-sellos small{color:#c9d0f2}
 .rc-dark .rc-marco{background:rgba(255,255,255,.1)}
+/* Recursos: panel de Cursos con degradado azul → violeta suave (estilo DataPulse, tonos bajos) */
+.rc-dark{position:relative;overflow:hidden;background:linear-gradient(120deg,#2c64d4 0%,#3f4fcf 50%,#5a46c2 100%)}
+.rc-dark::before{content:"";position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(to right,rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(to bottom,rgba(255,255,255,.07) 1px,transparent 1px);background-size:48px 48px}
+.rc-dark>*{position:relative}
+.rc-dark p,.rc-dark li{color:#eef0ff}
+.rc-list li::before{background:#c3ccff}
+.rc-sellos small{color:#dfe3fb}
+.rc-sellos{border-top-color:rgba(255,255,255,.22)}
+.rc-dark .rc-marco{background:rgba(255,255,255,.14);box-shadow:inset 0 0 0 1px rgba(255,255,255,.22)}

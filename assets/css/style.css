@@ -1405,3 +1405,9 @@ body:not(.s-inicio):not(.l-post):not(.s-plantillas):not(.s-ingenieria) main{back
 .rc-cta-ico{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;flex:none;background:linear-gradient(140deg,#5a46c2,#2c64d4);color:#fff;box-shadow:0 10px 22px -12px rgba(63,79,207,.7)}
 .rc-cta-ico svg{width:24px;height:24px}
 @media (max-width:600px){.rc-cta .btn{margin-left:0}}
+
+/* Ingeniería Industrial: franjas a todo el ancho como en el resto de la web (el contenido sigue centrado a 1040px) */
+.marco{max-width:none;margin:0;border:0}
+@media (max-width:1100px){.marco{margin-inline:0}}
+.marco>section{border-bottom:0;padding-inline:max(16px,calc((100% - 1040px)/2 + 32px))}
+.ii-hero{border-radius:0}

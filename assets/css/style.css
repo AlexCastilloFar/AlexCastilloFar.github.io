@@ -1653,3 +1653,7 @@ a.mc-node:focus-visible{outline:3px solid #3e57da;outline-offset:4px}
 .pl-card:hover .pl-panel-img img{transform:scale(1.03)}
 .pl-panel-img img{transition:transform .3s ease}
 @media (prefers-reduced-motion:reduce){.pl-panel-img img{transition:none}}
+/* Plantillas: secciones seguidas con el mismo fondo -> menos espacio entre ellas */
+.pl-sec{padding-block:clamp(40px,5vw,64px)}
+.pl-sec+.pl-sec{padding-top:clamp(8px,2vw,24px)}
+.pl-hero+.pl-sec{padding-top:clamp(32px,4vw,48px)}

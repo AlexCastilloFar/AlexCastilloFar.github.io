@@ -1393,3 +1393,7 @@ body:not(.s-inicio):not(.l-post):not(.s-plantillas):not(.s-ingenieria) main{back
 /* Recursos: degradado invertido (violeta en el texto, azul en la imagen) y ambas tarjetas del mismo alto */
 .rc-dark{background:linear-gradient(300deg,#2c64d4 0%,#3f4fcf 50%,#5a46c2 100%)}
 @media (min-width:901px){.rc-dark,.rc-light{min-height:0;height:700px}.rc-dark .rc-txt{gap:14px}.rc-dark .rc-sellos{margin-top:4px;padding-top:16px}}
+.rc-sellos.claro{border-top-color:rgba(12,23,84,.12)}
+.rc-sellos.claro b{color:var(--ink)}
+.rc-sellos.claro small{color:var(--muted)}
+.rc-light .rc-txt{gap:14px}

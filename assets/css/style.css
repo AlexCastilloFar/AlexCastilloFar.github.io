@@ -1376,3 +1376,8 @@ body:not(.s-inicio):not(.l-post):not(.s-plantillas):not(.s-ingenieria) main{back
 .rc-light{background:linear-gradient(140deg,#e3f1ea 0%,#eef1ff 55%,#f3efff 100%);box-shadow:0 0 0 1px #d8e3ef,0 24px 48px -32px rgba(12,23,84,.35)}
 .rc-light .rc-marco.claro{background:rgba(255,255,255,.6)}
 .rc-light .rc-k.verde{background:#fff}
+/* Recursos: panel de Cursos más suave (menos encendido) */
+.rc-dark{background:linear-gradient(135deg,#3a4a9e 0%,#2f3d86 55%,#28356f 100%)}
+.rc-dark p,.rc-dark li{color:#e3e7fb}
+.rc-sellos small{color:#c9d0f2}
+.rc-dark .rc-marco{background:rgba(255,255,255,.1)}

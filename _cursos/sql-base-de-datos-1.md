@@ -3,6 +3,7 @@ codigo: PIT624
 title: "SQL - Base de Datos 1"
 area: Datos
 orden: 3
+imagen: /assets/img/cursos/sql-base-de-datos-1.webp
 resumen: "Consultas SQL desde cero: seleccionar, filtrar, ordenar y unir tablas para sacar información de una base de datos."
 plantilla: ""
 pdf: ""            # cuando tengas tus apuntes: sube el PDF a assets/pdf/ y escribe aquí "/assets/pdf/nombre.pdf"

@@ -3,6 +3,7 @@ codigo: PIT566
 title: "Estadística básica con SPSS"
 area: Datos
 orden: 1
+imagen: /assets/img/cursos/estadistica-basica-spss.webp
 resumen: "Estadística descriptiva, gráficos y pruebas básicas con SPSS: lo que necesitas para analizar encuestas, controlar la calidad o sacar adelante tu tesis."
 plantilla: "ishikawa-pareto"
 pdf: ""            # cuando tengas tus apuntes: sube el PDF a assets/pdf/ y escribe aquí "/assets/pdf/nombre.pdf"

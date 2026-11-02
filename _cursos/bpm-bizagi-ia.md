@@ -3,6 +3,7 @@ codigo: PIT443
 title: "Business Process Management (BPM) con Bizagi + IA"
 area: Procesos
 orden: 10
+imagen: /assets/img/cursos/bpm-bizagi-ia.webp
 resumen: "Modelamiento de procesos en Bizagi con BPMN 2.0, usando IA para documentar y analizar más rápido."
 plantilla: ""
 pdf: ""            # cuando tengas tus apuntes: sube el PDF a assets/pdf/ y escribe aquí "/assets/pdf/nombre.pdf"

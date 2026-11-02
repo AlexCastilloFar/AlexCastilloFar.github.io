@@ -1369,3 +1369,31 @@ body:not(.s-inicio):not(.l-post):not(.s-plantillas):not(.s-ingenieria) main{back
   .ap-img{grid-column:1;grid-row:auto;height:170px;margin-inline:0 -22px}
   .ap-link{margin-bottom:4px}
 }
+/* Tarjetas claras con degradado suave para que se distingan del fondo */
+.ap-card:nth-child(1){background:linear-gradient(150deg,#e6ebff 0%,#f1f3ff 55%,#fff 100%);box-shadow:0 0 0 1px #d8def8,0 24px 48px -32px rgba(37,69,255,.45)}
+.ap-card:nth-child(2){background:linear-gradient(150deg,#e2f1ea 0%,#eef6f2 55%,#fff 100%);box-shadow:0 0 0 1px #cfe5da,0 24px 48px -32px rgba(4,102,69,.4)}
+.ap-ico .ico-box{background:#fff}
+.rc-light{background:linear-gradient(140deg,#e3f1ea 0%,#eef1ff 55%,#f3efff 100%);box-shadow:0 0 0 1px #d8e3ef,0 24px 48px -32px rgba(12,23,84,.35)}
+.rc-light .rc-marco.claro{background:rgba(255,255,255,.6)}
+.rc-light .rc-k.verde{background:#fff}
+/* Recursos: panel de Cursos más suave (menos encendido) */
+.rc-dark{background:linear-gradient(135deg,#3a4a9e 0%,#2f3d86 55%,#28356f 100%)}
+.rc-dark p,.rc-dark li{color:#e3e7fb}
+.rc-sellos small{color:#c9d0f2}
+.rc-dark .rc-marco{background:rgba(255,255,255,.1)}
+/* Recursos: panel de Cursos con degradado azul → violeta suave (estilo DataPulse, tonos bajos) */
+.rc-dark{position:relative;overflow:hidden;background:linear-gradient(120deg,#2c64d4 0%,#3f4fcf 50%,#5a46c2 100%)}
+.rc-dark::before{content:"";position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(to right,rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(to bottom,rgba(255,255,255,.07) 1px,transparent 1px);background-size:48px 48px}
+.rc-dark>*{position:relative}
+.rc-dark p,.rc-dark li{color:#eef0ff}
+.rc-list li::before{background:#c3ccff}
+.rc-sellos small{color:#dfe3fb}
+.rc-sellos{border-top-color:rgba(255,255,255,.22)}
+.rc-dark .rc-marco{background:rgba(255,255,255,.14);box-shadow:inset 0 0 0 1px rgba(255,255,255,.22)}
+/* Recursos: degradado invertido (violeta en el texto, azul en la imagen) y ambas tarjetas del mismo alto */
+.rc-dark{background:linear-gradient(300deg,#2c64d4 0%,#3f4fcf 50%,#5a46c2 100%)}
+@media (min-width:901px){.rc-dark,.rc-light{min-height:0;height:700px}.rc-dark .rc-txt{gap:14px}.rc-dark .rc-sellos{margin-top:4px;padding-top:16px}}
+.rc-sellos.claro{border-top-color:rgba(12,23,84,.12)}
+.rc-sellos.claro b{color:var(--ink)}
+.rc-sellos.claro small{color:var(--muted)}
+.rc-light .rc-txt{gap:14px}

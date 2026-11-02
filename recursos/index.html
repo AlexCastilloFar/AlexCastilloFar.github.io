@@ -47,6 +47,7 @@ description: Cursos gratuitos con sus clases ordenadas y plantillas de Excel par
           {% for p in site.data.plantillas %}<li><span><b>{{ p.nombre }}.</b> {{ p.beneficio }}</span></li>{% endfor %}
         </ul>
         <div class="ctas"><a class="btn pl-btn-verde" href="{{ '/plantillas/' | relative_url }}">Ver plantillas y precios →</a></div>
+        <div class="rc-sellos claro"><div><b>{{ site.data.plantillas.size }}</b><small>PLANTILLAS</small></div><div><b>Pago único</b><small>SIN SUSCRIPCIÓN</small></div><div><b>Yape · Plin</b><small>CONFIRMADO A MANO</small></div></div>
       </div>
       <div class="rc-vis"><div class="rc-marco claro"><img src="{{ '/assets/img/recursos/plantillas.webp' | relative_url }}" alt="Plantilla de Excel con diagrama de Ishikawa, Gantt y diagrama de Pareto" width="1400" height="931" loading="lazy" decoding="async"></div></div>
     </div>

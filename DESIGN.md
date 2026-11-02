@@ -102,3 +102,9 @@ Une las paletas que trajo Alex (Workleap, DataPulse y similares). **Toda la web 
 - Portadas de artículos y tarjetas de plantillas: panel con degradado del color de su área + cuadrícula + "pantalla" blanca con el gráfico.
 - Títulos en dos tonos: segunda parte en degradado cobalto → violeta.
 - **Ingeniería Industrial · herramientas:** diagrama tipo "mejora continua": círculo blanco al centro con el título y 3 barritas de color; 3 herramientas a cada lado, cada una con un círculo blanco, arco de color con flecha hacia el centro y anillo punteado (colores: verde #8cc84b, esmeralda #00c48a, turquesa #00bcc4, celeste #00aef0, azul #1e8ff0, violeta #8b7ff7; solo en gráficos, el texto va en navy). En celular: centro arriba y tarjetas en lista. Mide/Analiza/Mejora: fotos reales en tarjetas claras con degradado suave y letras oscuras.
+
+### Diagramas (nov 2026)
+- Paleta de diagramas `--g1…--g6`: verde #8cc84b, esmeralda #00c48a, turquesa #00bcc4, celeste #00aef0, azul #1e8ff0, violeta #8b7ff7. Solo en gráficos; el texto va en navy o en la versión oscura del color (AA).
+- **Sobre mí · Trayectoria:** roadmap de 6 etapas que suben (año grande, título, texto), círculo con icono y rampa de colores abajo. Sin "Etapa 1, 2…". En celular: lista vertical.
+- **Caso estandarización:** bloque Antes (violeta) vs Después (verde) con medio anillo rotulado (`_includes/antes-despues.html`).
+- **Cursos:** tarjeta con el banner oficial del CTIC UNI (`imagen:` en `_cursos`, versión `-800.webp` en la lista), etiqueta de área con color, filtros por área y tarjeta "Cursos en camino" que lleva a la lista de `_data/cursos_en_curso.yml`.

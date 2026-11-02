@@ -8,21 +8,30 @@ description: Cursos gratuitos de la UNI (Power BI, SQL, Python, Lean, Six Sigma,
   <div class="sec-head"><div class="crumbs"><a href="{{ '/recursos/' | relative_url }}">Recursos</a> / Cursos</div><span class="eyebrow">Cursos gratuitos</span><h1>Cursos que llevé, con todas sus clases</h1><p class="lead">Clases grabadas del Programa de Iniciación Tecnológica de la UNI, ordenadas por curso y con mis apuntes. Ideal si no tienes correo institucional y quieres aprender igual.</p></div>
   <div class="warn" style="max-width:680px;margin-bottom:32px">Son cursos gratuitos de la UNI. Esta página es personal y <strong>no es oficial</strong>. Si quieres el certificado, inscríbete en <a href="https://cursosgratuitos.uni.edu.pe" target="_blank" rel="noopener" style="color:var(--link)">cursosgratuitos.uni.edu.pe</a>.</div>
   {% assign cursos = site.cursos | sort: "orden" %}
-  <div class="grid3">
-    {% for c in cursos %}
-    <a class="card card-link" href="{{ c.url | relative_url }}">
-      <div class="card-top">{% include icon-area.html a=c.area %}<span class="tag">{{ c.area }}</span></div>
-      <h3>{{ c.title }}</h3>
-      <p>{{ c.resumen | truncate: 110 }}</p>
-      <span class="meta">{% if c.sesiones.size > 0 %}{{ c.sesiones.size }} {% if c.sesiones.size == 1 %}sesión{% else %}sesiones{% endif %}{% else %}Ver curso{% endif %}{% if c.pdf != "" %} · Con apuntes PDF{% endif %} →</span>
+  {% assign areas = cursos | map: "area" | uniq %}
+  <div class="cc-fil" role="group" aria-label="Filtrar por área"><button type="button" class="on" data-f="todos" aria-pressed="true">Todos</button>{% for a in areas %}<button type="button" data-f="{{ a | slugify: "latin" }}" aria-pressed="false">{{ a }}</button>{% endfor %}</div>
+  <div class="ccg">
+    {% for c in cursos %}{% assign s = c.area | slugify: "latin" %}
+    <a class="cc a-{{ s }}" data-a="{{ s }}" href="{{ c.url | relative_url }}">
+      {% if c.imagen %}<img src="{{ c.imagen | replace: '.webp', '-800.webp' | relative_url }}" alt="Banner del curso {{ c.title }}" width="800" height="282" loading="lazy">{% endif %}
+      <div class="cc-b"><span class="cc-a">{{ c.area }}</span><b>{{ c.title }}</b><p>{{ c.resumen | truncate: 120 }}</p>
+      <div class="cc-f"><span class="cc-n">{% if c.sesiones.size > 0 %}{{ c.sesiones.size }} {% if c.sesiones.size == 1 %}sesión{% else %}sesiones{% endif %}{% endif %}{% if c.pdf != "" %} · PDF{% endif %}</span><span class="cc-v">Ver clases →</span></div></div>
     </a>
     {% endfor %}
+    {% if site.data.cursos_en_curso.size > 0 %}
+    <a class="cc cc-camino" data-a="todos" href="#en-curso"><span class="cc-camino-n">+{{ site.data.cursos_en_curso.size }}</span><b>Cursos en camino</b><p>Los estoy llevando ahora. Cuando los termine, subo sus clases aquí.</p><span class="cc-v">Ver la lista ↓</span></a>
+    {% endif %}
   </div>
 
   {% if site.data.cursos_en_curso.size > 0 %}
-  <div class="block">
+  <div class="block" id="en-curso">
     <div class="sec-head"><span class="eyebrow">Aprendiendo ahora</span><h2>Cursos que estoy llevando</h2><p>Cuando los termine, subo sus clases y mis apuntes.</p></div>
     <div class="chips">{% for c in site.data.cursos_en_curso %}<span class="tag" style="text-transform:none;letter-spacing:.01em;font-size:14px;padding:9px 14px">{{ c }}</span>{% endfor %}</div>
   </div>
   {% endif %}
+<script>
+(function(){var bs=document.querySelectorAll('.cc-fil button'),cs=document.querySelectorAll('.ccg .cc');
+bs.forEach(function(b){b.addEventListener('click',function(){var f=b.dataset.f;bs.forEach(function(x){var on=x===b;x.classList.toggle('on',on);x.setAttribute('aria-pressed',on)});
+cs.forEach(function(c){c.hidden=!(f==='todos'||c.dataset.a===f)})})})})();
+</script>
 </section>

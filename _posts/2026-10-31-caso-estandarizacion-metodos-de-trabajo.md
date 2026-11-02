@@ -47,6 +47,10 @@ Sin entrar en detalles del proceso, los cambios fueron de tres tipos:
 
 ## Resultados: antes vs. después
 
+{% include antes-despues.html %}
+
+El detalle completo:
+
 | Métrica | Antes | Después | Mejora |
 |---|--:|--:|--:|
 | **Tiempo por lote** | 179 min | 106 min | **−40.8%** |

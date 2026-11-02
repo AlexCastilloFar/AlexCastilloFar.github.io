@@ -5,6 +5,7 @@ seccion: cursos
 <section class="view wrap">
   <div class="crumbs" style="margin-bottom:20px"><a href="{{ '/recursos/' | relative_url }}">Recursos</a> / <a href="{{ '/cursos/' | relative_url }}">Cursos</a> / {{ page.area }}</div>
   <div class="article stack" style="max-width:820px">
+    {% if page.imagen %}<img class="cur-banner" src="{{ page.imagen | relative_url }}" alt="Banner del curso {{ page.title }}" width="1600" height="564">{% endif %}
     <div class="chips"><span class="tag">{{ page.area }}</span>{% if page.sesiones.size > 0 %}<span class="tag">{{ page.sesiones.size }} {% if page.sesiones.size == 1 %}sesión{% else %}sesiones{% endif %}</span>{% endif %}</div>
     <h1>{{ page.title }}</h1>
     <p class="lead">{{ page.resumen }}</p>

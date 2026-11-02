@@ -1397,3 +1397,11 @@ body:not(.s-inicio):not(.l-post):not(.s-plantillas):not(.s-ingenieria) main{back
 .rc-sellos.claro b{color:var(--ink)}
 .rc-sellos.claro small{color:var(--muted)}
 .rc-light .rc-txt{gap:14px}
+/* Cierre de Recursos: tarjeta blanca con franja de color (distinta de las tarjetas de arriba y del pie) */
+.rc-cta{position:relative;overflow:hidden;background:#fff;justify-content:flex-start;box-shadow:0 0 0 1px var(--line),0 20px 40px -30px rgba(12,23,84,.35);padding-left:clamp(32px,4vw,48px)}
+.rc-cta::before{content:"";position:absolute;left:0;top:0;bottom:0;width:6px;background:linear-gradient(180deg,#5a46c2,#2c64d4)}
+.rc-cta>div{flex:1;min-width:220px}
+.rc-cta .btn{margin-left:auto}
+.rc-cta-ico{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;flex:none;background:linear-gradient(140deg,#5a46c2,#2c64d4);color:#fff;box-shadow:0 10px 22px -12px rgba(63,79,207,.7)}
+.rc-cta-ico svg{width:24px;height:24px}
+@media (max-width:600px){.rc-cta .btn{margin-left:0}}

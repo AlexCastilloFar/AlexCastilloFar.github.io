@@ -27,7 +27,18 @@ Web personal de **Alex Castillo** (marca personal): estudiante de Ingeniería In
 ## Artículos
 Claros, con un ejemplo peruano real (bodega, línea de producción, trabajo de la U), pensados para Google (título que la gente busca, respuesta directa al inicio, subtítulos) y con la plantilla relacionada al final.
 
+## Estado actual (1 nov 2026, todo publicado)
+- Rediseño completo publicado: Inicio, Ingeniería Industrial, Artículos, Recursos, Plantillas, Cursos y Sobre mí (ver `DESIGN.md`, secciones 7–9 y "Diagramas").
+- **Ingeniería Industrial:** franjas a todo el ancho, Mide/Analiza/Mejora con fotos reales (`assets/img/ingenieria/`), herramientas en diagrama tipo "mejora continua" (lee `_data/herramientas.yml`), ¿Dónde trabaja?, tarjeta personal.
+- **Sobre mí:** trayectoria tipo roadmap 2017 → hoy (sin "Etapa 1, 2…"), proyectos propios y contacto.
+- **Cursos:** 10 terminados en `_cursos/` con banner oficial del CTIC UNI (`imagen:`; versión `-800.webp` para la lista), filtros por área y tarjeta "Cursos en camino" (`_data/cursos_en_curso.yml`). Faltan PDF de apuntes (campo `pdf`) y validar descripciones.
+- **Plantillas:** `_data/plantillas.yml`; campo `captura:` = imagen real (si falta, se usa el dibujo `thumb`). Tarjetas solo con la imagen, sin relleno de color.
+- **Artículos:** 8 (Pareto, Ishikawa, Gantt, DOP/DAP, 5S y 3 casos reales). El caso de estandarización tiene el bloque Antes vs Después (`_includes/antes-despues.html`). En los casos: nunca nombre de empresa, producto, fórmulas ni porcentajes internos.
+- **Vista previa:** se sube a la rama `vista-previa`; una GitHub Action la construye en `vista-previa-site`. Publicar = llevar los cambios a `main`, solo cuando Alex dice "publica".
+
 ## Pendiente
-- Sección **Cursos** (hecha): cursos gratuitos del PIT de la UNI en `_cursos/` (una página por curso, con botones "Sesión 1, 2…" que abren YouTube directo) y `_data/cursos_en_curso.yml` (8 en curso, sin enlaces). Hay 10 cursos terminados con todos sus enlaces; MS Project y Bizagi se llevaron una sola vez. Faltan los PDF de apuntes (campo `pdf`) y los certificados (opcional). Las descripciones de los cursos las debe validar Alex.
-- Portada v4 publicada (31 oct 2026): portada con degradado, cifras en versión clara, "Proyectos de mejora" con 3 casos reales, Recursos en tarjetas de color, pie oscuro. 8 artículos: Pareto, Ishikawa, Gantt, DOP/DAP, 5S y 3 casos reales (estandarización −41%, registro de producción con Excel + IA, bot de formulación). En los casos: nunca nombre de empresa, producto, fórmulas ni porcentajes reales.
-- Faltan: artículos de estudio de tiempos, OEE y control estadístico; llevar el estilo nuevo a Sobre mí, Recursos e Ingeniería Industrial; precios finales, enlaces de TikTok y Telegram, videos o GIF de las plantillas y el bot de Telegram.
+- Artículos: estudio de tiempos, OEE, control estadístico.
+- Capturas de las plantillas en mejor resolución (pantalla completa) y videos/GIF.
+- Precios finales, enlaces de TikTok y Telegram, correo, bot de ventas en Telegram.
+- PDF de apuntes de cursos; validar descripciones; LinkedIn.
+- Alex debe borrar las ramas `propuesta-v3`, `vista-previa`, `vista-previa-site` cuando ya no se usen.

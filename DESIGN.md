@@ -101,4 +101,4 @@ Une las paletas que trajo Alex (Workleap, DataPulse y similares). **Toda la web 
 - Tarjetas en grillas: línea superior de 4px que rota entre los colores de área.
 - Portadas de artículos y tarjetas de plantillas: panel con degradado del color de su área + cuadrícula + "pantalla" blanca con el gráfico.
 - Títulos en dos tonos: segunda parte en degradado cobalto → violeta.
-- **Ingeniería Industrial · herramientas:** infografía en **anillo de 6 segmentos** (degradado bosque → cerúleo → cobalto → violeta), cada segmento enlaza a su guía; título al centro; leyenda numerada debajo (3 columnas en PC, 2 en celular). Mide/Analiza/Mejora: fotos reales en tarjetas claras con degradado suave y letras oscuras.
+- **Ingeniería Industrial · herramientas:** infografía en **anillo de 6 segmentos** (colores de la referencia: lima #a3e01a → verde #76d043 → turquesa #0ab6b0 → celeste #1fa0c0 → azul #3290c8 → índigo #5d63db; títulos en azul #2230d4), cada segmento enlaza a su guía; título al centro; leyenda numerada debajo (3 columnas en PC, 2 en celular). Mide/Analiza/Mejora: fotos reales en tarjetas claras con degradado suave y letras oscuras.

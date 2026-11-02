@@ -1411,3 +1411,4 @@ body:not(.s-inicio):not(.l-post):not(.s-plantillas):not(.s-ingenieria) main{back
 @media (max-width:1100px){.marco{margin-inline:0}}
 .marco>section{border-bottom:0;padding-inline:max(16px,calc((100% - 1040px)/2 + 32px))}
 .ii-hero{border-radius:0}
+.ii-oscuro{background:var(--canvas)}

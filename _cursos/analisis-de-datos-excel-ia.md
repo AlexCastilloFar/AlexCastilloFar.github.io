@@ -3,6 +3,7 @@ codigo: PIT432
 title: "Análisis de Datos con Excel + IA"
 area: Datos
 orden: 5
+imagen: /assets/img/cursos/analisis-de-datos-excel-ia.webp
 resumen: "Tablas dinámicas, fórmulas de análisis y uso de inteligencia artificial para sacar conclusiones más rápido en Excel."
 plantilla: "cotizador"
 pdf: ""            # cuando tengas tus apuntes: sube el PDF a assets/pdf/ y escribe aquí "/assets/pdf/nombre.pdf"

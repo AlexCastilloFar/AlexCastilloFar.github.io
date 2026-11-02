@@ -1642,3 +1642,5 @@ a.mc-node:focus-visible{outline:3px solid #3e57da;outline-offset:4px}
 @media (max-width:960px){.ccg{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:600px){.ccg{grid-template-columns:minmax(0,1fr)}}
 @media (prefers-reduced-motion:reduce){.cc{transition:none}.cc:hover{transform:none}}
+/* Capturas reales de plantillas */
+.pl-panel-img>img,.pl-screen-body>img,.thumb>img{display:block;width:100%;height:100%;object-fit:cover}

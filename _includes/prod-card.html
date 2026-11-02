@@ -1,5 +1,5 @@
 <a class="card prod card-link" href="{{ '/plantillas/' | append: include.p.id | append: '/' | relative_url }}">
-  <div class="thumb">{% include {{ include.p.thumb }} %}</div>
+  {% assign pp = include.p %}<div class="thumb">{% if pp.captura %}<img src="{{ pp.captura | replace: '.webp', '-640.webp' | relative_url }}" alt="Captura real de la plantilla {{ pp.nombre }}" width="640" height="400" loading="lazy">{% else %}{% include {{ pp.thumb }} %}{% endif %}</div>
   <span class="tag">{{ include.p.tag }}</span>
   <h3>{{ include.p.nombre }}</h3>
   <p>{{ include.p.desc }}</p>

@@ -14,8 +14,8 @@ comprar: true
         <p class="lead">{{ p.beneficio }}</p>
       </div>
       <div class="video">
-        <div class="thumb">{% include {{ p.thumb }} %}</div>
-        <span class="pill-note">Aquí irá el video de la plantilla funcionando</span>
+        <div class="thumb">{% if p.captura %}<img src="{{ p.captura | relative_url }}" alt="Captura real de la plantilla {{ p.nombre }}" width="1280" height="800" loading="lazy">{% else %}{% include {{ p.thumb }} %}{% endif %}</div>
+        <span class="pill-note">{% if p.captura %}Captura real de la plantilla{% else %}Aquí irá el video de la plantilla funcionando{% endif %}</span>
       </div>
       <div class="stack" style="gap:12px">
         <h2 style="font-size:28px">Qué incluye</h2>

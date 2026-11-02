@@ -1412,3 +1412,12 @@ body:not(.s-inicio):not(.l-post):not(.s-plantillas):not(.s-ingenieria) main{back
 .marco>section{border-bottom:0;padding-inline:max(16px,calc((100% - 1040px)/2 + 32px))}
 .ii-hero{border-radius:0}
 .ii-oscuro{background:var(--canvas)}
+/* Mide / Analiza / Mejora con ilustración arriba */
+.ii-tint{padding-top:14px}
+.ii-tint-img{display:block;width:calc(100% + 0px);margin:0 0 6px;border-radius:12px;overflow:hidden;aspect-ratio:4/3;background:rgba(255,255,255,.12);box-shadow:0 10px 24px -14px rgba(0,0,0,.5)}
+.ii-tint-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease}
+.ii-tint:hover .ii-tint-img img{transform:scale(1.04)}
+.ii-tint{padding-inline:14px}
+.ii-tint h3,.ii-tint p,.ii-tint .ii-pill{position:relative;z-index:1}
+.ii-tint .ii-ico{display:none}
+@media (prefers-reduced-motion:reduce){.ii-tint:hover .ii-tint-img img{transform:none}}

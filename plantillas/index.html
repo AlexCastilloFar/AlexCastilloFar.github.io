@@ -24,7 +24,7 @@ description: Plantillas de Excel con macros para Ishikawa, Pareto, Gantt y cotiz
     <div class="pl-hero-vis" aria-hidden="true">
       <div class="pl-screen">
         <div class="pl-screen-top"><span class="dots"><i></i><i></i><i></i></span><span>Gantt_con_ruta_critica.xlsm</span></div>
-        <div class="pl-screen-body">{% include thumb-gantt.html %}</div>
+        {% assign pg = site.data.plantillas | where: "id", "gantt" | first %}<div class="pl-screen-body">{% if pg.captura %}<img src="{{ pg.captura | relative_url }}" alt="Captura real de la plantilla {{ pg.nombre }}" width="1280" height="800" loading="lazy">{% else %}{% include {{ pg.thumb }} %}{% endif %}</div>
       </div>
       <div class="pl-float f1"><span class="pl-ok">✓</span><span><b>Archivo enviado</b><small>al confirmar tu pago</small></span></div>
       <div class="pl-float f2"><span class="pl-ico">{% include icon.html n="chart" %}</span><span><b>Ruta crítica</b><small>en 1 clic</small></span></div>
@@ -48,7 +48,7 @@ description: Plantillas de Excel con macros para Ishikawa, Pareto, Gantt y cotiz
       <a class="pl-card" href="{{ '/plantillas/' | append: p.id | append: '/' | relative_url }}" data-cat="{{ p.tag | slugify }}">
         <div class="pl-card-vis">
           {% if p.destacada %}<span class="pl-badge-card">Más vendida</span>{% endif %}
-          <div class="pl-card-screen"><div class="pl-screen-top"><span class="dots"><i></i><i></i><i></i></span><span>.xlsm</span></div><div class="pl-panel-img">{% include {{ p.thumb }} %}</div></div>
+          <div class="pl-card-screen"><div class="pl-screen-top"><span class="dots"><i></i><i></i><i></i></span><span>.xlsm</span></div><div class="pl-panel-img">{% if p.captura %}<img src="{{ p.captura | replace: '.webp', '-640.webp' | relative_url }}" alt="Captura real de la plantilla {{ p.nombre }}" width="640" height="400" loading="lazy">{% else %}{% include {{ p.thumb }} %}{% endif %}</div></div>
         </div>
         <div class="pl-card-body">
           <span class="pl-tag">{{ p.tag }}</span>

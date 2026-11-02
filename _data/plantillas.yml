@@ -10,6 +10,7 @@
   desc: Dibuja la espina de pescado y el Pareto, y te dice qué causas atacar primero.
   beneficio: Encuentra la causa raíz y prioriza qué atacar, con un botón.
   thumb: thumb-pareto.html
+  captura: /assets/img/plantillas/ishikawa-pareto.webp   # imagen real de la plantilla (si la borras, se usa el dibujo)
   incluye:
     - Hoja de instrucciones paso a paso
     - Diagrama de Ishikawa (6M) que se dibuja solo
@@ -24,6 +25,7 @@
   desc: Calendario automático, % de avance, ruta crítica y dashboard del proyecto.
   beneficio: Tu cronograma con ruta crítica en 1 clic.
   thumb: thumb-gantt.html
+  captura: /assets/img/plantillas/gantt.webp   # imagen real de la plantilla (si la borras, se usa el dibujo)
   incluye:
     - Calendario con días de la semana que se dibuja solo
     - Predecesores y fechas calculadas automáticamente
@@ -38,6 +40,7 @@
   desc: Cotizaciones profesionales en PDF con tus productos y clientes guardados.
   beneficio: Cotiza en segundos y envía un PDF que da confianza.
   thumb: thumb-coti.html
+  captura: /assets/img/plantillas/cotizador.webp   # imagen real de la plantilla (si la borras, se usa el dibujo)
   incluye:
     - Lista de productos y clientes guardados
     - Cotización con totales calculados

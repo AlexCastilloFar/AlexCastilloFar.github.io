@@ -1644,3 +1644,12 @@ a.mc-node:focus-visible{outline:3px solid #3e57da;outline-offset:4px}
 @media (prefers-reduced-motion:reduce){.cc{transition:none}.cc:hover{transform:none}}
 /* Capturas reales de plantillas */
 .pl-panel-img>img,.pl-screen-body>img,.thumb>img{display:block;width:100%;height:100%;object-fit:cover}
+/* Tarjetas de plantillas: solo la imagen, sin relleno de color */
+.pl-card .pl-card-vis,.pl-card[data-cat] .pl-card-vis{padding:0;background:#fff;border-bottom:1px solid var(--line)}
+.pl-card .pl-card-vis::before{display:none}
+.pl-card .pl-card-screen{border-radius:0;box-shadow:none}
+.pl-card .pl-card-screen .pl-screen-top{display:none}
+.pl-card:hover .pl-card-screen{transform:none}
+.pl-card:hover .pl-panel-img img{transform:scale(1.03)}
+.pl-panel-img img{transition:transform .3s ease}
+@media (prefers-reduced-motion:reduce){.pl-panel-img img{transition:none}}

@@ -1369,3 +1369,10 @@ body:not(.s-inicio):not(.l-post):not(.s-plantillas):not(.s-ingenieria) main{back
   .ap-img{grid-column:1;grid-row:auto;height:170px;margin-inline:0 -22px}
   .ap-link{margin-bottom:4px}
 }
+/* Tarjetas claras con degradado suave para que se distingan del fondo */
+.ap-card:nth-child(1){background:linear-gradient(150deg,#e6ebff 0%,#f1f3ff 55%,#fff 100%);box-shadow:0 0 0 1px #d8def8,0 24px 48px -32px rgba(37,69,255,.45)}
+.ap-card:nth-child(2){background:linear-gradient(150deg,#e2f1ea 0%,#eef6f2 55%,#fff 100%);box-shadow:0 0 0 1px #cfe5da,0 24px 48px -32px rgba(4,102,69,.4)}
+.ap-ico .ico-box{background:#fff}
+.rc-light{background:linear-gradient(140deg,#e3f1ea 0%,#eef1ff 55%,#f3efff 100%);box-shadow:0 0 0 1px #d8e3ef,0 24px 48px -32px rgba(12,23,84,.35)}
+.rc-light .rc-marco.claro{background:rgba(255,255,255,.6)}
+.rc-light .rc-k.verde{background:#fff}

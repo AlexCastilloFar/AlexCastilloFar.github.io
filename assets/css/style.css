@@ -1516,3 +1516,19 @@ a.an-item:hover{background:#fff;box-shadow:0 0 0 1px var(--line)}
 .an-item small{display:block;font-size:14.5px;color:var(--text);margin-top:4px;line-height:1.45}
 .an-item em{display:block;font:500 12px/1 var(--f-mono);font-style:normal;color:var(--c);margin-top:8px}
 @media (prefers-reduced-motion:reduce){.an-seg path{transition:none}}
+@media (max-width:520px){
+  .an-ley{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 10px}
+  .an-item{grid-template-columns:minmax(0,1fr);gap:8px;padding:12px;background:#fff;box-shadow:0 0 0 1px var(--line)}
+  .an-num{width:28px;height:28px;font-size:12px}
+  .an-item b{font-size:15.5px}
+  .an-item small{font-size:13px}
+}
+/* Anillo con los colores de la referencia (lima → verde → turquesa → celeste → azul → índigo) */
+.an-item b{color:#2230d4}
+.an-centro h2{color:#2230d4}
+.an-centro h2 .kw{background:none;-webkit-text-fill-color:#2230d4;color:#2230d4}
+.an-num{color:#fff}
+.an-item:nth-child(1) .an-num,.an-item:nth-child(2) .an-num{color:#0c1754}
+.an-item em{color:#2230d4}
+.an-ico{color:#fff}
+.an-ico b{color:#fff}

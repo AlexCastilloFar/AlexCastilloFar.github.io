@@ -1472,3 +1472,21 @@ a.mapa-n:hover{transform:translate(-50%,-50%) scale(1.05);box-shadow:0 16px 30px
 .p2,.p3{left:77%}.p5,.p6{left:23%}
 .mapa-n-txt small .vg{display:none}
 @media (max-width:700px){.mapa-top{font-size:10px;gap:8px}.mapa-top>span:nth-child(2){display:none}}
+/* Mide / Analiza / Mejora: tarjetas claras con degradado suave (estilo de la referencia) y letras oscuras */
+.ii-tint{color:var(--ink);box-shadow:0 0 0 1px #d9def6,0 22px 44px -30px rgba(37,69,255,.45)}
+.ii-tint::after{display:none}
+.ii-tint.t1{background:linear-gradient(150deg,#f4f6ff 0%,#e3e9ff 55%,#cdd8ff 100%)}
+.ii-tint.t2{background:linear-gradient(150deg,#f3f5fb 0%,#e1e5f5 55%,#c9d0ec 100%)}
+.ii-tint.t3{background:linear-gradient(150deg,#f6f3ff 0%,#e9e2ff 55%,#d6caff 100%)}
+.ii-tint h3{color:#0c1754}
+.ii-tint p{color:#36394a}
+.ii-tint .ii-pill{background:#fff;color:#2545ff;box-shadow:0 0 0 1px #c9d2fb}
+.ii-tint .ii-pill:hover{background:#2545ff;color:#fff}
+.ii-tint.t2 .ii-pill{color:#0c1754}
+.ii-tint.t2 .ii-pill:hover{background:#0c1754;color:#fff}
+.ii-tint.t3 .ii-pill{color:#6736eb;box-shadow:0 0 0 1px #d8cbfd}
+.ii-tint.t3 .ii-pill:hover{background:#6736eb;color:#fff}
+.ii-tint-img{box-shadow:0 0 0 1px rgba(12,23,84,.08),0 12px 24px -16px rgba(12,23,84,.45)}
+.ii-tint h3::after{content:"";display:block;width:28px;height:3px;border-radius:2px;margin:8px auto 0;background:#2545ff}
+.ii-tint.t2 h3::after{background:#0c1754}
+.ii-tint.t3 h3::after{background:#6736eb}

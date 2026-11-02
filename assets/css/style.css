@@ -1594,17 +1594,17 @@ a.mc-node:focus-visible{outline:3px solid #3e57da;outline-offset:4px}
 }
 /* Caso real: antes vs después */
 .adx{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:56px;margin:44px 0 28px}
-.adx-c{position:relative;background:#fff;border-radius:20px;padding:30px 150px 30px 28px;box-shadow:0 0 0 1px var(--line),0 20px 44px -30px rgba(103,54,235,.4);display:grid;gap:18px;align-content:center;min-height:330px}
-.adx-c.der{padding:30px 28px 30px 150px}
+.adx-c{position:relative;background:#fff;border-radius:20px;padding:30px 118px 30px 24px;box-shadow:0 0 0 1px var(--line),0 20px 44px -30px rgba(103,54,235,.4);display:grid;gap:18px;align-content:center;min-height:330px}
+.adx-c.der{padding:30px 24px 30px 118px}
 .adx-r{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:center}
 .adx-c.der .adx-r{grid-template-columns:1fr auto;text-align:right}.adx-c.der .adx-b{order:2}
 .adx-b{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;color:#fff;background:var(--g6)}
 .adx-c.der .adx-b{background:var(--g1);color:#0c1754}
 .adx-b .ico{width:22px;height:22px;stroke-width:2.3}
-.adx-r small{display:block;font-size:13px;color:var(--muted)}
+.adx-r small{display:block;font-size:13px;color:var(--muted);white-space:nowrap}
 .adx-r b{font-size:26px;letter-spacing:-.02em;color:var(--ink);line-height:1.1}.adx-r b em{font-style:normal;font-size:14px;color:var(--muted);font-weight:500}
-.adx-medio{position:absolute;top:50%;width:170px;height:170px;transform:translateY(-50%)}
-.izq .adx-medio{right:-28px;clip-path:inset(0 85px 0 0)}.der .adx-medio{left:-28px;clip-path:inset(0 0 0 85px)}
+.adx-medio{position:absolute;top:50%;width:150px;height:150px;transform:translateY(-50%)}
+.izq .adx-medio{right:-28px;clip-path:inset(0 75px 0 0)}.der .adx-medio{left:-28px;clip-path:inset(0 0 0 75px)}
 .adx-medio text{font-family:var(--f-ui)}
 .adx-ahorro{position:absolute;left:50%;top:-20px;transform:translateX(-50%);z-index:2;background:var(--ink);color:#fff;border-radius:999px;padding:9px 16px;font-weight:600;font-size:14px;white-space:nowrap}
 .adx-ahorro i{font-style:normal;color:#b6f07a}
